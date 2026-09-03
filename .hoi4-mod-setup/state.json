@@ -1,0 +1,53 @@
+{
+  "ai": {
+    "model": "gpt-5.6-luna",
+    "optimization_profile": "Codex setup analysis",
+    "provider": "codex",
+    "reasoning_effort": "medium"
+  },
+  "codex": {
+    "account_values_persisted": false,
+    "analysis_required": true,
+    "analysis_status": "confirmed",
+    "auth_mode": "chatgpt",
+    "auth_status": "signed_in",
+    "integration": "codex_app_server"
+  },
+  "coding_environments": {
+    "additional": [],
+    "primary": "codex"
+  },
+  "credential_references": [],
+  "platform": "windows",
+  "portrait_pipeline": {
+    "enabled": false,
+    "local_comfyui_root": "",
+    "local_server_url": "http://127.0.0.1:8188",
+    "mcp_registered": false,
+    "preferred_workflow": "source",
+    "provider": "disabled",
+    "provider_status": "not_selected",
+    "runpod_url": "",
+    "runpod_workspace": "/workspace/comfyui-hoi4-portraits",
+    "workflow_branch": "codex/portrait-pipeline",
+    "workflow_commit": "b47222a77f2f6454704530865aa1441fad48bdd3",
+    "workflow_repository": "https://github.com/klimPaskov/comfyui-hoi4-portraits"
+  },
+  "preferences": {
+    "telemetry": false
+  },
+  "project_id": "pax_franca",
+  "project_root": "\\\\?\\E:\\pax_franca",
+  "schema_version": "1.0.0",
+  "wizard": {
+    "completed_steps": [
+      "welcome",
+      "description",
+      "identity",
+      "environments",
+      "components",
+      "workflows"
+    ],
+    "current_step": "ready"
+  }
+}

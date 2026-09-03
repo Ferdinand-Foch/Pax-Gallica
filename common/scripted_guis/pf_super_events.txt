@@ -1,0 +1,26 @@
+scripted_gui = {
+    pf_super_events = {
+        context_type = player_context
+        window_name = "pf_super_events"
+
+        visible = {
+            has_global_flag = pf_super_event_visible
+        }
+
+        effects = {
+            super_event_close_click = {
+                clr_global_flag = pf_super_event_visible
+            }
+        }
+
+        properties = {
+            super_event_image = {
+                image = "[GetpfSuperEventImage]"
+            }
+        }
+
+        ai_enabled = {
+            always = no
+        }
+    }
+}
