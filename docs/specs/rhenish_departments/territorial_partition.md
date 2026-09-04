@@ -13,19 +13,21 @@ Les noyaux allemands, rhénans et prussiens sont conservés dans les quatre dép
 | ID | Nom | Provinces | Préfecture | Propriétaire initial | Population | Infrastructure | Usines civiles | Usines militaires |
 | --- | --- | --- | --- | --- | ---: | ---: | ---: | ---: |
 | 42 | Sarre | 11435, 11470, 9575, 11531 | Sarrebruck (11531) | FRA | 1 386 454 | 4 | 1 | 0 |
-| 51 | Ruhr | 529, 6469, 6570, 9482 | Essen (6469) | GER | 2 629 193 | 4 | 3 | 2 |
+| 51 | Rhénanie | 529, 3512, 6469, 6570, 9482 | Essen (6469) | GER | 3 306 409 | 4 | 3 | 2 |
 | 55 | Nassau | 564, 589, 3397, 3524, 3574, 6444, 6488, 6549, 9486, 9524, 9547, 11445, 11533 | Francfort (6488) | GER | 3 550 216 | 4 | 2 | 1 |
-| 1082 | Roer | 3512, 3444, 587, 9522 | Aix-la-Chapelle (9522) | FRA | 2 778 579 | 4 | 1 | 1 |
+| 1082 | Roer | 3444, 587, 9522 | Aix-la-Chapelle (9522) | FRA | 2 101 363 | 4 | 1 | 1 |
 | 1083 | Rhin-et-Moselle | 3547, 11494, 3423 | Coblence (3423) | FRA | 1 397 804 | 3 | 1 | 0 |
 | 1084 | Mont-Tonnerre | 11547, 563, 3558, 11560 | Mayence (11560) | FRA | 1 228 471 | 4 | 1 | 0 |
+
+La zone française annexée compte quatorze provinces. La prévalidation initiale avait incorrectement classé la province 3512 sur la rive gauche du Rhin ; le test en jeu sur HOI4 1.19 a confirmé sa position sur la rive droite, ce qui impose son maintien dans l’État allemand 51. La province 3444 reste dans Roer conformément au tracé demandé.
 
 Les champs `owner` et `controller` établissent explicitement la propriété et le contrôle initiaux à la date de départ.
 
 Les préfectures sont des désignations administratives et narratives : conformément au cahier des charges, Aix-la-Chapelle et Trèves ne reçoivent pas de VP artificiellement supérieur à Cologne ou Sarrebruck, de sorte que le marqueur de capitale mécanique de Roer demeure Cologne.
 
-Les ressources de l’ancien État 42 restent dans la Sarre, celles de l’ancien État 51 restent dans le reliquat de la Ruhr et celles de l’ancien État 55 restent dans le reliquat de Nassau.
+Les ressources de l’ancien État 42 restent dans la Sarre, celles de l’ancien État 51 restent dans le reliquat allemand de Rhénanie et celles de l’ancien État 55 restent dans le reliquat de Nassau.
 
-Les ajouts vanilla non fortifiés du signet de 1939 restent également dans leurs reliquats d’origine : la Sarre conserve le radar et les raffineries synthétiques de l’État 42, tandis que la Ruhr conserve l’extension de la base aérienne et le radar de l’État 51. Les forts provinciaux datés du Westwall et l’historique de démilitarisation sont volontairement écartés, puisque la rive gauche annexée constitue une frontière française militarisable.
+Les ajouts vanilla non fortifiés du signet de 1939 restent également dans leurs reliquats d’origine : la Sarre conserve le radar et les raffineries synthétiques de l’État 42, tandis que la Rhénanie conserve l’extension de la base aérienne et le radar de l’État 51. Les forts provinciaux datés du Westwall et l’historique de démilitarisation sont volontairement écartés, puisque la rive gauche annexée constitue une frontière française militarisable.
 
 Le barrage d’Edersee reste dans la province 11533 du Nassau.
 
@@ -38,14 +40,14 @@ La méthode du plus fort reste a été appliquée aux valeurs entières afin de 
 | Source vanilla | Parts en pixels | Répartition de population |
 | --- | --- | --- |
 | État 42, 701 pixels | Sarre 321 ; Rhin-et-Moselle 153 ; Mont-Tonnerre 227 | 1 386 454 ; 660 833 ; 980 452 |
-| État 51, 617 pixels | Roer 279 ; Rhin-et-Moselle 74 ; Ruhr 264 | 2 778 579 ; 736 971 ; 2 629 193 |
+| État 51, 617 pixels | Roer 211 ; Rhin-et-Moselle 74 ; Rhénanie 332 | 2 101 363 ; 736 971 ; 3 306 409 |
 | État 55, 1 072 pixels | Mont-Tonnerre 70 ; Nassau 1 002 | 248 019 ; 3 550 216 |
 
 Les populations sources de 3 027 739, 6 144 743 et 3 798 235 habitants totalisent 12 970 717 habitants, soit exactement le total des six États après découpage.
 
 ## Réseau, bâtiments et région stratégique
 
-Les 52 entrées de `map/buildings.txt` dont les coordonnées se trouvent dans une province transférée ont reçu le nouvel ID d’État correspondant.
+Les 52 entrées initialement réattribuées dans `map/buildings.txt` ont reçu l’ID d’État correspondant à leur province. La correction de la frontière réattribue ensuite à l’État 51 les quatre entrées situées dans la province 3512 : une position d’usine militaire, un bunker, un nœud de ravitaillement et un emplacement de réseau de forteresses. Le fichier final conserve donc 48 réattributions par rapport à vanilla.
 
 Les chemins de fer et les nœuds logistiques de Cologne (587) et Sarrebruck (11531) restent définis par les fichiers vanilla et n’ont pas été réécrits.
 
@@ -57,19 +59,19 @@ La remilitarisation allemande et ses événements ne manipulent plus les territo
 
 La construction du Westwall ne place plus de fortifications dans les provinces françaises et reste attachée à Bade, faute de tracé allemand de remplacement autorisé.
 
-Les investissements sidérurgiques allemands restent attachés au reliquat industriel de la Ruhr (51).
+Les investissements sidérurgiques allemands restent attachés au reliquat industriel de Rhénanie (51).
 
 Le barrage de la Rur est associé à Rhin-et-Moselle (1083) et le focus allemand correspondant est contourné lorsque l’Allemagne ne contrôle pas cet État.
 
-Les stratégies de front françaises et allemandes visent les reliquats de la Ruhr et du Nassau au lieu de considérer la Sarre française comme un territoire allemand.
+Les stratégies de front françaises et allemandes visent les reliquats de Rhénanie et du Nassau au lieu de considérer la Sarre française comme un territoire allemand.
 
 Les frontières naturelles françaises revendiquent les quatre départements sans créer automatiquement un objectif de guerre contre l’Allemagne qui les a déjà cédés.
 
-La désunion de l’Allemagne exclut les quatre départements français du transfert générique vers la Prusse, mais laisse la Ruhr allemande suivre le traitement normal.
+La désunion de l’Allemagne exclut les quatre départements français du transfert générique vers la Prusse, mais laisse la Rhénanie allemande suivre le traitement normal.
 
 Les décisions de formation qui énumèrent explicitement les territoires allemands exigent et intègrent aussi les États 1082, 1083 et 1084.
 
-Les chaînes alternatives de remilitarisation et d’Anschluss utilisent Bade (978), tandis que les objectifs de guerre allemands alternatifs conservent le reliquat allemand de la Ruhr (51).
+Les chaînes alternatives de remilitarisation et d’Anschluss utilisent Bade (978), tandis que les objectifs de guerre allemands alternatifs conservent le reliquat allemand de Rhénanie (51).
 
 ## Ressources visuelles
 
@@ -94,6 +96,14 @@ Le contrôle global des positions signale des `floating_harbor` vanilla hors pé
 Le rendu final `hoi4.map_render` a produit le PNG `c3e31ced3faeab8c6280ecf89141a95b7cf21131ee66d62eae2fed824caa9748`.
 
 La comparaison avant/après montre le passage de trois enveloppes territoriales vanilla à six États sans changement des 32 géométries provinciales, de la région stratégique 7 ni des réseaux ferroviaires et logistiques.
+
+### Correction de la province 3512
+
+Le contrôle préalable ciblé de la correction a repris la révision `f9b5b49ac89e5ce32c96aeabfa8d2633059b53653a76d092a06d415e9e4777bc`. Le rendu avec bâtiments, chemins de fer, ravitaillement et connexions a produit le PNG `81ba729582a0b8d4bac3cc2e42d32790ded0426b58c514c551d3f75b8c620c1f` alors que 3512 appartenait encore à Roer.
+
+L’opération ciblée `move_state_provinces` de `hoi4.map_rewrite` a été appelée pour déplacer uniquement 3512 de 1082 vers 51 et faire suivre ses bâtiments, positions, nœuds et voies ferrées. Le serveur l’a annulée avant écriture avec `REWRITE_STRUCTURE_LIMIT`; le repli manuel strictement équivalent a ensuite été explicitement autorisé.
+
+L’inspection finale ciblée établit la révision `38616328b693592458dd5c0a03c1a15e41905094a5f838e8951e8200eba4f8d9` : 3512 appartient à l’État allemand 51, 3444 reste dans Roer, et les contrôles de géométrie, d’appartenance, d’adjacence, de ravitaillement et de voies ferrées réussissent. Le rendu final produit le PNG `5e545cf4218cf827356a72109b1e7ccd2694fa7b31ed78b7d471ab5c79b4789a`. La comparaison avec le rendu préalable confirme le recul de la frontière française sur la rive gauche du Rhin sans modification du contour de 3512 ni d’aucune autre province.
 
 Les arbres nationaux allemand et français ont également été inspectés et rendus après adaptation à la révision MCP `1263eaa4ed2e5bcb4976e74fd9706bc56ff54d927051c83c6aea100b077bae5f`. Leurs nombres de nœuds et leurs hashes de disposition restent identiques aux preuves préalables : `abe189340cf67a71e15d6e08eb7de37e97437430f03d7a77c4c29789f50df3b1` pour l’Allemagne et `04bd763dbc684d1f376d0b038bc2b458e87918fca6f2da94d1bf33ba3d52c553` pour la France. Les adaptations territoriales n’ont donc déplacé ni supprimé aucun focus.
 
