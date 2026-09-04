@@ -99,8 +99,9 @@ config_file = "agents/hoi4_super_event_quote_researcher.toml"
 description = "Finds, verifies, compares, and documents quote and cultural-remark candidates for registered HOI4 super-events without editing localisation or runtime wiring."
 
 [mcp_servers.hoi4_agent_tools]
-command = "hoi4-agent-tools.cmd"
-cwd = "."
-default_tools_approval_mode = "auto"
-startup_timeout_sec = 120
+command = "C:\\Users\\yohan\\AppData\\Local\\Programs\\node-v24.19.0-win-x64\\node.exe"
+args = ["C:\\Users\\yohan\\AppData\\Roaming\\npm\\node_modules\\hoi4-agent-tools\\dist\\bin\\stdio.js"]
+cwd = "E:\\pax_franca"
+startup_timeout_sec = 60
 tool_timeout_sec = 180
+enabled = true
