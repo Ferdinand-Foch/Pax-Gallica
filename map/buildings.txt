@@ -904,7 +904,7 @@
 51;arms_factory;2912.00;9.70;1550.00;6.14;0
 51;arms_factory;2920.00;9.85;1539.00;2.52;0
 51;arms_factory;2915.00;9.75;1547.00;0.36;0
-1082;arms_factory;2914.00;9.70;1550.00;1.56;0
+51;arms_factory;2914.00;9.70;1550.00;1.56;0
 51;industrial_complex;2922.00;9.95;1539.00;4.59;0
 51;industrial_complex;2916.00;9.80;1547.00;2.43;0
 51;industrial_complex;2923.00;10.18;1533.00;3.63;0
@@ -921,7 +921,7 @@
 1082;bunker;2904.00;9.73;1542.00;2.59;0
 1082;bunker;2906.00;9.70;1546.00;0.43;0
 1083;bunker;2913.00;11.10;1531.00;0.53;0
-1082;anti_air_building;2914.00;9.70;1550.00;4.65;0
+51;anti_air_building;2914.00;9.70;1550.00;4.65;0
 51;anti_air_building;2916.00;9.75;1541.00;1.04;0
 51;anti_air_building;2912.00;9.70;1543.00;3.70;0
 51;synthetic_refinery;2923.00;10.18;1533.00;5.26;0
@@ -39279,7 +39279,7 @@
 55;special_project_facility_spawn;2946.00;10.07;1526.00;3.51;0
 55;special_project_facility_spawn;2949.00;10.95;1545.00;3.51;0
 1083;special_project_facility_spawn;2913.00;10.88;1532.00;5.07;0
-1082;special_project_facility_spawn;2912.00;9.70;1549.00;5.07;0
+51;special_project_facility_spawn;2912.00;9.70;1549.00;5.07;0
 1082;special_project_facility_spawn;2905.00;9.80;1541.00;5.07;0
 51;special_project_facility_spawn;2916.00;9.75;1541.00;5.07;0
 51;special_project_facility_spawn;2920.00;9.85;1539.00;5.07;0
