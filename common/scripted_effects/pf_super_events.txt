@@ -9,7 +9,11 @@ pf_show_super_event = {
 
 # Stable smoke-test registration installed with the package.
 pf_show_example_super_event = {
-    pf_show_super_event = {
-        SUPER_EVENT_ID = 1
-    }
+	meta_effect = {
+		text = {
+			pf_show_super_event = {
+				SUPER_EVENT_ID = 1
+			}
+		}
+	}
 }
