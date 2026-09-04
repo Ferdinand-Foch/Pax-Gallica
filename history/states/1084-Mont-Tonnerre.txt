@@ -1,0 +1,30 @@
+state = {
+	id = 1084
+	name = "STATE_1084"
+	manpower = 1228471
+
+	state_category = city
+
+	history = {
+		owner = FRA
+		controller = FRA
+		add_core_of = GER
+		add_core_of = RHI
+		add_core_of = PRE
+
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+		}
+
+		victory_points = {
+			11560 2 # Mainz
+		}
+	}
+
+	provinces = {
+		11547 563 3558 11560
+	}
+
+	local_supplies = 0.0
+}

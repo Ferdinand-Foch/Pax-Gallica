@@ -1,0 +1,49 @@
+state = {
+	id = 42
+	name = "STATE_42"
+	manpower = 1386454
+
+	resources = {
+		aluminium = 14
+		coal = 14
+		steel = 50
+	}
+
+	state_category = large_city
+
+	history = {
+		owner = FRA
+		controller = FRA
+		add_core_of = GER
+		add_core_of = RHI
+		add_core_of = PRE
+
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+		}
+
+		victory_points = {
+			11435 1 # Bitburg
+		}
+		victory_points = {
+			9575 3 # Trier
+		}
+		victory_points = {
+			11531 5 # Saarbrucken
+		}
+
+		1939.1.1 = {
+			buildings = {
+				radar_station = 1
+				synthetic_refinery = 3
+			}
+		}
+	}
+
+	provinces = {
+		11435 11470 9575 11531
+	}
+
+	local_supplies = 0.0
+}

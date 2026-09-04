@@ -1,0 +1,30 @@
+state = {
+	id = 1083
+	name = "STATE_1083"
+	manpower = 1397804
+
+	state_category = city
+
+	history = {
+		owner = FRA
+		controller = FRA
+		add_core_of = GER
+		add_core_of = RHI
+		add_core_of = PRE
+
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+
+		victory_points = {
+			3423 3 # Koblenz
+		}
+	}
+
+	provinces = {
+		3547 11494 3423
+	}
+
+	local_supplies = 0.0
+}
