@@ -8,7 +8,7 @@ ARM commence comme pays indépendant, sans overlord, sans statut de dépendance 
 
 ## Périmètre territorial
 
-Cette étape libère uniquement l'Arménie soviétique. Les États voisins 229 Azerbaïdjan, 231 Géorgie, 354 Trabzon et 419 Azerbaïdjan occidental restent inchangés. Aucun territoire turc et aucune autre disposition territoriale du traité de Sèvres ne sont appliqués.
+Cette étape libère uniquement l'Arménie soviétique. Les États voisins 229 Azerbaïdjan, 231 Géorgie et 419 Azerbaïdjan occidental restent inchangés. L'application territoriale distincte de la sentence arbitrale wilsonienne est décrite dans `wilsonian_boundary.md`.
 
 ## Données préservées
 
