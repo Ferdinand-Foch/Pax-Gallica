@@ -488,6 +488,9 @@ FRA_why_push_into_germany_their_food_is_horrible = {
 		55 = { # Nassau
 			is_controlled_by = GER
 		}
+		1085 = { # Rhenish Hesse
+			is_controlled_by = GER
+		}
 		978 = { # Baden
 			is_controlled_by = GER
 		}
@@ -498,6 +501,7 @@ FRA_why_push_into_germany_their_food_is_horrible = {
 		type = force_concentration_front_factor
 		state = 51  # Ruhr
 		state = 55  # Nassau
+		state = 1085  # Rhenish Hesse
 		state = 978  # Baden
 		ratio = 0.95  # Only if > 95 % of the front consists of these states. This should make it deactivate if the frontline extends around the maginot
 		value = -100
@@ -508,6 +512,7 @@ FRA_why_push_into_germany_their_food_is_horrible = {
 
 		state = 51 # Ruhr
 		state = 55 # Nassau
+		state = 1085 # Rhenish Hesse
 		state = 978 # Baden
 
 		ratio = 0.8

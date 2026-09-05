@@ -6,7 +6,7 @@ Ce paquet établit le découpage territorial rhénan du scénario de 1936 sans m
 
 La France possède et contrôle la Sarre, le Roer, Rhin-et-Moselle et Mont-Tonnerre au début de la partie, sans noyau ni revendication française.
 
-Les noyaux allemands, rhénans et prussiens sont conservés dans les quatre départements, tandis que le noyau hessois demeure exclusivement dans le reliquat de Nassau.
+Les noyaux allemands, rhénans et prussiens sont conservés dans les quatre départements. Le noyau hessois demeure dans les deux États allemands de Hesse et de Hesse-Rhénan.
 
 ## États
 
@@ -14,22 +14,25 @@ Les noyaux allemands, rhénans et prussiens sont conservés dans les quatre dép
 | --- | --- | --- | --- | --- | ---: | ---: | ---: | ---: |
 | 42 | Sarre | 11435, 11470, 9575, 11531 | Sarrebruck (11531) | FRA | 1 386 454 | 4 | 1 | 0 |
 | 51 | Rhénanie | 529, 3512, 6469, 6570, 9482 | Essen (6469) | GER | 3 306 409 | 4 | 3 | 2 |
-| 55 | Nassau | 564, 589, 3397, 3524, 3574, 6444, 6488, 6549, 9486, 9524, 9547, 11445, 11533 | Francfort (6488) | GER | 3 550 216 | 4 | 2 | 1 |
+| 55 | Hesse | 564, 3397, 3524, 6549, 9524, 9547, 11445, 11533 | Cassel (564) | GER | 2 550 000 | 4 | 0 | 1 |
 | 1082 | Roer | 3444, 587, 9522 | Aix-la-Chapelle (9522) | FRA | 2 101 363 | 4 | 1 | 1 |
 | 1083 | Rhin-et-Moselle | 3547, 11494, 3423 | Coblence (3423) | FRA | 1 397 804 | 3 | 1 | 0 |
 | 1084 | Mont-Tonnerre | 11547, 563, 3558, 11560 | Mayence (11560) | FRA | 1 228 471 | 4 | 1 | 0 |
+| 1085 | Hesse-Rhénan | 589, 3574, 6444, 6488, 9486 | Francfort (6488) | GER | 1 000 216 | 4 | 2 | 0 |
 
 La zone française annexée compte quatorze provinces. La prévalidation initiale avait incorrectement classé la province 3512 sur la rive gauche du Rhin ; le test en jeu sur HOI4 1.19 a confirmé sa position sur la rive droite, ce qui impose son maintien dans l’État allemand 51. La province 3444 reste dans Roer conformément au tracé demandé.
+
+Le reliquat allemand est subdivisé entre la Rhénanie, la Hesse et le nouvel État 1085 de Hesse-Rhénan. La Rhénanie conserve ses cinq provinces et reçoit explicitement le statut de zone démilitarisée. Hesse-Rhénan reçoit Francfort, Wiesbaden, les provinces 589, 3574 et 9486, ainsi que deux usines civiles, le barrage de la province 9486 et les extensions industrielles datées de 1939. La Hesse conserve Cassel, huit provinces, une usine militaire et ses extensions datées de 1939.
 
 Les champs `owner` et `controller` établissent explicitement la propriété et le contrôle initiaux à la date de départ.
 
 Les préfectures sont des désignations administratives et narratives : conformément au cahier des charges, Aix-la-Chapelle et Trèves ne reçoivent pas de VP artificiellement supérieur à Cologne ou Sarrebruck, de sorte que le marqueur de capitale mécanique de Roer demeure Cologne.
 
-Les ressources de l’ancien État 42 restent dans la Sarre, celles de l’ancien État 51 restent dans le reliquat allemand de Rhénanie et celles de l’ancien État 55 restent dans le reliquat de Nassau.
+Les ressources de l’ancien État 42 restent dans la Sarre et celles de l’ancien État 51 restent dans le reliquat allemand de Rhénanie. Hesse et Hesse-Rhénan disposent chacune de 8 unités de charbon dans le découpage retenu.
 
 Les ajouts vanilla non fortifiés du signet de 1939 restent également dans leurs reliquats d’origine : la Sarre conserve le radar et les raffineries synthétiques de l’État 42, tandis que la Rhénanie conserve l’extension de la base aérienne et le radar de l’État 51. Les forts provinciaux datés du Westwall et l’historique de démilitarisation sont volontairement écartés, puisque la rive gauche annexée constitue une frontière française militarisable.
 
-Le barrage d’Edersee reste dans la province 11533 du Nassau.
+Le barrage hessois est placé dans la province 9486 de Hesse-Rhénan.
 
 ## Population
 
@@ -41,13 +44,13 @@ La méthode du plus fort reste a été appliquée aux valeurs entières afin de 
 | --- | --- | --- |
 | État 42, 701 pixels | Sarre 321 ; Rhin-et-Moselle 153 ; Mont-Tonnerre 227 | 1 386 454 ; 660 833 ; 980 452 |
 | État 51, 617 pixels | Roer 211 ; Rhin-et-Moselle 74 ; Rhénanie 332 | 2 101 363 ; 736 971 ; 3 306 409 |
-| État 55, 1 072 pixels | Mont-Tonnerre 70 ; Nassau 1 002 | 248 019 ; 3 550 216 |
+| État 55, 1 072 pixels | Mont-Tonnerre ; Hesse ; Hesse-Rhénan | 248 019 ; 2 550 000 ; 1 000 216 |
 
-Les populations sources de 3 027 739, 6 144 743 et 3 798 235 habitants totalisent 12 970 717 habitants, soit exactement le total des six États après découpage.
+Les populations sources de 3 027 739, 6 144 743 et 3 798 235 habitants totalisent 12 970 717 habitants, soit exactement le total des sept États après découpage. La subdivision manuelle de l’ancien reliquat de Nassau conserve son total de 3 550 216 habitants entre Hesse et Hesse-Rhénan.
 
 ## Réseau, bâtiments et région stratégique
 
-Les 52 entrées initialement réattribuées dans `map/buildings.txt` ont reçu l’ID d’État correspondant à leur province. La correction de la frontière réattribue ensuite à l’État 51 les quatre entrées situées dans la province 3512 : une position d’usine militaire, un bunker, un nœud de ravitaillement et un emplacement de réseau de forteresses. Le fichier final conserve donc 48 réattributions par rapport à vanilla.
+Les 52 entrées initialement réattribuées dans `map/buildings.txt` ont reçu l’ID d’État correspondant à leur province. La correction de la frontière réattribue ensuite à l’État 51 les quatre entrées situées dans la province 3512. La création de Hesse-Rhénan réattribue enfin 17 positions de l’État 55 vers l’État 1085 sans modifier leurs coordonnées, leur type ou leur province résolue. Le fichier final conserve donc 65 réattributions par rapport à vanilla.
 
 Les chemins de fer et les nœuds logistiques de Cologne (587) et Sarrebruck (11531) restent définis par les fichiers vanilla et n’ont pas été réécrits.
 
@@ -63,13 +66,15 @@ Les investissements sidérurgiques allemands restent attachés au reliquat indus
 
 Le barrage de la Rur est associé à Rhin-et-Moselle (1083) et le focus allemand correspondant est contourné lorsque l’Allemagne ne contrôle pas cet État.
 
-Les stratégies de front françaises et allemandes visent les reliquats de Rhénanie et du Nassau au lieu de considérer la Sarre française comme un territoire allemand.
+Les stratégies de front françaises et allemandes visent les reliquats de Rhénanie, de Hesse et de Hesse-Rhénan au lieu de considérer la Sarre française comme un territoire allemand.
 
 Les frontières naturelles françaises revendiquent les quatre départements sans créer automatiquement un objectif de guerre contre l’Allemagne qui les a déjà cédés.
 
 La désunion de l’Allemagne exclut les quatre départements français du transfert générique vers la Prusse, mais laisse la Rhénanie allemande suivre le traitement normal.
 
-Les décisions de formation qui énumèrent explicitement les territoires allemands exigent et intègrent aussi les États 1082, 1083 et 1084.
+Les décisions de formation qui énumèrent explicitement les territoires allemands exigent et intègrent aussi les États 1082, 1083, 1084 et 1085. Le succès autrichien portant sur le contrôle de l’Allemagne exige également Hesse-Rhénan.
+
+Les deux décisions allemandes de développement occidental incluent Hesse-Rhénan dans leurs conditions, leur surbrillance et leurs effets. Les stratégies de front françaises et allemandes qui couvraient déjà la Hesse incluent aussi l’État 1085, sans changement de poids. Le partage territorial de Yalta classe Hesse-Rhénan avec l’Allemagne occidentale.
 
 Les chaînes alternatives de remilitarisation et d’Anschluss utilisent Bade (978), tandis que les objectifs de guerre allemands alternatifs conservent le reliquat allemand de Rhénanie (51).
 
@@ -108,6 +113,18 @@ L’inspection finale ciblée établit la révision `38616328b693592458dd5c0a03c
 Les arbres nationaux allemand et français ont également été inspectés et rendus après adaptation à la révision MCP `1263eaa4ed2e5bcb4976e74fd9706bc56ff54d927051c83c6aea100b077bae5f`. Leurs nombres de nœuds et leurs hashes de disposition restent identiques aux preuves préalables : `abe189340cf67a71e15d6e08eb7de37e97437430f03d7a77c4c29789f50df3b1` pour l’Allemagne et `04bd763dbc684d1f376d0b038bc2b458e87918fca6f2da94d1bf33ba3d52c553` pour la France. Les adaptations territoriales n’ont donc déplacé ni supprimé aucun focus.
 
 La chaîne événementielle allemande affectée a été inspectée puis rendue après adaptation. Le rendu final ciblé autour de `germany.60` est établi à la révision `886126ea4c9e5e03e47e0481f483e5471d68b00a83842683e2da0695065db03d`, avec le PNG `35afe90fdcdbc7501927361b1cafd30f45b9e764bf7cdce21a84fe99d2487755`. Les diagnostics globaux restant signalés par l’outil appartiennent au corpus vanilla complet ; aucun diagnostic bloquant n’est associé à la chaîne ciblée.
+
+### Subdivision manuelle de la Hesse
+
+La subdivision manuelle a été contrôlée avant correction à la révision MCP `90885880e3652673d0f34e3f3b3d7fafdc0380e19fa27f6be02961ae116dfdba`. L’inspection reconnaissait correctement les États 51, 55 et 1085 et leurs dix-huit provinces, mais signalait 17 positions encore rattachées à l’État 55 alors que leurs coordonnées se trouvaient dans les provinces de Hesse-Rhénan. Le rendu préalable avec bâtiments, ravitaillement et voies ferrées a produit le PNG `ff354e94e3bb8e5bd650e7640657af2a6215c0376d7745367a9332df432183cc`.
+
+Une réécriture atomique `hoi4.map_rewrite` par 17 opérations `upsert_building_position` a été tentée et annulée sans écriture par `REWRITE_STRUCTURE_LIMIT`. Le repli source a modifié uniquement l’ID d’État de ces 17 lignes, de 55 vers 1085, sans modifier leurs coordonnées, leur type, leur rotation ou leur province résolue.
+
+L’inspection finale établit la révision `7949da0e156fc45997a5274e70155aac5237f25f5e9c0077f8351603e065dacd`. Les 17 erreurs ciblées ont disparu ; les contrôles des définitions, de la géométrie, de l’appartenance aux États et régions, des adjacences, du ravitaillement et des voies ferrées réussissent. Les seuls diagnostics de positions restants sont les `floating_harbor` vanilla hors périmètre déjà documentés.
+
+Le rendu final conserve le même PNG `ff354e94e3bb8e5bd650e7640657af2a6215c0376d7745367a9332df432183cc`, ce qui confirme l’absence de déplacement visuel. Son catalogue JSON passe de `cedf6b80ae7f421db4eab5bb5a06306e6c90a62bbbe2df33aebc27d5cbf39780` à `3955cc623fb64baa44b24ce9fa6d83b9ae24da84730d04898e15c03a90408444`, conformément à la seule réattribution des 17 identifiants d’État.
+
+Après l’ajout de Hesse-Rhénan au partage de Yalta, l’inspection événementielle ciblée autour de `germany.119` établit la révision `2eb46e54eb5914aa7669ce27b3a1d9bf2f2bf218f6c57a00b972f295de3a1088`, sans diagnostic bloquant ciblé. Le rendu de voisinage final produit le PNG `5eaaac2534e90fb88b47776668a3a11713b7709403698c3e551ce8769144efda`.
 
 ## Limites et pistes futures
 

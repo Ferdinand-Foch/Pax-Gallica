@@ -1,10 +1,11 @@
 ﻿l_french:
  STATE_42: "Sarre"
  STATE_51: "Rhénanie"
- STATE_55: "Nassau"
+ STATE_55: "Hesse"
  STATE_1082: "Roer"
  STATE_1083: "Rhin-et-Moselle"
  STATE_1084: "Mont-Tonnerre"
+ STATE_1085: "Hesse-Rhénan"
  STRATEGICREGION_7: "Région rhénane"
  VICTORY_POINTS_587: "Cologne"
  VICTORY_POINTS_9522: "Aix-la-Chapelle"

@@ -13695,6 +13695,7 @@ GER_reich_labor_service_cat = {
 			59 = { is_fully_controlled_by = ROOT }
 			57 = { is_fully_controlled_by = ROOT }
 			55 = { is_fully_controlled_by = ROOT }
+			1085 = { is_fully_controlled_by = ROOT }
 			51 = { is_fully_controlled_by = ROOT }
 		}
 
@@ -13704,6 +13705,7 @@ GER_reich_labor_service_cat = {
 				59 = { is_controlled_by = ROOT }
 				57 = { is_controlled_by = ROOT }
 				55 = { is_controlled_by = ROOT }
+				1085 = { is_controlled_by = ROOT }
 				51 = { is_controlled_by = ROOT }
 			} 
 		}
@@ -13714,6 +13716,7 @@ GER_reich_labor_service_cat = {
 				state = 59 #Hannover
 				state = 57 #Westfalen
 				state = 55 #Hessen
+				state = 1085 #Rhenish Hesse
 				state = 51 #Rhineland
 			}
 		}
@@ -13736,6 +13739,7 @@ GER_reich_labor_service_cat = {
 						state = 59 #Hannover
 						state = 57 #Westfalen
 						state = 55 #Hessen
+						state = 1085 #Rhenish Hesse
 						state = 51 #Rhineland
 					}
 				}
@@ -14258,6 +14262,7 @@ GER_rebuild_the_nation_cat = {
 			59 = { is_fully_controlled_by = ROOT }
 			57 = { is_fully_controlled_by = ROOT }
 			55 = { is_fully_controlled_by = ROOT }
+			1085 = { is_fully_controlled_by = ROOT }
 			51 = { is_fully_controlled_by = ROOT }
 		}
 
@@ -14267,6 +14272,7 @@ GER_rebuild_the_nation_cat = {
 				59 = { is_controlled_by = ROOT }
 				57 = { is_controlled_by = ROOT }
 				55 = { is_controlled_by = ROOT }
+				1085 = { is_controlled_by = ROOT }
 				51 = { is_controlled_by = ROOT }
 			} 
 		}
@@ -14277,6 +14283,7 @@ GER_rebuild_the_nation_cat = {
 				state = 59 #Hannover
 				state = 57 #Westfalen
 				state = 55 #Hessen
+				state = 1085 #Rhenish Hesse
 				state = 51 #Rhineland
 			}
 		}
@@ -14299,6 +14306,7 @@ GER_rebuild_the_nation_cat = {
 						state = 59 #Hannover
 						state = 57 #Westfalen
 						state = 55 #Hessen
+						state = 1085 #Rhenish Hesse
 						state = 51 #Rhineland
 					}
 				}
@@ -22721,4 +22729,3 @@ GER_the_fading_eagle_category = {
 	}
 
 }
-

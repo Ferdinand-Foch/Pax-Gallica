@@ -2728,6 +2728,7 @@ form_european_union_category = {
 				state = 1082
 				state = 1083
 				state = 1084
+				state = 1085
 				state = 56
 				state = 57
 				state = 55
@@ -2926,6 +2927,7 @@ form_european_union_category = {
 				controls_state = 1082
 				controls_state = 1083
 				controls_state = 1084
+				controls_state = 1085
 				controls_state = 56
 				controls_state = 57
 				controls_state = 55
@@ -3042,6 +3044,7 @@ form_european_union_category = {
 				1082 = { add_core_of = ROOT } # Roer
 				1083 = { add_core_of = ROOT } # Rhine-and-Moselle
 				1084 = { add_core_of = ROOT } # Mont-Tonnerre
+				1085 = { add_core_of = ROOT } # Rhenish Hesse
 				56 = { add_core_of = ROOT } # Weser-ems
 				57 = { add_core_of = ROOT } # Westfalen
 				55 = { add_core_of = ROOT } # Hessen
@@ -6697,6 +6700,7 @@ form_roman_empire_category = {
 			controls_state = 1082 #Roer
 			controls_state = 1083 #Rhine-and-Moselle
 			controls_state = 1084 #Mont-Tonnerre
+			controls_state = 1085 #Rhenish Hesse
 			controls_state = 55 #Hessen
 			controls_state = 54 #Franken
 			controls_state = 50 #Wurtemberg
@@ -6735,6 +6739,7 @@ form_roman_empire_category = {
 			1082 = { add_core_of = ROOT }
 			1083 = { add_core_of = ROOT }
 			1084 = { add_core_of = ROOT }
+			1085 = { add_core_of = ROOT }
 
 			# Hessen
 			55 = { add_core_of = ROOT }
@@ -9232,6 +9237,7 @@ form_hre_category = {
 				state = 1082
 				state = 1083
 				state = 1084
+				state = 1085
 				state = 56
 				state = 57
 				state = 55
@@ -9305,6 +9311,7 @@ form_hre_category = {
 				controls_state = 1082
 				controls_state = 1083
 				controls_state = 1084
+				controls_state = 1085
 				controls_state = 56
 				controls_state = 57
 				controls_state = 55
@@ -9475,6 +9482,7 @@ form_hre_category = {
 				1082 = { add_core_of = ROOT } # Roer
 				1083 = { add_core_of = ROOT } # Rhine-and-Moselle
 				1084 = { add_core_of = ROOT } # Mont-Tonnerre
+				1085 = { add_core_of = ROOT } # Rhenish Hesse
 				56 = { add_core_of = ROOT } # Weser-ems
 				57 = { add_core_of = ROOT } # Westfalen
 				55 = { add_core_of = ROOT } # Hessen
@@ -9888,6 +9896,7 @@ form_greater_german_state_category = {
 				state = 1082
 				state = 1083
 				state = 1084
+				state = 1085
 				state = 56
 				state = 57
 				state = 55
@@ -10021,6 +10030,7 @@ form_greater_german_state_category = {
 				controls_state = 1082
 				controls_state = 1083
 				controls_state = 1084
+				controls_state = 1085
 				controls_state = 56
 				controls_state = 57
 				controls_state = 55
@@ -10151,6 +10161,7 @@ form_greater_german_state_category = {
 				1082 = { add_core_of = ROOT } # Roer
 				1083 = { add_core_of = ROOT } # Rhine-and-Moselle
 				1084 = { add_core_of = ROOT } # Mont-Tonnerre
+				1085 = { add_core_of = ROOT } # Rhenish Hesse
 				56 = { add_core_of = ROOT } # Weser-ems
 				57 = { add_core_of = ROOT } # Westfalen
 				55 = { add_core_of = ROOT } # Hessen
@@ -16443,6 +16454,10 @@ germany_formable_category = {
 				is_controlled_by = ROOT
 			}
 
+			1085 = { # Rhenish Hesse
+				is_controlled_by = ROOT
+			}
+
 			978 = { # Baden
 				is_controlled_by = ROOT
 			}
@@ -16485,6 +16500,7 @@ germany_formable_category = {
 				state = 1082
 				state = 1083
 				state = 1084
+				state = 1085
 				state = 978
 				state = 50
 				state = 54
@@ -16683,6 +16699,14 @@ germany_formable_category = {
 						NOT = { 1084 = { is_core_of = ROOT } }
 					}
 					1084 = { add_core_of = ROOT }
+				}
+
+				# Rhenish Hesse
+				IF = {
+					limit = {
+						NOT = { 1085 = { is_core_of = ROOT } }
+					}
+					1085 = { add_core_of = ROOT }
 				}
 
 				# Baden

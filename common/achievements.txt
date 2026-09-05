@@ -5847,6 +5847,7 @@ antischluss = {
 				controls_state = 1082 #Roer
 				controls_state = 1083 #Rhine-and-Moselle
 				controls_state = 1084 #Mont-Tonnerre
+				controls_state = 1085 #Rhenish Hesse
 				controls_state = 55 #Hessen
 				controls_state = 51 #Rhineland
 				controls_state = 57 #Westfalen

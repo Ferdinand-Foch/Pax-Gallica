@@ -1,7 +1,8 @@
+# German Rhenish Hesse successor state created from the former western provinces of state 55.
 state = {
-	id = 55
-	name = "STATE_55"
-	manpower = 2550000
+	id = 1085 # Hesse Rhénan
+	name = "STATE_1085"
+	manpower = 1000216
 
 	resources = {
 		coal = 8
@@ -18,13 +19,21 @@ state = {
 
 		buildings = {
 			infrastructure = 4
-			arms_factory = 1
+			industrial_complex = 2
 
+			9486 = {
+				dam = 1
+			}
 		}
 
 		victory_points = {
-			564 3 # Kassel
+			6488 20 # Frankfurt
 		}
+		victory_points = {
+			6444 2 # Wiesbaden
+		}
+
+		set_demilitarized_zone = yes
 
 		1939.1.1 = {
 			buildings = {
@@ -36,7 +45,7 @@ state = {
 	}
 
 	provinces = {
-		564 3397 3524 6549 9524 9547 11445 11533
+		589 3574 6444 6488 9486
 	}
 
 	local_supplies = 15.0

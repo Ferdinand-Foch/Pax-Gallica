@@ -10378,6 +10378,7 @@ country_event = {
 			53 = { set_state_flag = yalta_wgr }
 			54 = { set_state_flag = yalta_wgr }
 			55 = { set_state_flag = yalta_wgr }
+			1085 = { set_state_flag = yalta_wgr }
 			56 = { set_state_flag = yalta_wgr }
 			57 = { set_state_flag = yalta_wgr }
 			58 = { set_state_flag = yalta_wgr }

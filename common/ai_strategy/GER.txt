@@ -3075,6 +3075,9 @@ GER_around_the_maginot = {
 		55 = {
 			is_controlled_by = GER
 		}
+		1085 = {
+			is_controlled_by = GER
+		}
 		978 = {
 			is_controlled_by = GER
 		}
