@@ -50,7 +50,9 @@ Les populations sources de 3 027 739, 6 144 743 et 3 798 235 habitants totalisen
 
 ## Réseau, bâtiments et région stratégique
 
-Les 52 entrées initialement réattribuées dans `map/buildings.txt` ont reçu l’ID d’État correspondant à leur province. La correction de la frontière réattribue ensuite à l’État 51 les quatre entrées situées dans la province 3512. La création de Hesse-Rhénan réattribue enfin 17 positions de l’État 55 vers l’État 1085 sans modifier leurs coordonnées, leur type ou leur province résolue. Le fichier final conserve donc 65 réattributions par rapport à vanilla.
+Les entrées réattribuées dans `map/buildings.txt` utilisent l’ID de l’État qui contient réellement leur province. Les quatre positions de la province 3512 relèvent de l’État 51. Les cinq emplacements de projet spécial des provinces 9486, 6488, 589, 3574 et 6444, ainsi que le réseau de forteresses de la province 589, relèvent de Hesse-Rhénan (1085) sans déplacement de leurs coordonnées.
+
+Chaque État issu du découpage conserve ou reçoit un emplacement de base aérienne lorsqu’il en a besoin. Les États 42, 51, 55 et 1082 disposent chacun d’un emplacement `rocket_site_spawn`, partagé par les sites de fusées et les emplacements de canon conformément à la définition vanilla 1.19 ; les emplacements géographiques déjà transférés aux États 1083, 1084 et 1085 sont conservés.
 
 Les chemins de fer et les nœuds logistiques de Cologne (587) et Sarrebruck (11531) restent définis par les fichiers vanilla et n’ont pas été réécrits.
 
