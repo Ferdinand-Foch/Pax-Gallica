@@ -1,0 +1,2 @@
+# Pax Franca starting capital for independent Kurdistan.
+capital = 350
