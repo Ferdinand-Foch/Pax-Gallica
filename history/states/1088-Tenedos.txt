@@ -1,0 +1,26 @@
+state={
+	id=1088
+	name="STATE_1088"
+	manpower=93373
+	resources={
+		chromium=3
+	}
+
+	state_category=town
+
+	history={
+		owner=GRE
+		controller=GRE
+		buildings={
+			infrastructure=2
+		}
+		add_core_of=TUR
+		add_core_of=GRE
+	}
+
+	provinces={
+		6864
+	}
+
+	local_supplies=0.0
+}

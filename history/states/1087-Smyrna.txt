@@ -1,0 +1,37 @@
+state={
+	id=1087
+	name="STATE_1087"
+	manpower=999205
+	resources={
+		chromium=36
+	}
+
+	state_category=large_town
+
+	history={
+		owner=GRE
+		controller=GRE
+		victory_points={
+			4112 15
+		}
+		victory_points={
+			928 5
+		}
+		buildings={
+			infrastructure=2
+			industrial_complex=1
+			air_base=2
+			4112={
+				naval_base=5
+			}
+		}
+		add_core_of=TUR
+		add_core_of=GRE
+	}
+
+	provinces={
+		928 4112 6992 7130 9921 10038 11848
+	}
+
+	local_supplies=5.7
+}
