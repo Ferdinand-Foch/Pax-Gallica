@@ -1,0 +1,39 @@
+# Grants the 1936 French Sèvres influence zone its resource rights at scenario startup.
+
+on_actions = {
+	on_startup = {
+		effect = {
+			if = {
+				limit = {
+					date < 1936.1.2
+				}
+
+				TUR = {
+					give_resource_rights = {
+						receiver = FRA
+						state = 344
+					}
+					give_resource_rights = {
+						receiver = FRA
+						state = 348
+					}
+					give_resource_rights = {
+						receiver = FRA
+						state = 349
+					}
+				}
+
+				KUR = {
+					give_resource_rights = {
+						receiver = FRA
+						state = 350
+					}
+					give_resource_rights = {
+						receiver = FRA
+						state = 353
+					}
+				}
+			}
+		}
+	}
+}
