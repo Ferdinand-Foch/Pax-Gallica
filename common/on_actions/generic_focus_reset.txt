@@ -91,6 +91,9 @@ on_actions = {
 				CAN = {
 					load_focus_tree = { tree = generic_focus }
 				}
+				CHL = {
+					load_focus_tree = { tree = generic_focus }
+				}
 			}
 		}
 	}

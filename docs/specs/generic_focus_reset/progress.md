@@ -535,3 +535,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `CAN_send_in_the_zombies` dans `common/achievements.txt:679`; `CAN_swastika_clubs` dans `common/characters/CAN.txt:687`; `CAN_strengthen_the_commonwealth_ties` dans `common/characters/CAN.txt:731`.
 - Fichiers de ce commit : `common/decisions/ENG.txt`, `events/MTG_Britain.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Chili — CHL
+
+- Arbres antérieurs effectivement chargés : `chilean_focus_tree` (205 focus, `common/national_focus/chile.txt`).
+- Sélection DLC avant attribution : `chilean_focus_tree` : Trial of Allegiance, score 10.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/CHL - Chile.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions : aucun appel non générique visant potentiellement ce tag dans les scripts inspectés ; les appels visant explicitement un autre tag restent intacts.
+- Dépendances représentatives conservées : `CHL_expand_the_forestry` dans `common/decisions/CHL.txt:25`; `CHL_international_loans` dans `common/decisions/CHL.txt:158`; `CHL_found_national_steelworks` dans `common/decisions/CHL.txt:364`.
+- Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
