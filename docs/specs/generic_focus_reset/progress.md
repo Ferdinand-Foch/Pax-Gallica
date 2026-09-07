@@ -282,3 +282,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `uk_burma_focus` dans `common/decisions/CHI_decisions.txt:3818`; `ENG_no_further_appeasement` dans `common/decisions/ENG.txt:101`; `uk_scandinavian_focus` dans `common/decisions/ENG.txt:102`.
 - Fichiers de ce commit : `common/on_actions/04_mtg_on_actions.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Suisse — SWI
+
+- Arbres antérieurs effectivement chargés : `swiss_focus` (160 focus, `common/national_focus/switzerland.txt`).
+- Sélection DLC avant attribution : `swiss_focus` : By Blood Alone, score 10.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/SWI - Switzerland.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions : aucun appel non générique visant potentiellement ce tag dans les scripts inspectés ; les appels visant explicitement un autre tag restent intacts.
+- Dépendances représentatives conservées : `SWI_swiss_guiding_principles` dans `common/decisions/SWI.txt:131`; `SWI_case_north` dans `common/decisions/SWI.txt:286`; `SWI_case_west` dans `common/decisions/SWI.txt:327`.
+- Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
