@@ -4,6 +4,9 @@ on_actions = {
 		effect = {
 			if = {
 				limit = { date < 1936.1.2 }
+				FRA = {
+					load_focus_tree = { tree = generic_focus }
+				}
 				GER = {
 					load_focus_tree = { tree = generic_focus }
 				}
