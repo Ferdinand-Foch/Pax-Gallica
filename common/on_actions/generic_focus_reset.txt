@@ -97,6 +97,9 @@ on_actions = {
 				USA = {
 					load_focus_tree = { tree = generic_focus }
 				}
+				MEX = {
+					load_focus_tree = { tree = generic_focus }
+				}
 			}
 		}
 	}

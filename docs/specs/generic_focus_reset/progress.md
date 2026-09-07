@@ -557,3 +557,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `USA_empower_the_huac` dans `common/decisions/MTG_congress.txt:111`; `USA_ally_with_the_silver_shirts` dans `common/decisions/MTG_congress.txt:132`; `USA_agricultural_adjustment_act` dans `common/decisions/MTG_congress.txt:157`.
 - Fichiers de ce commit : `common/on_actions/04_mtg_on_actions.txt`, `events/MTG_USA.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Mexique — MEX
+
+- Arbres antérieurs effectivement chargés : `mexico_focus_tree` (114 focus, `common/national_focus/mexico.txt`).
+- Sélection DLC avant attribution : `mexico_focus_tree` : Man the Guns, score 10.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/MEX - Mexico.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions neutralisées uniquement pour ce tag : `common/on_actions/04_mtg_on_actions.txt` (1 appel).
+- Dépendances représentatives conservées : `MEX_focus_support_general_cedillo` dans `common/decisions/MEX.txt:63`; `MEX_focus_arrest_general_cedillo` dans `common/decisions/MEX.txt:64`; `MEX_focus_triumph_over_the_cristeros` dans `common/decisions/MEX.txt:163`.
+- Fichiers de ce commit : `common/on_actions/04_mtg_on_actions.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
