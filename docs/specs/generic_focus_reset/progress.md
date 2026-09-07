@@ -249,3 +249,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `BEL_unity_makes_strength` dans `common/decisions/BEL.txt:323`; `BEL_gold_reserves` dans `common/decisions/categories/BEL_decision_categories.txt:11`; `BEL_government_in_exile` dans `common/decisions/categories/BEL_decision_categories.txt:43`.
 - Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### France — FRA
+
+- Arbres antérieurs effectivement chargés : `french_focus` (185 focus, `common/national_focus/france.txt`); `free_french_focus` (23 focus, `common/national_focus/free_france.txt`); `vichy_french_focus` (24 focus, `common/national_focus/vichy_france.txt`).
+- Sélection DLC avant attribution : `french_focus` : sans condition DLC, score 10 ; `free_french_focus` : sans condition DLC, score 1 ; `vichy_french_focus` : sans condition DLC, score 1.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; conversion française existante revérifiée sans nouvelle modification de gameplay.
+- Histoire : `history/countries/FRA - France.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions : gardes FRA déjà vérifiées dans la section France précédente.
+- Dépendances représentatives conservées : `FRA_form_the_popular_front` dans `common/decisions/FRA.txt:13`; `FRA_destroy_the_counter_revolution` dans `common/decisions/FRA.txt:77`; `FRA_reorganize_the_aviation_industry` dans `common/decisions/FRA.txt:1336`.
+- Fichiers de ce commit : `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
