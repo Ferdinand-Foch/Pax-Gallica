@@ -634,3 +634,15 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `AFG_75_year_oil_concessions` dans `common/decisions/AFG.txt:26`; `AFG_expand_kabul_university` dans `common/decisions/AFG.txt:151`; `AFG_state_industries` dans `common/decisions/AFG.txt:316`.
 - Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Chine nationaliste — CHI
+
+- Arbres antérieurs effectivement chargés : `china_nationalist_focus` (50 focus, `common/national_focus/china_nationalist.txt`); `china_nationalist_sea_focus` (275 focus, `common/national_focus/china_nationalist_sea.txt`).
+- Sélection DLC avant attribution : `china_nationalist_focus` : Waking the Tiger, score 10 ; `china_nationalist_sea_focus` : No Compromise, No Surrender, score 1000.
+- Variante attribuable par script également protégée : `china_nationalist_warlord_focus` ; son accès ne remplace pas la sélection initiale des variantes ci-dessus.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/CHI - China.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions neutralisées uniquement pour ce tag : `common/national_focus/china_warlord.txt` (2 appels); `common/national_focus/china_warlord_sea.txt` (3 appels).
+- Dépendances représentatives conservées : `CHI_army_reform` dans `common/decisions/CHI_decisions.txt:271`; `CHI_60_divisions_plan` dans `common/decisions/CHI_decisions.txt:438`; `CHI_forced_loans` dans `common/decisions/CHI_decisions.txt:491`.
+- Fichiers de ce commit : `common/national_focus/china_warlord.txt`, `common/national_focus/china_warlord_sea.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.

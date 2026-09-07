@@ -118,6 +118,9 @@ on_actions = {
 				AFG = {
 					load_focus_tree = { tree = generic_focus }
 				}
+				CHI = {
+					load_focus_tree = { tree = generic_focus }
+				}
 			}
 		}
 	}
