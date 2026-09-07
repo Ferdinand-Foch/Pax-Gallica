@@ -755,7 +755,10 @@ on_actions = {
 					NOT = { has_focus_tree = lithuania_tree }
 					has_dlc = "No Step Back"
 				}
-				load_focus_tree = { tree = lithuania_tree keep_completed = yes }
+				if = {
+					limit = { NOT = { tag = LIT } }
+					load_focus_tree = { tree = lithuania_tree keep_completed = yes }
+				}
 				if = { #Give Lithuania their focus tree back if the Iron Wolf win the civil war.
 					limit = { has_government = fascism }
 					if = {

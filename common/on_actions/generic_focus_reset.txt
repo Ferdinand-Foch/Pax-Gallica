@@ -55,6 +55,9 @@ on_actions = {
 				LAT = {
 					load_focus_tree = { tree = generic_focus }
 				}
+				LIT = {
+					load_focus_tree = { tree = generic_focus }
+				}
 			}
 		}
 	}
