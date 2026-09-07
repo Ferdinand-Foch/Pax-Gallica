@@ -92,7 +92,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 14
 		}
-		location = 11811
+		location = 11747
 		division_template = "Süvari Tümeni"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.5
@@ -117,7 +117,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 17
 		}
-		location = 11811
+		location = 6871
 		division_template = "Piyade Tümeni"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.5
@@ -129,7 +129,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 20
 		}
-		location = 11811
+		location = 3951
 		division_template = "Piyade Tümeni"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.5
@@ -155,7 +155,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 2
 		}
-		location = 7454
+		location = 11747
 		division_template = "Zirhli Tümeni"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.8
@@ -181,7 +181,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 23
 		}
-		location = 7454
+		location = 9777
 		division_template = "Piyade Tümeni"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.5
@@ -206,7 +206,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 8
 		}
-		location = 9893
+		location = 9912
 		division_template = "Piyade Tümeni"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.5
@@ -218,7 +218,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 22
 		}
-		location = 9932
+		location = 6919
 		division_template = "Piyade Tümeni"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.5
@@ -230,7 +230,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 1
 		}
-		location = 12476
+		location = 3965
 		division_template = "Dag Tugayi"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.5
@@ -244,7 +244,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 39
 		}
-		location = 947
+		location = 3983
 		division_template = "Dag Tugayi"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.5
@@ -269,7 +269,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 16
 		}
-		location = 3927
+		location = 11898
 		division_template = "Piyade Tümeni"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.5
@@ -295,7 +295,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 4
 		}
-		location = 9833
+		location = 856
 		division_template = "Piyade Tümeni"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.5
@@ -307,7 +307,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 18
 		}
-		location = 9833
+		location = 9915
 		division_template = "Dag Tugayi"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.5
@@ -320,7 +320,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 5
 		}
-		location = 947
+		location = 981
 		division_template = "Piyade Tümeni"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.5
@@ -332,7 +332,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 25
 		}
-		location = 947
+		location = 9878
 		division_template = "Piyade Tümeni"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.5
@@ -344,7 +344,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 82
 		}
-		location = 12476
+		location = 7620
 		division_template = "Bogazi Tugay"
 		force_equipment_variants = { infantry_equipment_0 = { owner = "TUR" } }
 		start_experience_factor = 0.3
@@ -357,7 +357,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 83
 		}
-		location = 6935
+		location = 975
 		division_template = "Bogazi Tugay"
 		force_equipment_variants = { infantry_equipment_0 = { owner = "TUR" } }
 		start_experience_factor = 0.3
@@ -370,7 +370,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 84
 		}
-		location = 4512
+		location = 9893
 		division_template = "Bogazi Tugay"
 		force_equipment_variants = { infantry_equipment_0 = { owner = "TUR" } }
 		start_experience_factor = 0.3
@@ -383,7 +383,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 85
 		}
-		location = 11853
+		location = 6965
 		division_template = "Bogazi Tugay"
 		force_equipment_variants = { infantry_equipment_0 = { owner = "TUR" } }
 		start_experience_factor = 0.3
@@ -399,7 +399,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 2
 		}
-		location = 4512
+		location = 7620
 		division_template = "Piyade Tümeni"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.5
@@ -411,7 +411,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 10
 		}
-		location = 4512
+		location = 3889
 		division_template = "Piyade Tümeni"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.5
@@ -436,7 +436,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 15
 		}
-		location = 11881
+		location = 3935
 		division_template = "Piyade Tümeni"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.5
@@ -449,7 +449,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 3
 		}
-		location = 10403
+		location = 9761
 		division_template = "Piyade Tümeni"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.5
@@ -461,7 +461,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 9
 		}
-		location = 10472
+		location = 3903
 		division_template = "Piyade Tümeni"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.5
@@ -473,7 +473,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 1
 		}
-		location = 10472
+		location = 6977
 		division_template = "Süvari Tümeni"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.5
