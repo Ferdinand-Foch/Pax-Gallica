@@ -612,3 +612,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `COG_uniao_dos_povos_do_norte_de_angola` dans `common/decisions/COG.txt:465`; `COG_the_ma_loango_focus` dans `common/decisions/COG.txt:534`; `COG_the_mwami_of_burundi_focus` dans `common/decisions/COG.txt:608`.
 - Fichiers de ce commit : `common/decisions/BEL.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Éthiopie — ETH
+
+- Arbres antérieurs effectivement chargés : `ethiopia_tree` (204 focus, `common/national_focus/ethiopia.txt`).
+- Sélection DLC avant attribution : `ethiopia_tree` : By Blood Alone, score 10.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/ETH - Ethiopia.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions : aucun appel non générique visant potentiellement ce tag dans les scripts inspectés ; les appels visant explicitement un autre tag restent intacts.
+- Dépendances représentatives conservées : `ETH_reclaiming_ethiopia` dans `common/decisions/ETH.txt:118`; `ETH_the_ferengi` dans `common/decisions/ETH.txt:375`; `ETH_secure_arms` dans `common/decisions/ETH.txt:501`.
+- Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.

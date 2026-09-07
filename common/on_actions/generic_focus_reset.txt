@@ -112,6 +112,9 @@ on_actions = {
 				COG = {
 					load_focus_tree = { tree = generic_focus }
 				}
+				ETH = {
+					load_focus_tree = { tree = generic_focus }
+				}
 			}
 		}
 	}
