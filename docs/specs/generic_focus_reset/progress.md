@@ -568,3 +568,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `MEX_focus_support_general_cedillo` dans `common/decisions/MEX.txt:63`; `MEX_focus_arrest_general_cedillo` dans `common/decisions/MEX.txt:64`; `MEX_focus_triumph_over_the_cristeros` dans `common/decisions/MEX.txt:163`.
 - Fichiers de ce commit : `common/on_actions/04_mtg_on_actions.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Paraguay — PAR
+
+- Arbres antérieurs effectivement chargés : `paraguay_focus` (54 focus, `common/national_focus/paraguay.txt`).
+- Sélection DLC avant attribution : `paraguay_focus` : Trial of Allegiance, score 10.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/PAR - Paraguay.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions : aucun appel non générique visant potentiellement ce tag dans les scripts inspectés ; les appels visant explicitement un autre tag restent intacts.
+- Dépendances représentatives conservées : `PAR_nazify_the_army` dans `common/decisions/TOA_shared_decisions.txt:20`; `PAR_put_estigarribia_on_a_pedestal` dans `common/decisions/TOA_shared_decisions.txt:53`; `PAR_get_rid_of_colonel_peredes` dans `common/characters/PAR.txt:202`.
+- Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
