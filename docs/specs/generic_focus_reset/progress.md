@@ -713,3 +713,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `JAP_revisit_the_thirteen_demands` dans `common/decisions/CHI_decisions.txt:4582`; `JAP_new_order_in_east_asia` dans `common/decisions/CHI_decisions.txt:4583`; `JAP_subdue_the_kwantung_army` dans `common/decisions/CHI_decisions.txt:9472`.
 - Fichiers de ce commit : `common/on_actions/03_wtt_on_actions.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Mandchoukouo — MAN
+
+- Arbres antérieurs effectivement chargés : `manchukuo_focus` (46 focus, `common/national_focus/manchukuo.txt`); `manchukuo_focus_tsr` (87 focus, `common/national_focus/manchukuo_TSR.txt`).
+- Sélection DLC avant attribution : `manchukuo_focus` : Waking the Tiger, score 10 ; `manchukuo_focus_tsr` : No Compromise, No Surrender, score 15.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/MAN - Manchukou.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions : aucun appel non générique visant potentiellement ce tag dans les scripts inspectés ; les appels visant explicitement un autre tag restent intacts.
+- Dépendances représentatives conservées : `MAN_pacify_the_countryside` dans `common/decisions/MAN_decisions.txt:19`; `MAN_tsr_pacify_the_countryside` dans `common/decisions/MAN_decisions.txt:20`; `MAN_bolster_nationalism` dans `common/decisions/MAN_decisions.txt:598`.
+- Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.

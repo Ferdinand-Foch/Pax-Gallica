@@ -139,6 +139,9 @@ on_actions = {
 				JAP = {
 					load_focus_tree = { tree = generic_focus }
 				}
+				MAN = {
+					load_focus_tree = { tree = generic_focus }
+				}
 			}
 		}
 	}
