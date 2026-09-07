@@ -414,3 +414,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `LIT_look_north` dans `common/decisions/BALTIC.txt:63`; `LIT_secure_a_loyal_cabinet` dans `common/decisions/LIT.txt:59`; `LIT_a_martial_prime_minister` dans `common/decisions/LIT.txt:61`.
 - Fichiers de ce commit : `common/on_actions/07_nsb_on_actions.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Pologne — POL
+
+- Arbres antérieurs effectivement chargés : `polish_focus` (301 focus, `common/national_focus/poland.txt`).
+- Sélection DLC avant attribution : `polish_focus` : Poland: United and Ready ou No Step Back, score 10.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/POL - Poland.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions neutralisées uniquement pour ce tag : `common/national_focus/poland.txt` (4 appels); `common/on_actions/07_nsb_on_actions.txt` (4 appels); `events/NSB_Poland.txt` (1 appel).
+- Dépendances représentatives conservées : `POL_the_left_chairman` dans `common/decisions/POL.txt:301`; `POL_second_man_of_the_state` dans `common/decisions/POL.txt:331`; `POL_agrarian_reform` dans `common/decisions/POL.txt:372`.
+- Fichiers de ce commit : `common/national_focus/poland.txt`, `common/on_actions/07_nsb_on_actions.txt`, `events/NSB_Poland.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.

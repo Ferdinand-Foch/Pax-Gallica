@@ -558,7 +558,10 @@ on_actions = {
 					limit = { 
 						has_focus_tree = generic_focus
 					}
-					load_focus_tree = { tree = polish_focus keep_completed = no }
+					if = {
+						limit = { NOT = { tag = POL } }
+						load_focus_tree = { tree = polish_focus keep_completed = no }
+					}
 					mark_focus_tree_layout_dirty = yes
 					unlock_national_focus = POL_restore_the_sejm
 					unlock_national_focus = POL_internationalism
@@ -585,7 +588,10 @@ on_actions = {
 						original_tag = POL
 					}
 				}
-				load_focus_tree = { tree = polish_focus keep_completed = no }
+				if = {
+					limit = { NOT = { tag = POL } }
+					load_focus_tree = { tree = polish_focus keep_completed = no }
+				}
 				mark_focus_tree_layout_dirty = yes
 				complete_national_focus = POL_complete_april_constitution
 				POL_sanation_left_opposition_remove = yes
@@ -607,7 +613,10 @@ on_actions = {
 						original_tag = POL
 					}
 				}
-				load_focus_tree = { tree = polish_focus keep_completed = no }
+				if = {
+					limit = { NOT = { tag = POL } }
+					load_focus_tree = { tree = polish_focus keep_completed = no }
+				}
 				mark_focus_tree_layout_dirty = yes
 				complete_national_focus = POL_complete_april_constitution
 				POL_sanation_left_opposition_remove = yes
@@ -633,7 +642,10 @@ on_actions = {
 						original_tag = POL
 					}
 				}
-				load_focus_tree = { tree = polish_focus keep_completed = no }
+				if = {
+					limit = { NOT = { tag = POL } }
+					load_focus_tree = { tree = polish_focus keep_completed = no }
+				}
 				mark_focus_tree_layout_dirty = yes
 				complete_national_focus = POL_complete_april_constitution
 				POL_sanation_left_opposition_remove = yes
