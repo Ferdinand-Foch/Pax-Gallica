@@ -154,6 +154,9 @@ on_actions = {
 				AST = {
 					load_focus_tree = { tree = generic_focus }
 				}
+				NZL = {
+					load_focus_tree = { tree = generic_focus }
+				}
 			}
 		}
 	}

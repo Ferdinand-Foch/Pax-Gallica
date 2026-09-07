@@ -8262,7 +8262,10 @@ country_event = {
 					FROM = { original_tag = NZL }
 				}
 				FROM = {
-					load_focus_tree = { tree = new_zealander_focus keep_completed = yes }
+					if = {
+						limit = { NOT = { tag = NZL } }
+						load_focus_tree = { tree = new_zealander_focus keep_completed = yes }
+					}
 					NZL_enforce_loyalty = yes
 				}
 			}

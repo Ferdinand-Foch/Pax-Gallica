@@ -768,3 +768,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `AST_take_it_to_the_streets` dans `common/decisions/AST.txt:21`; `AST_all_for_one_one_for_all` dans `common/decisions/AST.txt:23`; `AST_against_war_and_fascism` dans `common/decisions/AST.txt:120`.
 - Fichiers de ce commit : `common/decisions/ENG.txt`, `events/MTG_Britain.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Nouvelle-Zélande — NZL
+
+- Arbres antérieurs effectivement chargés : `new_zealander_focus` (73 focus, `common/national_focus/new_zealand.txt`).
+- Sélection DLC avant attribution : `new_zealander_focus` : Together for Victory, score 10.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/NZL - New Zealand.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions neutralisées uniquement pour ce tag : `common/decisions/ENG.txt` (1 appel); `events/MTG_Britain.txt` (1 appel).
+- Dépendances représentatives conservées : `NZL_electrification` dans `common/decisions/NZL.txt:14`; `NZL_maori_volunteers` dans `common/decisions/formable_nation_decisions.txt:11071`; `NZL_ministry_of_public_works` dans `common/characters/NZL.txt:627`.
+- Fichiers de ce commit : `common/decisions/ENG.txt`, `events/MTG_Britain.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.

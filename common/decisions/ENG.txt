@@ -4261,7 +4261,10 @@ ENG_appeal_to_imperial_loyalists = {
 						limit = {
 							has_dlc = "Together for Victory"
 						}
-						load_focus_tree = { tree = new_zealander_focus keep_completed = yes }
+						if = {
+							limit = { NOT = { tag = NZL } }
+							load_focus_tree = { tree = new_zealander_focus keep_completed = yes }
+						}
 						NZL_enforce_loyalty = yes
 					}
 				}
