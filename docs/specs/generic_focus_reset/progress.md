@@ -691,3 +691,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `IRQ_arab_free_legion` dans `common/decisions/IRQ.txt:55`; `IRQ_greater_iraq` dans `common/decisions/IRQ.txt:138`; `IRQ_proclaim_united_arab_republic` dans `common/decisions/IRQ.txt:203`.
 - Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Iran — PER
+
+- Arbres antérieurs effectivement chargés : `persian_focus_tree` (272 focus, `common/national_focus/persia.txt`).
+- Sélection DLC avant attribution : `persian_focus_tree` : Graveyard of Empires, score 10.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/PER - Persia.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions : aucun appel non générique visant potentiellement ce tag dans les scripts inspectés ; les appels visant explicitement un autre tag restent intacts.
+- Dépendances représentatives conservées : `PER_profit_from_war` dans `common/decisions/PER.txt:60`; `PER_reintegrate_anatolia` dans `common/decisions/PER.txt:121`; `PER_absorb_byzantines` dans `common/decisions/PER.txt:187`.
+- Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.

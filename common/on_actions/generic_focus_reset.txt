@@ -133,6 +133,9 @@ on_actions = {
 				IRQ = {
 					load_focus_tree = { tree = generic_focus }
 				}
+				PER = {
+					load_focus_tree = { tree = generic_focus }
+				}
 			}
 		}
 	}
