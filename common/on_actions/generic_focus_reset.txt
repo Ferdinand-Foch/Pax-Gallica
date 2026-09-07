@@ -67,6 +67,9 @@ on_actions = {
 				SOV = {
 					load_focus_tree = { tree = generic_focus }
 				}
+				DEN = {
+					load_focus_tree = { tree = generic_focus }
+				}
 			}
 		}
 	}

@@ -447,3 +447,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `SOV_demand_balkan_submission` dans `common/decisions/GRE.txt:1496`; `SOV_expand_the_agitprop` dans `common/decisions/SOV.txt:1957`; `SOV_collectivist_propaganda` dans `common/decisions/SOV.txt:2713`.
 - Fichiers de ce commit : `common/on_actions/03_wtt_on_actions.txt`, `common/scripted_effects/SOV_scripted_effects.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Danemark — DEN
+
+- Arbres antérieurs effectivement chargés : `danish_focus` (175 focus, `common/national_focus/denmark.txt`).
+- Sélection DLC avant attribution : `danish_focus` : Arms Against Tyranny, score 10.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/DEN - Denmark.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions : aucun appel non générique visant potentiellement ce tag dans les scripts inspectés ; les appels visant explicitement un autre tag restent intacts.
+- Dépendances représentatives conservées : `DEN_overthrow_the_government` dans `common/decisions/DEN.txt:467`; `DEN_social_stability` dans `common/decisions/DEN.txt:641`; `DEN_declare_neutrality` dans `common/decisions/DEN.txt:743`.
+- Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
