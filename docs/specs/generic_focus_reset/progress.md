@@ -680,3 +680,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `INS_east_indies_exile_government` dans `common/decisions/INS.txt:313`; `INS_agrarian_reform` dans `common/decisions/INS.txt:452`; `INS_reallocate_rubber_industry_funding` dans `common/decisions/INS.txt:510`.
 - Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Irak — IRQ
+
+- Arbres antérieurs effectivement chargés : `iraq_focus` (136 focus, `common/national_focus/iraq.txt`).
+- Sélection DLC avant attribution : `iraq_focus` : Graveyard of Empires, score 50.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/IRQ - Iraq.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions : aucun appel non générique visant potentiellement ce tag dans les scripts inspectés ; les appels visant explicitement un autre tag restent intacts.
+- Dépendances représentatives conservées : `IRQ_arab_free_legion` dans `common/decisions/IRQ.txt:55`; `IRQ_greater_iraq` dans `common/decisions/IRQ.txt:138`; `IRQ_proclaim_united_arab_republic` dans `common/decisions/IRQ.txt:203`.
+- Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.

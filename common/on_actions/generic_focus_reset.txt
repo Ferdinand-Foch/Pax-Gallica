@@ -130,6 +130,9 @@ on_actions = {
 				INS = {
 					load_focus_tree = { tree = generic_focus }
 				}
+				IRQ = {
+					load_focus_tree = { tree = generic_focus }
+				}
 			}
 		}
 	}
