@@ -82,6 +82,9 @@ on_actions = {
 				SWE = {
 					load_focus_tree = { tree = generic_focus }
 				}
+				ARG = {
+					load_focus_tree = { tree = generic_focus }
+				}
 			}
 		}
 	}

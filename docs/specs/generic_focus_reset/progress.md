@@ -502,3 +502,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `SWE_finlands_cause_is_ours` dans `common/decisions/SWE.txt:314`; `SWE_urbanization` dans `common/decisions/SWE.txt:367`; `SWE_hygenic_housing` dans `common/decisions/SWE.txt:423`.
 - Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Argentine — ARG
+
+- Arbres antérieurs effectivement chargés : `argentine_focus_tree` (150 focus, `common/national_focus/argentina.txt`).
+- Sélection DLC avant attribution : `argentine_focus_tree` : Trial of Allegiance, score 10.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/ARG - Argentina.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions : aucun appel non générique visant potentiellement ce tag dans les scripts inspectés ; les appels visant explicitement un autre tag restent intacts.
+- Dépendances représentatives conservées : `ARG_intervenciones_federales` dans `common/decisions/ARG.txt:19`; `ARG_reach_out_to_the_great_powers` dans `common/decisions/ARG.txt:117`; `ARG_yacimientos_petroliferos_fiscales` dans `common/decisions/ARG.txt:786`.
+- Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
