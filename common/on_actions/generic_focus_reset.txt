@@ -43,6 +43,9 @@ on_actions = {
 				ROM = {
 					load_focus_tree = { tree = generic_focus }
 				}
+				YUG = {
+					load_focus_tree = { tree = generic_focus }
+				}
 			}
 		}
 	}

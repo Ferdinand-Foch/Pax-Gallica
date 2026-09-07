@@ -359,3 +359,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `ROM_balkans_dominance` dans `common/decisions/GRE.txt:2693`; `ROM_force_abdication` dans `common/achievements.txt:1024`; `ROM_handle_the_king` dans `common/achievements.txt:1025`.
 - Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Yougoslavie — YUG
+
+- Arbres antérieurs effectivement chargés : `yugoslavian_focus` (118 focus, `common/national_focus/yugoslavia.txt`).
+- Sélection DLC avant attribution : `yugoslavian_focus` : Death or Dishonor, score 10.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/YUG - Yugoslavia.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions neutralisées uniquement pour ce tag : `common/on_actions/00_on_actions.txt` (1 appel).
+- Dépendances représentatives conservées : `YUG_pan_balkan_workers_congress` dans `common/decisions/YUG.txt:197`; `YUG_invite_greece` dans `common/decisions/YUG.txt:422`; `YUG_invite_hungary` dans `common/decisions/YUG.txt:423`.
+- Fichiers de ce commit : `common/on_actions/00_on_actions.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
