@@ -25,6 +25,9 @@ on_actions = {
 				SWI = {
 					load_focus_tree = { tree = generic_focus }
 				}
+				BUL = {
+					load_focus_tree = { tree = generic_focus }
+				}
 			}
 		}
 	}

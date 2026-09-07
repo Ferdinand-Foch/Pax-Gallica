@@ -293,3 +293,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `SWI_swiss_guiding_principles` dans `common/decisions/SWI.txt:131`; `SWI_case_north` dans `common/decisions/SWI.txt:286`; `SWI_case_west` dans `common/decisions/SWI.txt:327`.
 - Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Bulgarie — BUL
+
+- Arbres antérieurs effectivement chargés : `bulgarian_focus` (150 focus, `common/national_focus/bulgaria.txt`).
+- Sélection DLC avant attribution : `bulgarian_focus` : Battle for the Bosporus, score 10.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/BUL - Bulgaria.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions neutralisées uniquement pour ce tag : `common/on_actions/06_bftb_on_actions.txt` (2 appels).
+- Dépendances représentatives conservées : `BUL_power_to_the_tsar` dans `common/decisions/BUL.txt:40`; `BUL_oppose_the_royal_dictatorship` dans `common/decisions/BUL.txt:48`; `BUL_cooperate_with_the_zveno` dans `common/decisions/BUL.txt:136`.
+- Fichiers de ce commit : `common/on_actions/06_bftb_on_actions.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
