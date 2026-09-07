@@ -1,4 +1,4 @@
-# Grants the 1936 French Sèvres influence zone its resource rights at scenario startup.
+# Grants the 1936 Sèvres influence zones their resource rights at scenario startup.
 
 on_actions = {
 	on_startup = {
@@ -9,6 +9,25 @@ on_actions = {
 				}
 
 				TUR = {
+					# Italian influence zone.
+					give_resource_rights = {
+						receiver = ITA
+						state = 342
+					}
+					give_resource_rights = {
+						receiver = ITA
+						state = 343
+					}
+					give_resource_rights = {
+						receiver = ITA
+						state = 345
+					}
+					give_resource_rights = {
+						receiver = ITA
+						state = 346
+					}
+
+					# French influence zone.
 					give_resource_rights = {
 						receiver = FRA
 						state = 344
