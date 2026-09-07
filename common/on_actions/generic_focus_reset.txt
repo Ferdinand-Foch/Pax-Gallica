@@ -148,6 +148,9 @@ on_actions = {
 				SIA = {
 					load_focus_tree = { tree = generic_focus }
 				}
+				TUR = {
+					load_focus_tree = { tree = generic_focus }
+				}
 			}
 		}
 	}

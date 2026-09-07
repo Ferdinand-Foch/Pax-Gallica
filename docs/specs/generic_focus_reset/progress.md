@@ -746,3 +746,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `SIA_the_king_of_the_white_elephant` dans `common/decisions/SIA.txt:641`; `SIA_recover_indochina` dans `common/decisions/SIA.txt:720`; `SIA_retake_lost_british_states` dans `common/decisions/SIA.txt:961`.
 - Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Turquie — TUR
+
+- Arbres antérieurs effectivement chargés : `turkish_focus` (201 focus, `common/national_focus/turkey.txt`).
+- Sélection DLC avant attribution : `turkish_focus` : Battle for the Bosporus, score 10.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/TUR - Turkey.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions neutralisées uniquement pour ce tag : `events/BFTB_Greece.txt` (2 appels).
+- Dépendances représentatives conservées : `TUR_press_the_austro_hungarian_claim` dans `common/decisions/GER.txt:13611`; `TUR_pivot_to_the_past` dans `common/decisions/GRE.txt:2776`; `TUR_reconfigure_our_foreign_policy` dans `common/decisions/GRE.txt:2777`.
+- Fichiers de ce commit : `events/BFTB_Greece.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
