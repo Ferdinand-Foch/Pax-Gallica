@@ -337,3 +337,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `ITA_triumph_in_africa_bba` dans `common/decisions/ETH.txt:23`; `ITA_war_with_greece` dans `common/decisions/GRE.txt:1263`; `ITA_befriend_turkey` dans `common/decisions/GRE.txt:1993`.
 - Fichiers de ce commit : `common/on_actions/03_wtt_on_actions.txt`, `common/scripted_effects/ITA_scripted_effects.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Portugal — POR
+
+- Arbres antérieurs effectivement chargés : `portuguese_focus` (126 focus, `common/national_focus/portugal.txt`).
+- Sélection DLC avant attribution : `portuguese_focus` : La Resistance, score 10.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/POR - Portugal.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions neutralisées uniquement pour ce tag : `common/on_actions/05_lar_on_actions.txt` (2 appels).
+- Dépendances représentatives conservées : `POR_luso_tropicalism` dans `common/decisions/POR.txt:9`; `POR_revert_the_local_autonomy_policies` dans `common/decisions/POR.txt:78`; `POR_british_guns` dans `common/decisions/POR.txt:147`.
+- Fichiers de ce commit : `common/on_actions/05_lar_on_actions.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
