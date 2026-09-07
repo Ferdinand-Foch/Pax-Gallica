@@ -88,6 +88,9 @@ on_actions = {
 				BRA = {
 					load_focus_tree = { tree = generic_focus }
 				}
+				CAN = {
+					load_focus_tree = { tree = generic_focus }
+				}
 			}
 		}
 	}

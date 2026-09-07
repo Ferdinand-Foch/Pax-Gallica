@@ -524,3 +524,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `BRA_reach_out_to_the_great_powers` dans `common/decisions/ARG.txt:118`; `BRA_financial_stimulation` dans `common/decisions/BRA.txt:10`; `BRA_work_with_the_integralists` dans `common/decisions/BRA.txt:131`.
 - Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Canada — CAN
+
+- Arbres antérieurs effectivement chargés : `canadian_focus` (95 focus, `common/national_focus/canada.txt`).
+- Sélection DLC avant attribution : `canadian_focus` : Together for Victory, score 10.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/CAN - Canada.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions neutralisées uniquement pour ce tag : `common/decisions/ENG.txt` (1 appel); `events/MTG_Britain.txt` (1 appel).
+- Dépendances représentatives conservées : `CAN_send_in_the_zombies` dans `common/achievements.txt:679`; `CAN_swastika_clubs` dans `common/characters/CAN.txt:687`; `CAN_strengthen_the_commonwealth_ties` dans `common/characters/CAN.txt:731`.
+- Fichiers de ce commit : `common/decisions/ENG.txt`, `events/MTG_Britain.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
