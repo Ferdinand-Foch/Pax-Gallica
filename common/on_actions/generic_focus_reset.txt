@@ -1,0 +1,13 @@
+# Assigns the unchanged vanilla generic tree to the listed countries at the 1936 start.
+on_actions = {
+	on_startup = {
+		effect = {
+			if = {
+				limit = { date < 1936.1.2 }
+				GER = {
+					load_focus_tree = { tree = generic_focus }
+				}
+			}
+		}
+	}
+}
