@@ -513,3 +513,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `ARG_intervenciones_federales` dans `common/decisions/ARG.txt:19`; `ARG_reach_out_to_the_great_powers` dans `common/decisions/ARG.txt:117`; `ARG_yacimientos_petroliferos_fiscales` dans `common/decisions/ARG.txt:786`.
 - Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Brésil — BRA
+
+- Arbres antérieurs effectivement chargés : `brazil_tree` (171 focus, `common/national_focus/brazil.txt`).
+- Sélection DLC avant attribution : `brazil_tree` : Trial of Allegiance, score 10.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/BRA - Brazil.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions : aucun appel non générique visant potentiellement ce tag dans les scripts inspectés ; les appels visant explicitement un autre tag restent intacts.
+- Dépendances représentatives conservées : `BRA_reach_out_to_the_great_powers` dans `common/decisions/ARG.txt:118`; `BRA_financial_stimulation` dans `common/decisions/BRA.txt:10`; `BRA_work_with_the_integralists` dans `common/decisions/BRA.txt:131`.
+- Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
