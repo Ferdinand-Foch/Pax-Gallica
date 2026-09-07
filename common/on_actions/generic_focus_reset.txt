@@ -64,6 +64,9 @@ on_actions = {
 				CZE = {
 					load_focus_tree = { tree = generic_focus }
 				}
+				SOV = {
+					load_focus_tree = { tree = generic_focus }
+				}
 			}
 		}
 	}

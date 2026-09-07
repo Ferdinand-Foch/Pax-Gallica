@@ -469,7 +469,10 @@ on_actions = {
 						NOT = { has_government = communism }
 					}
 				}
-				load_focus_tree = { tree = soviet_focus keep_completed = no }
+				if = {
+					limit = { NOT = { tag = SOV } }
+					load_focus_tree = { tree = soviet_focus keep_completed = no }
+				}
 			}
 		}
 	}

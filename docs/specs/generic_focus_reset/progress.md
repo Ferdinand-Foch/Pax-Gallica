@@ -436,3 +436,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `CZE_reform_the_naval_detachment` dans `common/decisions/CZE.txt:988`; `CZE_access_to_the_sea` dans `common/decisions/CZE.txt:991`; `CZE_airlift_soviet_support` dans `common/decisions/CZE.txt:1117`.
 - Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### URSS — SOV
+
+- Arbres antérieurs effectivement chargés : `soviet_focus` (311 focus, `common/national_focus/soviet.txt`).
+- Sélection DLC avant attribution : `soviet_focus` : sans condition DLC, score 10.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/SOV - Soviet union.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions neutralisées uniquement pour ce tag : `common/on_actions/03_wtt_on_actions.txt` (1 appel); `common/scripted_effects/SOV_scripted_effects.txt` (1 appel).
+- Dépendances représentatives conservées : `SOV_demand_balkan_submission` dans `common/decisions/GRE.txt:1496`; `SOV_expand_the_agitprop` dans `common/decisions/SOV.txt:1957`; `SOV_collectivist_propaganda` dans `common/decisions/SOV.txt:2713`.
+- Fichiers de ce commit : `common/on_actions/03_wtt_on_actions.txt`, `common/scripted_effects/SOV_scripted_effects.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
