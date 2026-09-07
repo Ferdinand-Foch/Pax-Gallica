@@ -590,3 +590,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `URG_accion_revisionista_del_uruguay` dans `common/characters/URG.txt:654`; `URG_pay_of_all_external_debts` dans `common/ideas/uruguay.txt:45`; `URG_brou` dans `common/ideas/uruguay.txt:409`.
 - Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Afrique du Sud — SAF
+
+- Arbres antérieurs effectivement chargés : `south_african_focus` (80 focus, `common/national_focus/south_africa.txt`).
+- Sélection DLC avant attribution : `south_african_focus` : Together for Victory, score 10.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/SAF - South Africa.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions neutralisées uniquement pour ce tag : `common/decisions/ENG.txt` (1 appel); `common/on_actions/03_wtt_on_actions.txt` (1 appel); `events/MTG_Britain.txt` (1 appel).
+- Dépendances représentatives conservées : `SAF_anti_colonialist_crusade` dans `common/decisions/SAF.txt:9`; `SAF_abandon_westminster` dans `common/autonomous_states/dominion.txt:112`; `SAF_support_the_afrikaner_broederbond` dans `common/characters/SAF.txt:164`.
+- Fichiers de ce commit : `common/decisions/ENG.txt`, `common/on_actions/03_wtt_on_actions.txt`, `events/MTG_Britain.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.

@@ -8238,7 +8238,10 @@ country_event = {
 					FROM = { original_tag = SAF }
 				}
 				FROM = {
-					load_focus_tree = { tree = south_african_focus keep_completed = yes }
+					if = {
+						limit = { NOT = { tag = SAF } }
+						load_focus_tree = { tree = south_african_focus keep_completed = yes }
+					}
 					SAF_enforce_loyalty = yes
 				}
 			}
