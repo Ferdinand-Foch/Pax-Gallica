@@ -19,6 +19,9 @@ on_actions = {
 				HOL = {
 					load_focus_tree = { tree = generic_focus }
 				}
+				ENG = {
+					load_focus_tree = { tree = generic_focus }
+				}
 			}
 		}
 	}

@@ -271,3 +271,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `HOL_obtain_foreign_colonial_investments` dans `common/decisions/HOL.txt:69`; `HOL_obtain_foreign_colonial_investments_taog` dans `common/decisions/HOL.txt:70`; `HOL_prepare_the_inundation_lines` dans `common/decisions/HOL.txt:411`.
 - Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Royaume-Uni — ENG
+
+- Arbres antérieurs effectivement chargés : `british_focus` (164 focus, `common/national_focus/uk.txt`).
+- Sélection DLC avant attribution : `british_focus` : sans condition DLC, score 10.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/ENG - Britain.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions neutralisées uniquement pour ce tag : `common/on_actions/04_mtg_on_actions.txt` (2 appels).
+- Dépendances représentatives conservées : `uk_burma_focus` dans `common/decisions/CHI_decisions.txt:3818`; `ENG_no_further_appeasement` dans `common/decisions/ENG.txt:101`; `uk_scandinavian_focus` dans `common/decisions/ENG.txt:102`.
+- Fichiers de ce commit : `common/on_actions/04_mtg_on_actions.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
