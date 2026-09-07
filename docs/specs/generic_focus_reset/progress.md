@@ -392,3 +392,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `HUN_protect_czechoslovakia` dans `common/decisions/DOD_hungary.txt:11`; `HUN_elect_a_democratic_king` dans `common/decisions/DOD_hungary.txt:43`; `wuw_HUN_expand_the_hungarian_academy_of_sciences` dans `common/decisions/HUN.txt:20`.
 - Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Lettonie — LAT
+
+- Arbres antérieurs effectivement chargés : `latvia_tree` (56 focus, `common/national_focus/latvia.txt`).
+- Sélection DLC avant attribution : `latvia_tree` : No Step Back, score 10.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/LAT - Latvia.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions neutralisées uniquement pour ce tag : `common/on_actions/07_nsb_on_actions.txt` (1 appel).
+- Dépendances représentatives conservées : `LAT_look_north` dans `common/decisions/BALTIC.txt:62`; `LAT_alignment_with_germany` dans `common/decisions/LAT.txt:17`; `LAT_banish_clemens` dans `common/decisions/LAT.txt:18`.
+- Fichiers de ce commit : `common/on_actions/07_nsb_on_actions.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.

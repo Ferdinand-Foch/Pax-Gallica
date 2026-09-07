@@ -861,7 +861,10 @@ on_actions = {
 					NOT = { has_focus_tree = latvia_tree }
 					has_dlc = "No Step Back"
 				}
-				load_focus_tree = { tree = latvia_tree keep_completed = yes }
+				if = {
+					limit = { NOT = { tag = LAT } }
+					load_focus_tree = { tree = latvia_tree keep_completed = yes }
+				}
 				if = { #Give Latvia their focus tree back if the Perkonkrust win the civil war.
 					limit = { has_government = fascism }
 					if = {
