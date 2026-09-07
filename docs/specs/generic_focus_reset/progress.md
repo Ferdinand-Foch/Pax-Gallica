@@ -579,3 +579,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `PAR_nazify_the_army` dans `common/decisions/TOA_shared_decisions.txt:20`; `PAR_put_estigarribia_on_a_pedestal` dans `common/decisions/TOA_shared_decisions.txt:53`; `PAR_get_rid_of_colonel_peredes` dans `common/characters/PAR.txt:202`.
 - Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Uruguay — URG
+
+- Arbres antérieurs effectivement chargés : `uruguay_focus` (45 focus, `common/national_focus/uruguay.txt`).
+- Sélection DLC avant attribution : `uruguay_focus` : Trial of Allegiance, score 10.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/URG - Uruguay.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions : aucun appel non générique visant potentiellement ce tag dans les scripts inspectés ; les appels visant explicitement un autre tag restent intacts.
+- Dépendances représentatives conservées : `URG_accion_revisionista_del_uruguay` dans `common/characters/URG.txt:654`; `URG_pay_of_all_external_debts` dans `common/ideas/uruguay.txt:45`; `URG_brou` dans `common/ideas/uruguay.txt:409`.
+- Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.

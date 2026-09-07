@@ -103,6 +103,9 @@ on_actions = {
 				PAR = {
 					load_focus_tree = { tree = generic_focus }
 				}
+				URG = {
+					load_focus_tree = { tree = generic_focus }
+				}
 			}
 		}
 	}
