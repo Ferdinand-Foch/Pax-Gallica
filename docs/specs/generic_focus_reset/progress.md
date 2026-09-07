@@ -182,3 +182,59 @@ Pour GER, les trois appels de réattribution sont bloqués ; pour les autres tag
 Le on_startup charge explicitement generic_focus pour GER le 1er janvier 1936, indépendamment du DLC, et ne s'applique pas au démarrage 1939.
 Les inspections et rendus MCP du générique ont été répétés avec succès : 56 focus inchangés, sans diagnostic bloquant.
 Les dépendances anciennes énumérées ci-dessus restent préservées, sans refonte ni simplification.
+
+## Lot de 50 pays — validation du démarrage 1936
+
+Les entrées ci-dessous utilisent le même arbre vanilla `generic_focus` de HOI4 1.19.2, sans copie ni réécriture des 56 focus, de leurs récompenses, icônes, localisations ou poids IA.
+Chaque tag exact est attribué par `common/on_actions/generic_focus_reset.txt`, dans le `on_startup` limité par `date < 1936.1.2`.
+Les scores de sélection restent intacts ; l'effet explicite charge le générique après cette sélection, avec ou sans les DLC indiqués.
+Quand le DLC national est absent, le générique déjà choisi par défaut reste le générique.
+Les états initiaux, lois, idées, personnages, unités, industrie, territoires et modifications manuelles sont préservés.
+Les achèvements et déverrouillages trouvés dans les histoires appartiennent aux blocs 1939 ; aucun n'est supprimé.
+Les plans IA et mécaniques dépendant des anciens focus restent inchangés ; les références représentatives par pays sont indiquées sans prétendre que ces mécaniques ont été adaptées.
+
+### Preuves communes
+
+L'inspection MCP avant/après couvre 62 arbres pertinents, y compris le générique, les variantes DLC et les deux arbres chinois attribuables par script.
+Le texte de leurs sélecteurs et leurs nombres de focus sont identiques avant/après ; les artefacts complets ont été lus localement pour dépasser la troncature de la réponse MCP.
+Le plan MCP complet du générique est identique avant/après, avec 56 focus et l'empreinte de disposition `ad2b3bb2de93a33b2152cd1e0a303ff29f29cec5c43123ba39d4a80a696e4716`.
+L'inspection ciblée et le rendu du générique passent sans diagnostic bloquant.
+Les fichiers d'arbres contenant des gardes de réattribution ont aussi été rendus avant/après ; leur disposition et leur contenu hors de ces gardes sont conservés.
+Les diagnostics des anciens arbres ne sont pas présentés comme résolus par cette conversion.
+La sélection au démarrage est une preuve statique du flux d'effets, pas une exécution du moteur par MCP.
+
+Inspection avant : `hoi4-agent://workspace/auto_pax_franca/artifact/dd0777cb3d4c20183d200051ee5fdba9fc22e6c145359c52d40bfa30e94b23d8/9b9e3559b26be7b37209a6da177d09fbdac512f418c1072021b693d37a75e007/focus-inspect.c7c916727c3a8a2b.json`.
+Inspection après : `hoi4-agent://workspace/auto_pax_franca/artifact/619a28fc460fa118802a4a4d257c53b2f08c495f680ef7f9f7a189cdfca18b4c/ba218682bd2681f53256b8955ee53aa07d6c158a39c4d71cb3cd84118a145516/focus-inspect.21f9d1f03abd82a8.json`.
+
+La paire d'instantanés événementiels avant/après a été générée avec le sélecteur du fichier modifié `events/MTG_Britain.txt`, profondeur 1, sans expansion des helpers.
+L'unique comparaison de cette paire échoue avec `EVENT_GRAPH_ARTIFACT_INVALID`, identifiant `entry_4b2e8aab856abda074c4f91c`.
+Le défaut établi correspond aux deux blocs vanilla `on_release_as_puppet` de `common/on_actions/13_goe_on_actions.txt`, lignes 171 et 1758, auxquels le graphe attribue le même identifiant interne.
+Ce n'est pas un doublon d'événement ajouté par le mod ; aucune modification du serveur ni réparation globale n'est effectuée.
+La réponse ciblée contient encore ce nœud hors périmètre, ce qui empêche cette seule comparaison MCP.
+
+La dérogation explicite de l'utilisateur est appliquée : comparaison directe exhaustive de chaque fichier surchargé à son état initial, après retrait inverse des seules gardes ajoutées.
+Le reste du texte est identique, y compris les autres effets et références.
+L'inventaire des événements effectivement chargés masque les fichiers vanilla remplacés au même chemin par le mod.
+Il confirme une définition unique pour chacun des événements modifiés : `NSB_poland_royal_election.4`, `mtg_britain.113`, `mtg_usa_civil_war_democrats.20`, `wtt_warlord_vs_prc.2` et `bftb_greece.34`.
+La vérification directe couvre les cinq fichiers de ces événements, pas seulement le sélecteur du rapport MCP.
+Pour les pays sans événement modifié, aucune comparaison événementielle supplémentaire n'est requise.
+Les gardes utilisent le tag exact : elles ne changent ni les pays dynamiques ni les autres utilisateurs d'un fichier régional.
+Les appels espagnols dans les scopes explicites SPA/SPB/SPC/SPD et les appels présents uniquement dans des `effect_tooltip` sont conservés.
+
+Aucun nouveau contenu national, aucune simplification du générique, aucun replace_path et aucune suppression globale.
+Les dépendances nationales restantes sont conservées volontairement conformément au périmètre demandé.
+Validation statique uniquement ; aucun lancement du jeu, aucun subagent.
+Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-missions` ; aucune compétence créée ou modifiée.
+
+### Registre pays par pays
+
+#### Autriche — AUS
+
+- Arbres antérieurs effectivement chargés : `austria_focus_tree` (214 focus, `common/national_focus/austria.txt`).
+- Sélection DLC avant attribution : `austria_focus_tree` : Gotterdammerung, score 50.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/AUS - Austria.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions : aucun appel non générique visant potentiellement ce tag dans les scripts inspectés ; les appels visant explicitement un autre tag restent intacts.
+- Dépendances représentatives conservées : `AUS_heimwehr_support` dans `common/decisions/AUS.txt:539`; `AUS_sturmscharen_support` dans `common/decisions/AUS.txt:571`; `AUS_schutzbund_support` dans `common/decisions/AUS.txt:602`.
+- Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
