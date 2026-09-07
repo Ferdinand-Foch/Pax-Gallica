@@ -304,3 +304,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `BUL_power_to_the_tsar` dans `common/decisions/BUL.txt:40`; `BUL_oppose_the_royal_dictatorship` dans `common/decisions/BUL.txt:48`; `BUL_cooperate_with_the_zveno` dans `common/decisions/BUL.txt:136`.
 - Fichiers de ce commit : `common/on_actions/06_bftb_on_actions.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Espagne — SPR
+
+- Arbres antérieurs effectivement chargés : `spanish_focus` (281 focus, `common/national_focus/spain.txt`).
+- Sélection DLC avant attribution : `spanish_focus` : La Resistance, score 10.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/SPR - Spain.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions : aucun appel non générique visant potentiellement ce tag dans les scripts inspectés ; les appels visant explicitement un autre tag restent intacts.
+- Dépendances représentatives conservées : `SPA_the_phalanx_ascendant` dans `common/decisions/POR.txt:2094`; `SPA_unify_the_nationalist_front` dans `common/decisions/POR.txt:2096`; `SPA_the_iberian_pact` dans `common/decisions/POR.txt:2097`.
+- Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.

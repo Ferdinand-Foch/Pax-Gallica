@@ -28,6 +28,9 @@ on_actions = {
 				BUL = {
 					load_focus_tree = { tree = generic_focus }
 				}
+				SPR = {
+					load_focus_tree = { tree = generic_focus }
+				}
 			}
 		}
 	}
