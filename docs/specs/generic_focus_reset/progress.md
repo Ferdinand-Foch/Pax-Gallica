@@ -491,3 +491,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `NOR_quislings_coup` dans `common/decisions/GER.txt:3443`; `NOR_establish_milorg` dans `common/decisions/NOR.txt:404`; `NOR_use_xu` dans `common/decisions/NOR.txt:690`.
 - Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Suède — SWE
+
+- Arbres antérieurs effectivement chargés : `sweden_focus` (168 focus, `common/national_focus/sweden.txt`).
+- Sélection DLC avant attribution : `sweden_focus` : Arms Against Tyranny, score 10.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/SWE - Sweden.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions : aucun appel non générique visant potentiellement ce tag dans les scripts inspectés ; les appels visant explicitement un autre tag restent intacts.
+- Dépendances représentatives conservées : `SWE_finlands_cause_is_ours` dans `common/decisions/SWE.txt:314`; `SWE_urbanization` dans `common/decisions/SWE.txt:367`; `SWE_hygenic_housing` dans `common/decisions/SWE.txt:423`.
+- Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
