@@ -73,6 +73,9 @@ on_actions = {
 				FIN = {
 					load_focus_tree = { tree = generic_focus }
 				}
+				ICE = {
+					load_focus_tree = { tree = generic_focus }
+				}
 			}
 		}
 	}

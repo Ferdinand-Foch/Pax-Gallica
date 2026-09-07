@@ -469,3 +469,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `FIN_the_lone_wolf` dans `common/decisions/FIN.txt:337`; `FIN_weapon_caches` dans `common/decisions/FIN.txt:440`; `FIN_defensive_preparations` dans `common/decisions/FIN.txt:441`.
 - Fichiers de ce commit : `common/on_actions/09_aat_on_actions.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Islande — ICE
+
+- Arbres antérieurs effectivement chargés : `iceland_tree` (89 focus, `common/national_focus/iceland.txt`).
+- Sélection DLC avant attribution : `iceland_tree` : Arms Against Tyranny, score 10.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/ICE - Iceland.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions : aucun appel non générique visant potentiellement ce tag dans les scripts inspectés ; les appels visant explicitement un autre tag restent intacts.
+- Dépendances représentatives conservées : `ICE_declare_absolute_neutrality` dans `common/decisions/ENG.txt:9897`; `ICE_united_we_stand` dans `common/decisions/ENG.txt:9908`; `ICE_off_shore_oil_drilling` dans `common/decisions/ICE.txt:29`.
+- Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
