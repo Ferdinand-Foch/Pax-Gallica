@@ -40,6 +40,9 @@ on_actions = {
 				POR = {
 					load_focus_tree = { tree = generic_focus }
 				}
+				ROM = {
+					load_focus_tree = { tree = generic_focus }
+				}
 			}
 		}
 	}

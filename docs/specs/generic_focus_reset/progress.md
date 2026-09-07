@@ -348,3 +348,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `POR_luso_tropicalism` dans `common/decisions/POR.txt:9`; `POR_revert_the_local_autonomy_policies` dans `common/decisions/POR.txt:78`; `POR_british_guns` dans `common/decisions/POR.txt:147`.
 - Fichiers de ce commit : `common/on_actions/05_lar_on_actions.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Roumanie — ROM
+
+- Arbres antérieurs effectivement chargés : `romanian_focus` (92 focus, `common/national_focus/romania.txt`).
+- Sélection DLC avant attribution : `romanian_focus` : Death or Dishonor, score 10.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/ROM - Romania.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions : aucun appel non générique visant potentiellement ce tag dans les scripts inspectés ; les appels visant explicitement un autre tag restent intacts.
+- Dépendances représentatives conservées : `ROM_balkans_dominance` dans `common/decisions/GRE.txt:2693`; `ROM_force_abdication` dans `common/achievements.txt:1024`; `ROM_handle_the_king` dans `common/achievements.txt:1025`.
+- Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
