@@ -757,3 +757,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `TUR_press_the_austro_hungarian_claim` dans `common/decisions/GER.txt:13611`; `TUR_pivot_to_the_past` dans `common/decisions/GRE.txt:2776`; `TUR_reconfigure_our_foreign_policy` dans `common/decisions/GRE.txt:2777`.
 - Fichiers de ce commit : `events/BFTB_Greece.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Australie — AST
+
+- Arbres antérieurs effectivement chargés : `australian_focus` (94 focus, `common/national_focus/australia.txt`); `australia_taog_focus` (217 focus, `common/national_focus/australia_taog.txt`).
+- Sélection DLC avant attribution : `australian_focus` : Together for Victory, score 10 ; `australia_taog_focus` : Thunder at Our Gates, score 1000.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/AST - Australia.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions neutralisées uniquement pour ce tag : `common/decisions/ENG.txt` (1 appel); `events/MTG_Britain.txt` (1 appel).
+- Dépendances représentatives conservées : `AST_take_it_to_the_streets` dans `common/decisions/AST.txt:21`; `AST_all_for_one_one_for_all` dans `common/decisions/AST.txt:23`; `AST_against_war_and_fascism` dans `common/decisions/AST.txt:120`.
+- Fichiers de ce commit : `common/decisions/ENG.txt`, `events/MTG_Britain.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.

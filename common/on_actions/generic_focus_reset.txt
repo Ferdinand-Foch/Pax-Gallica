@@ -151,6 +151,9 @@ on_actions = {
 				TUR = {
 					load_focus_tree = { tree = generic_focus }
 				}
+				AST = {
+					load_focus_tree = { tree = generic_focus }
+				}
 			}
 		}
 	}

@@ -8250,7 +8250,10 @@ country_event = {
 					FROM = { original_tag = AST }
 				}
 				FROM = {
-					load_focus_tree = { tree = australian_focus keep_completed = yes }
+					if = {
+						limit = { NOT = { tag = AST } }
+						load_focus_tree = { tree = australian_focus keep_completed = yes }
+					}
 					AST_enforce_loyalty = yes
 				}
 			}
