@@ -260,3 +260,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `FRA_form_the_popular_front` dans `common/decisions/FRA.txt:13`; `FRA_destroy_the_counter_revolution` dans `common/decisions/FRA.txt:77`; `FRA_reorganize_the_aviation_industry` dans `common/decisions/FRA.txt:1336`.
 - Fichiers de ce commit : `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Pays-Bas — HOL
+
+- Arbres antérieurs effectivement chargés : `netherlands_focus` (152 focus, `common/national_focus/netherlands.txt`).
+- Sélection DLC avant attribution : `netherlands_focus` : Man the Guns, score 10.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/HOL - Holland.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions : aucun appel non générique visant potentiellement ce tag dans les scripts inspectés ; les appels visant explicitement un autre tag restent intacts.
+- Dépendances représentatives conservées : `HOL_obtain_foreign_colonial_investments` dans `common/decisions/HOL.txt:69`; `HOL_obtain_foreign_colonial_investments_taog` dans `common/decisions/HOL.txt:70`; `HOL_prepare_the_inundation_lines` dans `common/decisions/HOL.txt:411`.
+- Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
