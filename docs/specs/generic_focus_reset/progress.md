@@ -546,3 +546,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `CHL_expand_the_forestry` dans `common/decisions/CHL.txt:25`; `CHL_international_loans` dans `common/decisions/CHL.txt:158`; `CHL_found_national_steelworks` dans `common/decisions/CHL.txt:364`.
 - Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### États-Unis — USA
+
+- Arbres antérieurs effectivement chargés : `usa_focus` (135 focus, `common/national_focus/usa.txt`).
+- Sélection DLC avant attribution : `usa_focus` : sans condition DLC, score 20.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/USA - USA.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions neutralisées uniquement pour ce tag : `common/on_actions/04_mtg_on_actions.txt` (1 appel); `events/MTG_USA.txt` (1 appel).
+- Dépendances représentatives conservées : `USA_empower_the_huac` dans `common/decisions/MTG_congress.txt:111`; `USA_ally_with_the_silver_shirts` dans `common/decisions/MTG_congress.txt:132`; `USA_agricultural_adjustment_act` dans `common/decisions/MTG_congress.txt:157`.
+- Fichiers de ce commit : `common/on_actions/04_mtg_on_actions.txt`, `events/MTG_USA.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.

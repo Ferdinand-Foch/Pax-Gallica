@@ -94,6 +94,9 @@ on_actions = {
 				CHL = {
 					load_focus_tree = { tree = generic_focus }
 				}
+				USA = {
+					load_focus_tree = { tree = generic_focus }
+				}
 			}
 		}
 	}
