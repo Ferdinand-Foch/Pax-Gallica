@@ -315,3 +315,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `SPA_the_phalanx_ascendant` dans `common/decisions/POR.txt:2094`; `SPA_unify_the_nationalist_front` dans `common/decisions/POR.txt:2096`; `SPA_the_iberian_pact` dans `common/decisions/POR.txt:2097`.
 - Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Grèce — GRE
+
+- Arbres antérieurs effectivement chargés : `greek_focus` (123 focus, `common/national_focus/greece.txt`).
+- Sélection DLC avant attribution : `greek_focus` : Battle for the Bosporus, score 10.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/GRE - Greece.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions : aucun appel non générique visant potentiellement ce tag dans les scripts inspectés ; les appels visant explicitement un autre tag restent intacts.
+- Dépendances représentatives conservées : `GRE_the_right_to_rule` dans `common/decisions/GRE.txt:171`; `GRE_bolster_the_schachtplan` dans `common/decisions/GRE.txt:419`; `GRE_following_in_the_footsteps_of_giants` dans `common/decisions/GRE.txt:423`.
+- Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
