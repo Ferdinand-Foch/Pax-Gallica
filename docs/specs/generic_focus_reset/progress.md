@@ -458,3 +458,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `DEN_overthrow_the_government` dans `common/decisions/DEN.txt:467`; `DEN_social_stability` dans `common/decisions/DEN.txt:641`; `DEN_declare_neutrality` dans `common/decisions/DEN.txt:743`.
 - Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Finlande — FIN
+
+- Arbres antérieurs effectivement chargés : `finnish_focus` (166 focus, `common/national_focus/finland.txt`).
+- Sélection DLC avant attribution : `finnish_focus` : sans condition DLC, score 10.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/FIN - Finland.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions neutralisées uniquement pour ce tag : `common/on_actions/09_aat_on_actions.txt` (1 appel).
+- Dépendances représentatives conservées : `FIN_the_lone_wolf` dans `common/decisions/FIN.txt:337`; `FIN_weapon_caches` dans `common/decisions/FIN.txt:440`; `FIN_defensive_preparations` dans `common/decisions/FIN.txt:441`.
+- Fichiers de ce commit : `common/on_actions/09_aat_on_actions.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.

@@ -70,6 +70,9 @@ on_actions = {
 				DEN = {
 					load_focus_tree = { tree = generic_focus }
 				}
+				FIN = {
+					load_focus_tree = { tree = generic_focus }
+				}
 			}
 		}
 	}
