@@ -127,6 +127,9 @@ on_actions = {
 				RAJ = {
 					load_focus_tree = { tree = generic_focus }
 				}
+				INS = {
+					load_focus_tree = { tree = generic_focus }
+				}
 			}
 		}
 	}

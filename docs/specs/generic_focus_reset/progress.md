@@ -669,3 +669,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `RAJ_chindits_dlc` dans `common/decisions/ETH.txt:1297`; `RAJ_chindits` dans `common/decisions/ETH.txt:1298`; `RAJ_administrative_oversight` dans `common/decisions/RAJ.txt:11`.
 - Fichiers de ce commit : `common/on_actions/03_wtt_on_actions.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Indonésie — INS
+
+- Arbres antérieurs effectivement chargés : `indonesia_focus` (148 focus, `common/national_focus/indonesia.txt`).
+- Sélection DLC avant attribution : `indonesia_focus` : Thunder at Our Gates, score 10.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/INS - Indonesia.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions : aucun appel non générique visant potentiellement ce tag dans les scripts inspectés ; les appels visant explicitement un autre tag restent intacts.
+- Dépendances représentatives conservées : `INS_east_indies_exile_government` dans `common/decisions/INS.txt:313`; `INS_agrarian_reform` dans `common/decisions/INS.txt:452`; `INS_reallocate_rubber_industry_funding` dans `common/decisions/INS.txt:510`.
+- Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
