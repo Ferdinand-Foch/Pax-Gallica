@@ -370,3 +370,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `YUG_pan_balkan_workers_congress` dans `common/decisions/YUG.txt:197`; `YUG_invite_greece` dans `common/decisions/YUG.txt:422`; `YUG_invite_hungary` dans `common/decisions/YUG.txt:423`.
 - Fichiers de ce commit : `common/on_actions/00_on_actions.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Estonie — EST
+
+- Arbres antérieurs effectivement chargés : `estonia_tree` (59 focus, `common/national_focus/estonia.txt`).
+- Sélection DLC avant attribution : `estonia_tree` : No Step Back, score 10.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/EST - Estonia.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions neutralisées uniquement pour ce tag : `common/on_actions/07_nsb_on_actions.txt` (1 appel).
+- Dépendances représentatives conservées : `EST_look_north` dans `common/decisions/BALTIC.txt:61`; `EST_rally_the_nation` dans `common/decisions/EST.txt:21`; `EST_era_of_silence` dans `common/decisions/EST.txt:30`.
+- Fichiers de ce commit : `common/on_actions/07_nsb_on_actions.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
