@@ -658,3 +658,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `PRC_infiltration` dans `common/decisions/CHI_decisions.txt:2979`; `PRC_anti_japanese_expedition` dans `common/decisions/PRC.txt:1838`; `PRC_100_regiments_campaign` dans `common/decisions/PRC.txt:2526`.
 - Fichiers de ce commit : `common/national_focus/china_warlord.txt`, `common/national_focus/china_warlord_sea.txt`, `events/WTT_PRC.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Inde britannique — RAJ
+
+- Arbres antérieurs effectivement chargés : `indian_focus` (71 focus, `common/national_focus/india.txt`); `indian_focus_goe` (412 focus, `common/national_focus/india_goe.txt`).
+- Sélection DLC avant attribution : `indian_focus` : Together for Victory et absence de Graveyard of Empires, score 10 ; `indian_focus_goe` : Graveyard of Empires, score 10.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/RAJ - British Raj.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions neutralisées uniquement pour ce tag : `common/on_actions/03_wtt_on_actions.txt` (1 appel).
+- Dépendances représentatives conservées : `RAJ_chindits_dlc` dans `common/decisions/ETH.txt:1297`; `RAJ_chindits` dans `common/decisions/ETH.txt:1298`; `RAJ_administrative_oversight` dans `common/decisions/RAJ.txt:11`.
+- Fichiers de ce commit : `common/on_actions/03_wtt_on_actions.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.

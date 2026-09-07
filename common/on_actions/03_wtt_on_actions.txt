@@ -425,7 +425,10 @@ on_actions = {
 						}
 					}
 				}
-				load_focus_tree = { tree = indian_focus keep_completed = no }
+				if = {
+					limit = { NOT = { tag = RAJ } }
+					load_focus_tree = { tree = indian_focus keep_completed = no }
+				}
 				unlock_national_focus = RAJ_provincial_elections
 				unlock_national_focus = RAJ_indian_national_congress
 			}
