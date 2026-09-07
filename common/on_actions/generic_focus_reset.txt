@@ -49,6 +49,9 @@ on_actions = {
 				EST = {
 					load_focus_tree = { tree = generic_focus }
 				}
+				HUN = {
+					load_focus_tree = { tree = generic_focus }
+				}
 			}
 		}
 	}

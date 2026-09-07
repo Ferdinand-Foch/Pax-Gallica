@@ -381,3 +381,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `EST_look_north` dans `common/decisions/BALTIC.txt:61`; `EST_rally_the_nation` dans `common/decisions/EST.txt:21`; `EST_era_of_silence` dans `common/decisions/EST.txt:30`.
 - Fichiers de ce commit : `common/on_actions/07_nsb_on_actions.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Hongrie — HUN
+
+- Arbres antérieurs effectivement chargés : `hungarian_focus` (99 focus, `common/national_focus/hungary.txt`); `wuw_hungarian_focus` (238 focus, `common/national_focus/hungary_wuw.txt`).
+- Sélection DLC avant attribution : `hungarian_focus` : Death or Dishonor, score 10 ; `wuw_hungarian_focus` : Gotterdammerung, score 50.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/HUN - Hungary.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions : aucun appel non générique visant potentiellement ce tag dans les scripts inspectés ; les appels visant explicitement un autre tag restent intacts.
+- Dépendances représentatives conservées : `HUN_protect_czechoslovakia` dans `common/decisions/DOD_hungary.txt:11`; `HUN_elect_a_democratic_king` dans `common/decisions/DOD_hungary.txt:43`; `wuw_HUN_expand_the_hungarian_academy_of_sciences` dans `common/decisions/HUN.txt:20`.
+- Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
