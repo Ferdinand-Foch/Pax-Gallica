@@ -480,3 +480,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `ICE_declare_absolute_neutrality` dans `common/decisions/ENG.txt:9897`; `ICE_united_we_stand` dans `common/decisions/ENG.txt:9908`; `ICE_off_shore_oil_drilling` dans `common/decisions/ICE.txt:29`.
 - Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Norvège — NOR
+
+- Arbres antérieurs effectivement chargés : `norwegian_focus` (192 focus, `common/national_focus/norway.txt`).
+- Sélection DLC avant attribution : `norwegian_focus` : Arms Against Tyranny via NOR_AAT (original_tag = NOR), score 10.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/NOR - Norway.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions : aucun appel non générique visant potentiellement ce tag dans les scripts inspectés ; les appels visant explicitement un autre tag restent intacts.
+- Dépendances représentatives conservées : `NOR_quislings_coup` dans `common/decisions/GER.txt:3443`; `NOR_establish_milorg` dans `common/decisions/NOR.txt:404`; `NOR_use_xu` dans `common/decisions/NOR.txt:690`.
+- Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
