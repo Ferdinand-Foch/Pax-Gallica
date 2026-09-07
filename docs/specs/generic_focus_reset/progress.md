@@ -238,3 +238,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `AUS_heimwehr_support` dans `common/decisions/AUS.txt:539`; `AUS_sturmscharen_support` dans `common/decisions/AUS.txt:571`; `AUS_schutzbund_support` dans `common/decisions/AUS.txt:602`.
 - Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Belgique — BEL
+
+- Arbres antérieurs effectivement chargés : `belgium_focus` (173 focus, `common/national_focus/belgium.txt`).
+- Sélection DLC avant attribution : `belgium_focus` : Gotterdammerung, score 10.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/BEL - Belgium.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions : aucun appel non générique visant potentiellement ce tag dans les scripts inspectés ; les appels visant explicitement un autre tag restent intacts.
+- Dépendances représentatives conservées : `BEL_unity_makes_strength` dans `common/decisions/BEL.txt:323`; `BEL_gold_reserves` dans `common/decisions/categories/BEL_decision_categories.txt:11`; `BEL_government_in_exile` dans `common/decisions/categories/BEL_decision_categories.txt:43`.
+- Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
