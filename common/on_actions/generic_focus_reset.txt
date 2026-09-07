@@ -109,6 +109,9 @@ on_actions = {
 				SAF = {
 					load_focus_tree = { tree = generic_focus }
 				}
+				COG = {
+					load_focus_tree = { tree = generic_focus }
+				}
 			}
 		}
 	}

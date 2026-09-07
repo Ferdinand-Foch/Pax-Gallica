@@ -601,3 +601,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `SAF_anti_colonialist_crusade` dans `common/decisions/SAF.txt:9`; `SAF_abandon_westminster` dans `common/autonomous_states/dominion.txt:112`; `SAF_support_the_afrikaner_broederbond` dans `common/characters/SAF.txt:164`.
 - Fichiers de ce commit : `common/decisions/ENG.txt`, `common/on_actions/03_wtt_on_actions.txt`, `events/MTG_Britain.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Congo belge — COG
+
+- Arbres antérieurs effectivement chargés : `congo_focus` (152 focus, `common/national_focus/congo.txt`).
+- Sélection DLC avant attribution : `congo_focus` : Gotterdammerung, score 10.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/COG - Congo.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions neutralisées uniquement pour ce tag : `common/decisions/BEL.txt` (1 appel).
+- Dépendances représentatives conservées : `COG_uniao_dos_povos_do_norte_de_angola` dans `common/decisions/COG.txt:465`; `COG_the_ma_loango_focus` dans `common/decisions/COG.txt:534`; `COG_the_mwami_of_burundi_focus` dans `common/decisions/COG.txt:608`.
+- Fichiers de ce commit : `common/decisions/BEL.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
