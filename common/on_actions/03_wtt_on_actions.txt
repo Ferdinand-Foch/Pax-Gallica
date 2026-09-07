@@ -408,7 +408,10 @@ on_actions = {
 						NOT = { has_government = fascism }
 					}
 				}
-				load_focus_tree = { tree = japan_wtt_focus keep_completed = no }
+				if = {
+					limit = { NOT = { tag = JAP } }
+					load_focus_tree = { tree = japan_wtt_focus keep_completed = no }
+				}
 				unlock_national_focus = JAP_sea_purge_the_kodoha_faction
 			}
 			# Give back RAJ focus tree to Unaligned RAJ if they win the communist or fascist civil war.

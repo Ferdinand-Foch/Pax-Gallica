@@ -136,6 +136,9 @@ on_actions = {
 				PER = {
 					load_focus_tree = { tree = generic_focus }
 				}
+				JAP = {
+					load_focus_tree = { tree = generic_focus }
+				}
 			}
 		}
 	}

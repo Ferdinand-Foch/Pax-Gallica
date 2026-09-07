@@ -702,3 +702,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `PER_profit_from_war` dans `common/decisions/PER.txt:60`; `PER_reintegrate_anatolia` dans `common/decisions/PER.txt:121`; `PER_absorb_byzantines` dans `common/decisions/PER.txt:187`.
 - Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Japon — JAP
+
+- Arbres antérieurs effectivement chargés : `japan_wtt_focus` (448 focus, `common/national_focus/japan.txt`).
+- Sélection DLC avant attribution : `japan_wtt_focus` : sans condition DLC, score 20.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/JAP - Japan.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions neutralisées uniquement pour ce tag : `common/on_actions/03_wtt_on_actions.txt` (1 appel).
+- Dépendances représentatives conservées : `JAP_revisit_the_thirteen_demands` dans `common/decisions/CHI_decisions.txt:4582`; `JAP_new_order_in_east_asia` dans `common/decisions/CHI_decisions.txt:4583`; `JAP_subdue_the_kwantung_army` dans `common/decisions/CHI_decisions.txt:9472`.
+- Fichiers de ce commit : `common/on_actions/03_wtt_on_actions.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
