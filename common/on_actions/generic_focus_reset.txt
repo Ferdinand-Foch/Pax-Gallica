@@ -115,6 +115,9 @@ on_actions = {
 				ETH = {
 					load_focus_tree = { tree = generic_focus }
 				}
+				AFG = {
+					load_focus_tree = { tree = generic_focus }
+				}
 			}
 		}
 	}

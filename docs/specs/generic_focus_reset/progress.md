@@ -623,3 +623,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `ETH_reclaiming_ethiopia` dans `common/decisions/ETH.txt:118`; `ETH_the_ferengi` dans `common/decisions/ETH.txt:375`; `ETH_secure_arms` dans `common/decisions/ETH.txt:501`.
 - Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Afghanistan — AFG
+
+- Arbres antérieurs effectivement chargés : `afghanistan_tree` (201 focus, `common/national_focus/afghanistan.txt`).
+- Sélection DLC avant attribution : `afghanistan_tree` : Graveyard of Empires, score 10.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/AFG - Afghanistan.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions : aucun appel non générique visant potentiellement ce tag dans les scripts inspectés ; les appels visant explicitement un autre tag restent intacts.
+- Dépendances représentatives conservées : `AFG_75_year_oil_concessions` dans `common/decisions/AFG.txt:26`; `AFG_expand_kabul_university` dans `common/decisions/AFG.txt:151`; `AFG_state_industries` dans `common/decisions/AFG.txt:316`.
+- Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
