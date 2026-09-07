@@ -646,3 +646,15 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `CHI_army_reform` dans `common/decisions/CHI_decisions.txt:271`; `CHI_60_divisions_plan` dans `common/decisions/CHI_decisions.txt:438`; `CHI_forced_loans` dans `common/decisions/CHI_decisions.txt:491`.
 - Fichiers de ce commit : `common/national_focus/china_warlord.txt`, `common/national_focus/china_warlord_sea.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Chine communiste — PRC
+
+- Arbres antérieurs effectivement chargés : `china_communist_focus` (43 focus, `common/national_focus/china_communist.txt`); `china_communist_focus_sea` (203 focus, `common/national_focus/china_communist_sea.txt`).
+- Sélection DLC avant attribution : `china_communist_focus` : Waking the Tiger et absence de No Compromise, No Surrender, score 10 ; `china_communist_focus_sea` : No Compromise, No Surrender, score 1000.
+- Variante attribuable par script également protégée : `china_communist_warlord_focus` ; son accès ne remplace pas la sélection initiale des variantes ci-dessus.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/PRC - ComChina.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions neutralisées uniquement pour ce tag : `common/national_focus/china_warlord.txt` (1 appel); `common/national_focus/china_warlord_sea.txt` (1 appel); `events/WTT_PRC.txt` (2 appels).
+- Dépendances représentatives conservées : `PRC_infiltration` dans `common/decisions/CHI_decisions.txt:2979`; `PRC_anti_japanese_expedition` dans `common/decisions/PRC.txt:1838`; `PRC_100_regiments_campaign` dans `common/decisions/PRC.txt:2526`.
+- Fichiers de ce commit : `common/national_focus/china_warlord.txt`, `common/national_focus/china_warlord_sea.txt`, `events/WTT_PRC.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.

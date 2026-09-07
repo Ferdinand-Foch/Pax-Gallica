@@ -1402,7 +1402,10 @@
 					}
 					NOT = { neutrality > 0.5 }
 				}
-				load_focus_tree = china_communist_focus
+				if = {
+					limit = { NOT = { tag = PRC } }
+					load_focus_tree = china_communist_focus
+				}
 			}
 			else = {
 				if = {
