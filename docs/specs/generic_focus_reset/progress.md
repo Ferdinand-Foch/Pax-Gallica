@@ -724,3 +724,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `MAN_pacify_the_countryside` dans `common/decisions/MAN_decisions.txt:19`; `MAN_tsr_pacify_the_countryside` dans `common/decisions/MAN_decisions.txt:20`; `MAN_bolster_nationalism` dans `common/decisions/MAN_decisions.txt:598`.
 - Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Philippines — PHI
+
+- Arbres antérieurs effectivement chargés : `philippines_focus` (169 focus, `common/national_focus/philippines.txt`).
+- Sélection DLC avant attribution : `philippines_focus` : No Compromise, No Surrender, score 10.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/PHI - Philippines.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions : aucun appel non générique visant potentiellement ce tag dans les scripts inspectés ; les appels visant explicitement un autre tag restent intacts.
+- Dépendances représentatives conservées : `PHI_aircraft_requisition` dans `common/decisions/FRA.txt:669`; `PHI_treaty_of_manila` dans `common/decisions/PHI.txt:113`; `PHI_anti_intervention_strategies` dans `common/decisions/PHI.txt:248`.
+- Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
