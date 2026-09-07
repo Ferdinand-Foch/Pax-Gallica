@@ -425,3 +425,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `POL_the_left_chairman` dans `common/decisions/POL.txt:301`; `POL_second_man_of_the_state` dans `common/decisions/POL.txt:331`; `POL_agrarian_reform` dans `common/decisions/POL.txt:372`.
 - Fichiers de ce commit : `common/national_focus/poland.txt`, `common/on_actions/07_nsb_on_actions.txt`, `events/NSB_Poland.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Tchécoslovaquie — CZE
+
+- Arbres antérieurs effectivement chargés : `czech_focus` (89 focus, `common/national_focus/czechoslovakia.txt`); `mu_czech_focus` (275 focus, `common/national_focus/czechoslovakia_mu.txt`).
+- Sélection DLC avant attribution : `czech_focus` : Death or Dishonor, score 10 ; `mu_czech_focus` : Peace For Our Time, score 50.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/CZE - Czechoslovakia.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions : aucun appel non générique visant potentiellement ce tag dans les scripts inspectés ; les appels visant explicitement un autre tag restent intacts.
+- Dépendances représentatives conservées : `CZE_reform_the_naval_detachment` dans `common/decisions/CZE.txt:988`; `CZE_access_to_the_sea` dans `common/decisions/CZE.txt:991`; `CZE_airlift_soviet_support` dans `common/decisions/CZE.txt:1117`.
+- Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
