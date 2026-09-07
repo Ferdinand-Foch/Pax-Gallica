@@ -326,3 +326,14 @@ Compétences utilisées : `hoi4-focus-trees`, `hoi4-events`, `hoi4-decisions-mis
 - Dépendances représentatives conservées : `GRE_the_right_to_rule` dans `common/decisions/GRE.txt:171`; `GRE_bolster_the_schachtplan` dans `common/decisions/GRE.txt:419`; `GRE_following_in_the_footsteps_of_giants` dans `common/decisions/GRE.txt:423`.
 - Fichiers de ce commit : `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
 - Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.
+
+#### Italie — ITA
+
+- Arbres antérieurs effectivement chargés : `italian_focus` (314 focus, `common/national_focus/italy.txt`).
+- Sélection DLC avant attribution : `italian_focus` : sans condition DLC, score 10.
+- Résultat 1936 : `generic_focus`, 56 focus vanilla ; bloc du tag ajouté au on_startup commun.
+- Histoire : `history/countries/ITA - Italy.txt` conservée ; aucune attribution ou priorité précomplétée incompatible en 1936.
+- Réattributions neutralisées uniquement pour ce tag : `common/on_actions/03_wtt_on_actions.txt` (1 appel); `common/scripted_effects/ITA_scripted_effects.txt` (1 appel).
+- Dépendances représentatives conservées : `ITA_triumph_in_africa_bba` dans `common/decisions/ETH.txt:23`; `ITA_war_with_greece` dans `common/decisions/GRE.txt:1263`; `ITA_befriend_turkey` dans `common/decisions/GRE.txt:1993`.
+- Fichiers de ce commit : `common/on_actions/03_wtt_on_actions.txt`, `common/scripted_effects/ITA_scripted_effects.txt`, `common/on_actions/generic_focus_reset.txt`, `docs/specs/generic_focus_reset/progress.md`.
+- Validation : preuve statique commune ci-dessus, garde exacte du tag, contenu extérieur aux gardes inchangé ; pas de validation en jeu.

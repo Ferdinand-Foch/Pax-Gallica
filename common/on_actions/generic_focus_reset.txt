@@ -34,6 +34,9 @@ on_actions = {
 				GRE = {
 					load_focus_tree = { tree = generic_focus }
 				}
+				ITA = {
+					load_focus_tree = { tree = generic_focus }
+				}
 			}
 		}
 	}

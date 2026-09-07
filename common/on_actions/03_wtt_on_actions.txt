@@ -453,7 +453,10 @@ on_actions = {
 						NOT = { has_government = fascism }
 					}
 				}
-				load_focus_tree = { tree = italian_focus keep_completed = no }
+				if = {
+					limit = { NOT = { tag = ITA } }
+					load_focus_tree = { tree = italian_focus keep_completed = no }
+				}
 			}
 			# Give back SOV focus tree to Communist SOV if they win a civil war.
 			if = {
