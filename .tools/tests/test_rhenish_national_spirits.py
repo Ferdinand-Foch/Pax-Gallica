@@ -199,6 +199,14 @@ for filename in ('common/ideas/rhenish_resistance.txt', 'common/scripted_effects
     source = (ROOT / filename).read_text(encoding='utf-8-sig')
     assert not any(forbidden in source for forbidden in ('add_stability', 'add_intel', 'intel_to_others', 'intel_factor'))
 for language in ('french', 'english'):
+    ledger_path = ROOT / f'localisation/{language}/replace/rhenish_intel_ledger_l_{language}.yml'
+    assert ledger_path.read_bytes().startswith(b'\xef\xbb\xbf')
+    ledger = dict(re.findall(r'^([^\s:]+): "(.*)"$', ledger_path.read_text(encoding='utf-8-sig'), re.M))
+    assert set(ledger) == {'INTEL_STATIC_SOURCE_OperationTokens', 'INTEL_STATIC_INFO'}
+    assert ledger['INTEL_STATIC_SOURCE_OperationTokens'].count('$AMOUNT|.1+%%$') == 1
+    assert len(re.findall(r'\$[^$]+\$', ledger['INTEL_STATIC_SOURCE_OperationTokens'])) == 1, 'Ledger must retain its native aggregate amount'
+    assert ('réseaux de résistance' if language == 'french' else 'resistance networks') in ledger['INTEL_STATIC_SOURCE_OperationTokens']
+    assert 'fixe' not in ledger['INTEL_STATIC_INFO'] and 'Static' not in ledger['INTEL_STATIC_INFO']
     source = (ROOT / f'localisation/{language}/rhenish_resistance_l_{language}.yml').read_text(encoding='utf-8-sig')
     entries = re.findall(r'^([^\s:]+): "(.*)"$', source, re.M)
     localisation = dict(entries)
@@ -233,3 +241,4 @@ for language in ('french', 'english'):
             assert ('chaque jour' if language == 'french' else 'each day') in description
 print(f'{count} national threshold/transition cases passed, each followed by three stable updates; maximum exclusions, cancellation, four directed intel domains, unrelated tokens and local-effect preservation passed.')
 print('French/English tooltips and twenty resistance source names resolve; all displayed point values match runtime tokens and describe daily rises, falls and withdrawal.')
+print('Native ledger replacements are registered for both languages; aggregate amount formatting is preserved and the fixed-source label is clarified.')

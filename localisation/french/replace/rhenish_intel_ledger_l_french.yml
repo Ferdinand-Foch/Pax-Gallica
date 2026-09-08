@@ -1,0 +1,4 @@
+﻿l_french:
+# Native ledger keys shared by all countries; amounts and source grouping stay native.
+INTEL_STATIC_SOURCE_OperationTokens: "Opérations et réseaux de résistance : $AMOUNT|.1+%%$"
+INTEL_STATIC_INFO: "(§Happort maintenu§!)"

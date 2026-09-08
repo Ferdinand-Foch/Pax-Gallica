@@ -68,13 +68,18 @@ Les cinq esprits réutilisent `picture = DEN_occupation_laws` : sprite vanilla `
 Les jetons utilisent le sprite vanilla `GFX_contact_resistance_bg`, défini dans `interface/operationoverview.gfx` vers `gfx/interface/operations/contact_resistance_token.dds`, comme `token_resistance_contacts` ; l'icône représente ainsi leur source rhénane.
 Aucun asset ni fichier GFX supplémentaire n'est nécessaire.
 
-### Limite du registre allemand
+### Présentation du registre allemand
 
-Le registre natif regroupe les jetons dans `INTEL_STATIC_SOURCE_OperationTokens` (« From Operations ») et qualifie les sources de ce type avec `INTEL_STATIC_INFO` (« Static »), dans `localisation/english/intel_ledger_l_english.yml` vanilla.
+Le registre natif regroupe les jetons dans `INTEL_STATIC_SOURCE_OperationTokens` et qualifie les sources de ce type avec `INTEL_STATIC_INFO`, dans `localisation/english/intel_ledger_l_english.yml` vanilla.
 Cette catégorie technique n'implique pas que la valeur du système rhénan reste constante : les callbacks remplacent toujours les jetons au changement de palier.
 Le schéma documenté des jetons n'offre aucun champ de catégorie de registre propre à un jeton.
-Les deux libellés globaux restent donc intacts pour préserver les autres opérations ; les noms, descriptions et icônes propres aux jetons identifient leur origine et leur évolution.
-La ligne agrégée native n'est pas renommée ni présentée comme une ligne dédiée à la Rhénanie.
+La capture utilisateur confirme que l'infobulle du total civil affiche uniquement cette ligne agrégée et son qualificatif : les noms et descriptions individuels des jetons n'y sont pas affichés.
+Les fichiers `localisation/{french,english}/replace/rhenish_intel_ledger_l_<langue>.yml` remplacent donc directement les deux clés natives, avec la priorité `replace` documentée dans la section « Replacing » du wiki hors ligne `Localisation`.
+La ligne française devient « Opérations et réseaux de résistance : <montant> (apport maintenu) » ; l'anglais utilise « Operations and resistance networks » et « maintained contribution ».
+Le paramètre moteur `$AMOUNT|.1+%%$` reste intact : il représente toujours le total des jetons applicables au domaine et à la relation affichés, y compris les autres opérations.
+Le qualificatif signifie que l'apport est maintenu par sa source ; il n'implique pas que cette source ou sa valeur soit permanente.
+Ces deux textes sont partagés par tous les pays ; le qualificatif concerne aussi les autres sources natives de la même catégorie, sans modifier leurs effets ou leur durée.
+La ligne ne constitue pas une ventilation séparée du bonus rhénan : les esprits et descriptions des jetons fournissent ce détail.
 
 ## Références consultées
 
@@ -97,6 +102,7 @@ Les scénarios supplémentaires couvrent la chute du maximum, sa perte par propr
 Les assertions vérifient les quatre domaines à la bonne valeur, la relation GER → FRA, la stabilité persistante, la conservation des idées et jetons tiers, l'absence de renseignement local et l'absence d'écriture dans la résistance native.
 Les vérifications de présentation développent les références de localisation françaises et anglaises, contrôlent les quatre montants dans chaque esprit et les vingt noms de sources, puis les comparent aux constantes des jetons.
 Elles contrôlent aussi le nom du palier français, la cible, le bénéficiaire, le caractère continu de la source, sa fréquence quotidienne et l'icône de résistance.
+Le contrôle du registre impose les deux clés natives dans les fichiers prioritaires `replace` français et anglais, conserve leur paramètre de montant agrégé et rejette l'ancien qualificatif « fixe ».
 Le test importe aussi `.tools/tests/test_rhenish_resistance.py`, dont les 240 cas locaux restent valides avec les six effets d'État inchangés.
 
 Aucune surface MCP événementielle, cartographique, de focus, de technologie, de GUI ou de probabilités scriptées n'est modifiée ; les hooks existants ne sont pas édités.
