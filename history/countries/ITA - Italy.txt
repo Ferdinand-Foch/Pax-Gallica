@@ -32,8 +32,6 @@ IF = {
 }
 
 add_ideas = {
-	vittorio_emanuele
-	vittoria_mutilata
 	limited_exports
 	limited_conscription
 	partial_economic_mobilisation
@@ -204,7 +202,6 @@ set_variable = { ITA_iri_production_speed_infrastructure_factor = 0 }
 set_variable = { ITA_re_supply_node_range = 0 }
 set_variable = { ITA_iri_production_speed_dockyard_factor = 0 }
 
-add_dynamic_modifier = { modifier = ITA_ricostruzione_industriale_dynamic_modifier }
 
 
 #MILITARY INDUSTRY
@@ -219,8 +216,6 @@ set_variable = { ITA_military_industry_dm_equipment_upgrade_xp_cost = 0 }
 set_variable = { ITA_military_industry_dm_industrial_capacity_dockyard = 0 }
 set_variable = { ITA_military_industry_air_equipment_upgrade_xp_cost = 0 }
 
-add_dynamic_modifier = { modifier = ITA_military_industry_dynamic_modifier }
-add_ideas = ITA_hidden_research_penalties_ns # Hidden NS to apply research penalties as part of the Military Industry Dynamic Modifier.
 
 
 #REGIO ESERCITO
@@ -266,7 +261,6 @@ set_variable = { ITA_re_acclimatization_hot_climate_gain_factor = 0 }
 set_variable = { ITA_re_heat_attrition_factor = 0 }
 set_variable = { ITA_re_sp_land_land_cruiser_speed_factor = 0 }
 
-add_dynamic_modifier = { modifier = ITA_regio_esercito_dynamic_modifier }
 
 
 #REGIA AERONAUTICA
@@ -288,7 +282,6 @@ set_variable = { ITA_ra_air_intercept_efficiency = 0 }
 set_variable = { ITA_ra_sp_air_intercontinental_bomber_speed_factor = 0 }
 set_variable = { ITA_ra_sp_air_mothership_aircraft_speed_factor = 0 }
 
-add_dynamic_modifier = { modifier = ITA_regia_aeronautica_dynamic_modifier }
 
 
 #REGIA MARINA
@@ -317,7 +310,6 @@ set_variable = { ITA_rm_navy_intel_factor = 0 }
 set_variable = { ITA_rm_naval_invasion_prep_speed = 0 }
 set_variable = { ITA_rm_sp_naval_ice_carrier_speed_factor = 0 }
 
-add_dynamic_modifier = { modifier = ITA_regia_marina_dynamic_modifier }
 
 
 #INTERNATIONAL AID (Commie)
@@ -475,7 +467,6 @@ if = {
 	limit = {
 		has_dlc = "Man the Guns"
 	}
-	add_ideas = MTG_naval_treaty_cheating
 }
 
 # DIPLOMACY / WAR 36
