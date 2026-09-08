@@ -27,15 +27,13 @@ modifiers = dict(parse(ROOT / 'common/dynamic_modifiers/rhenish_resistance.txt')
 constants = dict(dict(parse(ROOT / 'common/script_constants/rhenish_resistance.txt'))['rhenish_resistance'])
 
 
-def condition(block, state, parameter=None):
+def condition(block, state):
     answers = []
     for key, value in block:
-        if value == '$MODIFIER$':
-            value = parameter
         if key in ('NOT', 'OR'):
-            answer = not condition(value, state, parameter) if key == 'NOT' else any(condition([item], state, parameter) for item in value)
+            answer = not condition(value, state) if key == 'NOT' else any(condition([item], state) for item in value)
         elif key in triggers:
-            answer = condition(triggers[key], state, parameter)
+            answer = condition(triggers[key], state)
         elif key == 'check_variable':
             args = dict(value)
             assert args['var'] == 'resistance' and args['compare'] == 'greater_than'
@@ -54,20 +52,21 @@ def condition(block, state, parameter=None):
     return all(answers)
 
 
-def execute(block, state, parameter=None):
+def execute(block, state):
     taken = False
     for key, value in block:
         if key in ('if', 'else_if', 'else'):
             if key == 'if':
                 taken = False
-            if not taken and (key == 'else' or condition(dict(value)['limit'], state, parameter)):
-                execute([(k, v) for k, v in value if k != 'limit'], state, parameter)
+            if not taken and (key == 'else' or condition(dict(value)['limit'], state)):
+                execute([(k, v) for k, v in value if k != 'limit'], state)
                 taken = True
         elif key in effects:
-            execute(effects[key], state, dict(value)['MODIFIER'] if isinstance(value, list) else parameter)
+            assert value == 'yes', 'Ordinary scripted effects do not accept parameter blocks'
+            execute(effects[key], state)
         elif key in ('add_dynamic_modifier', 'remove_dynamic_modifier'):
             name = dict(value)['modifier']
-            name = parameter if name == '$MODIFIER$' else name
+            assert name in modifiers, f'Unresolved modifier: {name}'
             state['operations'] += 1
             state['mods'].add(name) if key.startswith('add') else state['mods'].discard(name)
         else:
@@ -104,8 +103,37 @@ for state_id in (51, 55, 1085):
 assert {int(k) for k, _ in effects['rhenish_resistance_update']} == {42, 1082, 1083, 1084}
 hooks = dict(dict(parse(ROOT / 'common/on_actions/rhenish_resistance.txt'))['on_actions'])
 assert set(hooks) == {'on_startup', 'on_daily_FRA'}
-for hook in hooks.values():
-    assert dict(dict(hook)['effect']) == {'rhenish_resistance_update': 'yes'}
+assert dict(dict(hooks['on_daily_FRA'])['effect']) == {'rhenish_resistance_update': 'yes'}
+
+
+def validate_calls(block, scope):
+    for key, value in block:
+        if key in effects:
+            assert scope is not None, 'A scripted effect cannot run in startup scope None'
+            assert value == 'yes', 'Ordinary scripted effects do not accept parameter blocks'
+            validate_calls(effects[key], scope)
+        elif key == 'FRA' or key.isdigit():
+            validate_calls(value, 'country' if key == 'FRA' else 'state')
+        elif key in ('if', 'else_if', 'else'):
+            validate_calls([(k, v) for k, v in value if k != 'limit'], scope)
+        elif key in ('add_dynamic_modifier', 'remove_dynamic_modifier'):
+            assert scope == 'state'
+            assert dict(value)['modifier'] in modifiers
+        else:
+            raise AssertionError(key)
+
+
+validate_calls(dict(hooks['on_startup'])['effect'], None)
+validate_calls(dict(hooks['on_daily_FRA'])['effect'], 'country')
+# Regression checks: the previous calls must fail this validator.
+for invalid, scope in [([('rhenish_resistance_update', 'yes')], None),
+                       ([('rhenish_resistance_clear', [('MODIFIER', 'rhenish_resistance_light')])], 'state')]:
+    try:
+        validate_calls(invalid, scope)
+    except AssertionError:
+        pass
+    else:
+        raise AssertionError('Invalid engine contract accepted')
 for modifier in modifiers.values():
     for key, value in modifier:
         if key not in ('enable', 'remove_trigger', 'icon'):

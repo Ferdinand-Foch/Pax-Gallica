@@ -23,40 +23,53 @@ rhenish_resistance_clear = {
 	}
 }
 
-# State scope; MODIFIER is one of the five modifiers defined by this feature.
-rhenish_resistance_select = {
-	if = {
-		limit = { NOT = { has_dynamic_modifier = $MODIFIER$ } }
-		rhenish_resistance_clear = yes
-		add_dynamic_modifier = { modifier = $MODIFIER$ }
-	}
-}
-
 rhenish_resistance_update_state = {
 	if = {
 		limit = { rhenish_resistance_eligible = yes }
 		if = {
 			limit = { check_variable = { var = resistance value = constant:rhenish_resistance.armed_ceiling compare = greater_than } }
-			rhenish_resistance_select = { MODIFIER = rhenish_resistance_uprisings }
+			if = {
+				limit = { NOT = { has_dynamic_modifier = rhenish_resistance_uprisings } }
+				rhenish_resistance_clear = yes
+				add_dynamic_modifier = { modifier = rhenish_resistance_uprisings }
+			}
 		}
 		else_if = {
 			limit = { check_variable = { var = resistance value = constant:rhenish_resistance.sabotage_ceiling compare = greater_than } }
-			rhenish_resistance_select = { MODIFIER = rhenish_resistance_armed }
+			if = {
+				limit = { NOT = { has_dynamic_modifier = rhenish_resistance_armed } }
+				rhenish_resistance_clear = yes
+				add_dynamic_modifier = { modifier = rhenish_resistance_armed }
+			}
 		}
 		else_if = {
 			limit = { check_variable = { var = resistance value = constant:rhenish_resistance.general_ceiling compare = greater_than } }
-			rhenish_resistance_select = { MODIFIER = rhenish_resistance_sabotage }
+			if = {
+				limit = { NOT = { has_dynamic_modifier = rhenish_resistance_sabotage } }
+				rhenish_resistance_clear = yes
+				add_dynamic_modifier = { modifier = rhenish_resistance_sabotage }
+			}
 		}
 		else_if = {
 			limit = { check_variable = { var = resistance value = constant:rhenish_resistance.light_ceiling compare = greater_than } }
-			rhenish_resistance_select = { MODIFIER = rhenish_resistance_general }
+			if = {
+				limit = { NOT = { has_dynamic_modifier = rhenish_resistance_general } }
+				rhenish_resistance_clear = yes
+				add_dynamic_modifier = { modifier = rhenish_resistance_general }
+			}
 		}
-		else = { rhenish_resistance_select = { MODIFIER = rhenish_resistance_light } }
+		else = {
+			if = {
+				limit = { NOT = { has_dynamic_modifier = rhenish_resistance_light } }
+				rhenish_resistance_clear = yes
+				add_dynamic_modifier = { modifier = rhenish_resistance_light }
+			}
+		}
 	}
 	else = { rhenish_resistance_clear = yes }
 }
 
-# Explicit allowlist, safe from startup's global scope or the FRA daily hook.
+# Country scope: call from FRA at startup and from the FRA daily hook.
 rhenish_resistance_update = {
 	42 = { rhenish_resistance_update_state = yes }
 	1082 = { rhenish_resistance_update_state = yes }

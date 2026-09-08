@@ -1,7 +1,7 @@
-# Effets paramétrés
+# Effets scriptés rhénans
 
-`rhenish_resistance_select`, défini dans `common/scripted_effects/rhenish_resistance.txt`, choisit un des cinq modificateurs de résistance rhénane en scope État.
-Entrée obligatoire sans valeur par défaut : `MODIFIER`, identifiant de palier défini dans `common/dynamic_modifiers/rhenish_resistance.txt` ; l'appelant doit avoir vérifié `rhenish_resistance_eligible`.
-Exemple : `rhenish_resistance_select = { MODIFIER = rhenish_resistance_light }`.
-Il ne produit aucune variable de sortie et ne modifie pas la résistance native ; si le palier diffère, il retire uniquement les modificateurs de cette famille avant d'ajouter celui demandé.
+`rhenish_resistance_update`, défini dans `common/scripted_effects/rhenish_resistance.txt`, s'appelle depuis le scope pays FRA et visite les quatre États autorisés.
+`rhenish_resistance_update_state` travaille en scope État : il vérifie l'éligibilité et choisit un palier par des branches explicites contenant des identifiants de modificateurs littéraux.
+Exemple : `FRA = { rhenish_resistance_update = yes }` dans l'effet de `on_startup` ; aucun argument, valeur par défaut ni variable de sortie.
+Les appels d'effets scriptés ordinaires utilisent `= yes`, sans substitution de paramètres ; le nettoyage partagé `rhenish_resistance_clear = yes` retire uniquement les cinq modificateurs rhénans.
 Le détail des helpers sans paramètres, de leur routage et des limites figure dans [la spécification rhénane](specs/rhenish_resistance/implementation.md).

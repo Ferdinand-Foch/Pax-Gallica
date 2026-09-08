@@ -10,9 +10,10 @@ Rhénanie (51), Hesse (55) et Hesse-Rhénan (1085) appartiennent à GER et sont 
 Le système lit directement la variable moteur `resistance` sur son échelle 0–100, sans copie persistante, arrondi, initialisation ni écriture de résistance/compliance.
 Les comparaisons strictes descendantes `>80`, `>60`, `>40`, `>20`, puis le cas restant couvrent exactement les intervalles demandés.
 
-`on_startup` et `on_daily_FRA` appellent uniquement les quatre scopes numériques, sans itération mondiale.
+`on_startup` entre explicitement dans `FRA` avant d'appeler l'effet scripté ; `on_daily_FRA` possède déjà ce scope pays.
+Les deux chemins appellent uniquement les quatre scopes numériques, sans itération mondiale.
 Chaque État doit rester possédé ET contrôlé par FRA et non-core FRA.
-Le sélecteur ne retire/remplace rien lorsque le bon palier existe ; lors d'une transition il retire uniquement les cinq identifiants de ce système, puis ajoute le palier voulu.
+Chaque branche du sélecteur utilise un identifiant de modificateur littéral et ne retire/remplace rien lorsque le bon palier existe ; lors d'une transition elle appelle le nettoyage partagé des cinq identifiants de ce système, puis ajoute le palier voulu.
 Les blocs `enable` et `remove_trigger` neutralisent et nettoient aussi les modificateurs invalides lors de l'actualisation native des modificateurs, même si FRA disparaît et que son on_action quotidien ne s'exécute plus.
 Le retour aux conditions réapplique le palier à l'actualisation suivante ; la réactivité est quotidienne, pas instantanée.
 Aucun événement, insurrection scriptée, bâtiment, frontière, core ou droit de ressources n'est modifié.
@@ -68,6 +69,10 @@ Le test `.tools/tests/test_rhenish_resistance.py` interprète le sous-ensemble u
 Il vérifie montées/descentes, unicité, stabilité sans remplacement, nettoyage pour propriétaire/contrôleur/core, réapplication, exclusion des États allemands et conservation d'un modificateur tiers.
 Il contrôle les cinq valeurs et branchements de `local_factory_sabotage`, ainsi que l’absence de substitution par `resistance_activity`.
 Il contrôle également le routage des deux on_actions et la résolution des constantes ; ce contrôle statique ne remplace pas l'exécution moteur, non réalisée conformément à la demande.
+Les erreurs moteur fournies ont identifié deux défauts dans les scripts : la substitution `$MODIFIER$` dans un effet scripté ordinaire et l'appel d'un effet scripté depuis le scope vide de `on_startup`.
+Les branches explicites et le scope FRA corrigent ces deux chemins ; les paramètres sont retirés du simulateur de test, qui rejetait insuffisamment cette syntaxe.
+Les contrôles de non-régression rejettent explicitement les appels avec paramètres et les appels depuis un scope vide ; les 240 scénarios sont exécutés sur les branches corrigées.
+Références de ces corrections : exemple d'effet appelé avec `= yes` dans le vanilla `common/scripted_effects/00_scripted_effects.txt`, scopes pays sous `on_startup` dans `common/on_actions/00_on_actions.txt`, et section `on_startup` du wiki hors ligne précisant son scope initial `none`.
 L'inspection cartographique est à la révision `7e2e8b443c429459ba85deb246c14f077909c402ddb0cc1f0fb26bd01c8104b4` ; l'artefact est `map-inspect.7e2e8b443c429459.json`, SHA-256 `ef3482c3e3f273e8bfbc46432cd62acc445d1eb18780e6e86e19294c1769dbdd`.
 MCP valide les appartenances et réseaux ; sa validation globale des positions/ports échoue et n'est pas présentée comme validée ; aucun fichier cartographique n'est touché.
 L'inspection probabilité ciblée identifie `no_weighted_surfaces` : ces facteurs ne sont pas un pool pondéré ou une chaîne événementielle prise en charge par ses onze adaptateurs.
