@@ -55,10 +55,26 @@ Les cinq valeurs de stabilité n'existent qu'une fois dans les constantes `@..._
 Les cinq gains de renseignement n'existent qu'une fois dans les constantes `@..._intel` de `common/operation_tokens/rhenish_resistance.txt`, chacun partagé par les quatre domaines.
 Les constantes de fichier sont utilisées pour ces champs numériques statiques ; la prise en charge de `constant:` n'est pas attestée dans ces champs, contrairement aux champs variables du sélecteur.
 
-Les cinq noms et descriptions existent en français et en anglais dans les fichiers `rhenish_resistance_l_<langue>.yml`, avec les noms et descriptions des quatre sources de renseignement.
+Les cinq noms et descriptions existent en français et en anglais dans les fichiers `rhenish_resistance_l_<langue>.yml`.
+Chaque esprit possède un `custom_modifier_tooltip` qui affiche explicitement « Renseignement de l’Allemagne sur la France » et quatre lignes chiffrées, une par domaine, avec le gain en points absolus.
+Le texte explique aussi l'actualisation quotidienne, les montées/descentes et la disparition du bonus en l'absence de département occupé éligible.
+Les cinq clés `rhenish_<palier>_intel_points` de chaque langue sont des projections d'affichage des constantes `@<palier>_intel` ; elles sont partagées par les titres et les infobulles, et le test rejette tout écart avec les valeurs runtime.
+Elles ne règlent aucun effet de jeu.
+
+Les vingt jetons portent des noms quantifiés, par exemple « Réseaux rhénans — Civil : +10 pts ».
+Leur description indique l'apport continu de résistance, le bénéficiaire allemand, la cible française, le nom exact de l'esprit français et le gain du domaine concerné.
+Chaque description rappelle que le montant suit le maximum de résistance et peut augmenter, diminuer ou disparaître.
 Les cinq esprits réutilisent `picture = DEN_occupation_laws` : sprite vanilla `GFX_idea_DEN_occupation_laws`, défini dans `interface/ideas.gfx`, texture `gfx/interface/ideas/idea_DEN_occupation_laws.dds` présente dans l'installation.
-Les jetons utilisent les sprites vanilla `GFX_infiltrate_civilian_bg`, `GFX_infiltrate_army_bg`, `GFX_infiltrate_navy_bg` et `GFX_infiltrate_air_bg`, comme les quatre jetons d'infiltration vanilla.
+Les jetons utilisent le sprite vanilla `GFX_contact_resistance_bg`, défini dans `interface/operationoverview.gfx` vers `gfx/interface/operations/contact_resistance_token.dds`, comme `token_resistance_contacts` ; l'icône représente ainsi leur source rhénane.
 Aucun asset ni fichier GFX supplémentaire n'est nécessaire.
+
+### Limite du registre allemand
+
+Le registre natif regroupe les jetons dans `INTEL_STATIC_SOURCE_OperationTokens` (« From Operations ») et qualifie les sources de ce type avec `INTEL_STATIC_INFO` (« Static »), dans `localisation/english/intel_ledger_l_english.yml` vanilla.
+Cette catégorie technique n'implique pas que la valeur du système rhénan reste constante : les callbacks remplacent toujours les jetons au changement de palier.
+Le schéma documenté des jetons n'offre aucun champ de catégorie de registre propre à un jeton.
+Les deux libellés globaux restent donc intacts pour préserver les autres opérations ; les noms, descriptions et icônes propres aux jetons identifient leur origine et leur évolution.
+La ligne agrégée native n'est pas renommée ni présentée comme une ligne dédiée à la Rhénanie.
 
 ## Références consultées
 
@@ -70,6 +86,7 @@ Racine vanilla : `C:/Program Files (x86)/Steam/steamapps/common/Hearts of Iron I
 - `documentation/triggers_documentation.md`, `dynamic_variables_documentation.md`, `modifiers_documentation.md` : comparaisons, résistance native et stabilité ; distinction entre gains dirigés et facteurs de renseignement.
 - `documentation/script_concept_documentation.md` et `common/script_constants/documentation.md` : constantes et limites des champs compatibles.
 - Wiki hors ligne : pages centrales requises, `Idea modding` pour callbacks/annulation, `Data structures` pour temporaire sans scope, `Effects`, `Modifiers`, `Intelligence agency modding` et `On actions`.
+- Infobulles : section « Tooltip modification » de `paradox_wiki/Modifiers - Hearts of Iron 4 Wiki.md` et précédent `BEL_chasseurs_ardennais` dans `common/ideas/belgium.txt`, avec `custom_modifier_tooltip` dans le bloc `modifier`.
 
 ## Vérifications et limites
 
@@ -78,6 +95,8 @@ Il couvre 240 combinaisons : les quatre États gagnants, six situations initiale
 Chaque combinaison est suivie de trois actualisations sans aucune nouvelle opération d'idée ou de jeton.
 Les scénarios supplémentaires couvrent la chute du maximum, sa perte par propriétaire/contrôleur/core, l'absence d'État éligible, l'annulation native simulée, le retour dans le périmètre, les maxima ex æquo et un État français extérieur à la liste à 100 de résistance.
 Les assertions vérifient les quatre domaines à la bonne valeur, la relation GER → FRA, la stabilité persistante, la conservation des idées et jetons tiers, l'absence de renseignement local et l'absence d'écriture dans la résistance native.
+Les vérifications de présentation développent les références de localisation françaises et anglaises, contrôlent les quatre montants dans chaque esprit et les vingt noms de sources, puis les comparent aux constantes des jetons.
+Elles contrôlent aussi le nom du palier français, la cible, le bénéficiaire, le caractère continu de la source, sa fréquence quotidienne et l'icône de résistance.
 Le test importe aussi `.tools/tests/test_rhenish_resistance.py`, dont les 240 cas locaux restent valides avec les six effets d'État inchangés.
 
 Aucune surface MCP événementielle, cartographique, de focus, de technologie, de GUI ou de probabilités scriptées n'est modifiée ; les hooks existants ne sont pas édités.

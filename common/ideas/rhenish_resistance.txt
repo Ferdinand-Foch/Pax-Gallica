@@ -13,7 +13,10 @@ ideas = {
 			allowed_civil_war = { always = no }
 			removal_cost = -1
 			cancel = { NOT = { any_owned_state = { rhenish_resistance_eligible = yes } } }
-			modifier = { stability_factor = @occupation_stability }
+			modifier = {
+				stability_factor = @occupation_stability
+				custom_modifier_tooltip = rhenish_occupation_intel_tt
+			}
 			on_add = {
 				GER = {
 					add_operation_token = { tag = FRA token = rhenish_occupation_civilian_intel }
@@ -38,7 +41,10 @@ ideas = {
 			allowed_civil_war = { always = no }
 			removal_cost = -1
 			cancel = { NOT = { any_owned_state = { rhenish_resistance_eligible = yes } } }
-			modifier = { stability_factor = @concern_stability }
+			modifier = {
+				stability_factor = @concern_stability
+				custom_modifier_tooltip = rhenish_concern_intel_tt
+			}
 			on_add = {
 				GER = {
 					add_operation_token = { tag = FRA token = rhenish_concern_civilian_intel }
@@ -63,7 +69,10 @@ ideas = {
 			allowed_civil_war = { always = no }
 			removal_cost = -1
 			cancel = { NOT = { any_owned_state = { rhenish_resistance_eligible = yes } } }
-			modifier = { stability_factor = @crisis_stability }
+			modifier = {
+				stability_factor = @crisis_stability
+				custom_modifier_tooltip = rhenish_crisis_intel_tt
+			}
 			on_add = {
 				GER = {
 					add_operation_token = { tag = FRA token = rhenish_crisis_civilian_intel }
@@ -88,7 +97,10 @@ ideas = {
 			allowed_civil_war = { always = no }
 			removal_cost = -1
 			cancel = { NOT = { any_owned_state = { rhenish_resistance_eligible = yes } } }
-			modifier = { stability_factor = @insurrection_stability }
+			modifier = {
+				stability_factor = @insurrection_stability
+				custom_modifier_tooltip = rhenish_insurrection_intel_tt
+			}
 			on_add = {
 				GER = {
 					add_operation_token = { tag = FRA token = rhenish_insurrection_civilian_intel }
@@ -113,7 +125,10 @@ ideas = {
 			allowed_civil_war = { always = no }
 			removal_cost = -1
 			cancel = { NOT = { any_owned_state = { rhenish_resistance_eligible = yes } } }
-			modifier = { stability_factor = @uprising_stability }
+			modifier = {
+				stability_factor = @uprising_stability
+				custom_modifier_tooltip = rhenish_uprising_intel_tt
+			}
 			on_add = {
 				GER = {
 					add_operation_token = { tag = FRA token = rhenish_uprising_civilian_intel }

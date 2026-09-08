@@ -3,6 +3,7 @@
 This bounded script interpreter is not the HOI4 engine or its intel UI.
 """
 from decimal import Decimal
+import re
 from test_rhenish_resistance import ROOT, parse, effects, triggers, constants, modifiers
 
 idea_file = dict(parse(ROOT / 'common/ideas/rhenish_resistance.txt'))
@@ -120,7 +121,7 @@ class World:
         assert set(gains.values()) == {Decimal(0 if tier is None else points[tier])}
         if tier is not None:
             modifier = dict(dict(ideas[next(iter(expected))])['modifier'])
-            assert set(modifier) == {'stability_factor'}
+            assert set(modifier) == {'stability_factor', 'custom_modifier_tooltip'}
             assert Decimal(idea_file[modifier['stability_factor']]) == stability[tier]
 
 
@@ -199,8 +200,36 @@ for filename in ('common/ideas/rhenish_resistance.txt', 'common/scripted_effects
     assert not any(forbidden in source for forbidden in ('add_stability', 'add_intel', 'intel_to_others', 'intel_factor'))
 for language in ('french', 'english'):
     source = (ROOT / f'localisation/{language}/rhenish_resistance_l_{language}.yml').read_text(encoding='utf-8-sig')
+    entries = re.findall(r'^([^\s:]+): "(.*)"$', source, re.M)
+    localisation = dict(entries)
+    assert len(entries) == len(localisation), 'Duplicate localisation key'
+
+    def expand(key, trail=()):
+        assert key not in trail, 'Recursive localisation reference'
+        assert key in localisation, f'Missing localisation: {key}'
+        return re.sub(r'\$([\w]+)\$', lambda m: expand(m[1], (*trail, key)), localisation[key])
+
     for key in ideas:
         assert f'\n{key}: ' in source and f'\n{key}_desc: ' in source
     for definition in tokens.values():
         assert f'\n{definition["name"]}: ' in source and f'\n{definition["desc"]}: ' in source
+    for tier in tiers:
+        amount = token_file[f'@{tier}_intel']
+        assert localisation[f'rhenish_{tier}_intel_points'] == amount, 'Displayed points differ from runtime tuning'
+        tooltip_key = dict(dict(ideas[f'rhenish_{tier}'])['modifier'])['custom_modifier_tooltip']
+        assert tooltip_key == f'rhenish_{tier}_intel_tt'
+        tooltip = expand(tooltip_key)
+        assert tooltip.count(f'§R+{amount} points§!') == 4, 'French spirit must quantify all four domains'
+        assert ('Allemagne' if language == 'french' else 'German') in tooltip and 'France' in tooltip
+        assert ('chaque jour' if language == 'french' else 'each day') in tooltip
+        for domain in domains:
+            definition = tokens[f'rhenish_{tier}_{domain}_intel']
+            assert definition['icon'] == 'GFX_contact_resistance_bg'
+            title, description = expand(definition['name']), expand(definition['desc'])
+            assert f'+{amount} pts' in title and expand(f'rhenish_intel_{domain}') in title
+            assert expand(f'rhenish_{tier}') in description
+            assert ('Allemagne' if language == 'french' else 'Germany') in description and 'France' in description
+            assert ('Apport continu' if language == 'french' else 'Continuing intelligence') in description
+            assert ('chaque jour' if language == 'french' else 'each day') in description
 print(f'{count} national threshold/transition cases passed, each followed by three stable updates; maximum exclusions, cancellation, four directed intel domains, unrelated tokens and local-effect preservation passed.')
+print('French/English tooltips and twenty resistance source names resolve; all displayed point values match runtime tokens and describe daily rises, falls and withdrawal.')
