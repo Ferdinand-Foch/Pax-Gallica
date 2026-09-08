@@ -1,0 +1,7 @@
+# State scope: only the four annexed departments under French ownership and control.
+rhenish_resistance_eligible = {
+	OR = { state = 42 state = 1082 state = 1083 state = 1084 }
+	is_owned_by = FRA
+	is_controlled_by = FRA
+	NOT = { is_core_of = FRA }
+}

@@ -1,0 +1,9 @@
+# Initialize without setting resistance; update only the four listed states each day.
+on_actions = {
+	on_startup = {
+		effect = { rhenish_resistance_update = yes }
+	}
+	on_daily_FRA = {
+		effect = { rhenish_resistance_update = yes }
+	}
+}

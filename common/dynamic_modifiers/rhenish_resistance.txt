@@ -1,0 +1,56 @@
+# Mutually exclusive state tiers; no changes to native resistance or compliance values.
+
+rhenish_resistance_light = {
+	icon = GFX_modifiers_generic_resistance
+	enable = { rhenish_resistance_eligible = yes }
+	remove_trigger = { NOT = { rhenish_resistance_eligible = yes } }
+	state_production_speed_buildings_factor = constant:rhenish_resistance.light_construction
+	state_resources_factor = constant:rhenish_resistance.light_resources
+	compliance_growth = constant:rhenish_resistance.light_compliance
+	required_garrison_factor = constant:rhenish_resistance.light_garrison
+	resistance_damage_to_garrison = constant:rhenish_resistance.light_damage
+}
+
+rhenish_resistance_general = {
+	icon = GFX_modifiers_generic_resistance
+	enable = { rhenish_resistance_eligible = yes }
+	remove_trigger = { NOT = { rhenish_resistance_eligible = yes } }
+	state_production_speed_buildings_factor = constant:rhenish_resistance.general_construction
+	state_resources_factor = constant:rhenish_resistance.general_resources
+	compliance_growth = constant:rhenish_resistance.general_compliance
+	required_garrison_factor = constant:rhenish_resistance.general_garrison
+	resistance_damage_to_garrison = constant:rhenish_resistance.general_damage
+}
+
+rhenish_resistance_sabotage = {
+	icon = GFX_modifiers_generic_resistance
+	enable = { rhenish_resistance_eligible = yes }
+	remove_trigger = { NOT = { rhenish_resistance_eligible = yes } }
+	state_production_speed_buildings_factor = constant:rhenish_resistance.sabotage_construction
+	state_resources_factor = constant:rhenish_resistance.sabotage_resources
+	compliance_growth = constant:rhenish_resistance.sabotage_compliance
+	required_garrison_factor = constant:rhenish_resistance.sabotage_garrison
+	resistance_damage_to_garrison = constant:rhenish_resistance.sabotage_damage
+}
+
+rhenish_resistance_armed = {
+	icon = GFX_modifiers_generic_resistance
+	enable = { rhenish_resistance_eligible = yes }
+	remove_trigger = { NOT = { rhenish_resistance_eligible = yes } }
+	state_production_speed_buildings_factor = constant:rhenish_resistance.armed_construction
+	state_resources_factor = constant:rhenish_resistance.armed_resources
+	compliance_growth = constant:rhenish_resistance.armed_compliance
+	required_garrison_factor = constant:rhenish_resistance.armed_garrison
+	resistance_damage_to_garrison = constant:rhenish_resistance.armed_damage
+}
+
+rhenish_resistance_uprisings = {
+	icon = GFX_modifiers_generic_resistance
+	enable = { rhenish_resistance_eligible = yes }
+	remove_trigger = { NOT = { rhenish_resistance_eligible = yes } }
+	state_production_speed_buildings_factor = constant:rhenish_resistance.uprisings_construction
+	state_resources_factor = constant:rhenish_resistance.uprisings_resources
+	compliance_growth = constant:rhenish_resistance.uprisings_compliance
+	required_garrison_factor = constant:rhenish_resistance.uprisings_garrison
+	resistance_damage_to_garrison = constant:rhenish_resistance.uprisings_damage
+}
