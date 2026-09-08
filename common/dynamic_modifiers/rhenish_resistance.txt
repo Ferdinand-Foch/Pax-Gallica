@@ -9,6 +9,7 @@ rhenish_resistance_light = {
 	compliance_growth = constant:rhenish_resistance.light_compliance
 	required_garrison_factor = constant:rhenish_resistance.light_garrison
 	resistance_damage_to_garrison = constant:rhenish_resistance.light_damage
+	local_factory_sabotage = constant:rhenish_resistance.light_factory_sabotage
 }
 
 rhenish_resistance_general = {
@@ -20,6 +21,7 @@ rhenish_resistance_general = {
 	compliance_growth = constant:rhenish_resistance.general_compliance
 	required_garrison_factor = constant:rhenish_resistance.general_garrison
 	resistance_damage_to_garrison = constant:rhenish_resistance.general_damage
+	local_factory_sabotage = constant:rhenish_resistance.general_factory_sabotage
 }
 
 rhenish_resistance_sabotage = {
@@ -31,6 +33,7 @@ rhenish_resistance_sabotage = {
 	compliance_growth = constant:rhenish_resistance.sabotage_compliance
 	required_garrison_factor = constant:rhenish_resistance.sabotage_garrison
 	resistance_damage_to_garrison = constant:rhenish_resistance.sabotage_damage
+	local_factory_sabotage = constant:rhenish_resistance.sabotage_factory_sabotage
 }
 
 rhenish_resistance_armed = {
@@ -42,6 +45,7 @@ rhenish_resistance_armed = {
 	compliance_growth = constant:rhenish_resistance.armed_compliance
 	required_garrison_factor = constant:rhenish_resistance.armed_garrison
 	resistance_damage_to_garrison = constant:rhenish_resistance.armed_damage
+	local_factory_sabotage = constant:rhenish_resistance.armed_factory_sabotage
 }
 
 rhenish_resistance_uprisings = {
@@ -53,4 +57,5 @@ rhenish_resistance_uprisings = {
 	compliance_growth = constant:rhenish_resistance.uprisings_compliance
 	required_garrison_factor = constant:rhenish_resistance.uprisings_garrison
 	resistance_damage_to_garrison = constant:rhenish_resistance.uprisings_damage
+	local_factory_sabotage = constant:rhenish_resistance.uprisings_factory_sabotage
 }

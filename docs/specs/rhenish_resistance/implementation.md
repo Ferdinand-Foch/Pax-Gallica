@@ -1,7 +1,7 @@
 # Paliers de résistance rhénane
 
-Tranche partielle pour HOI4 1.19.2.0, confirmé par le `launcher-settings.json` installé : construction, ressources, croissance de la compliance, besoins et dégâts de garnison.
-Le renseignement allemand et le risque de sabotage restent non implémentés, sans substitution.
+Paliers pour HOI4 1.19.2.0, confirmé par le `launcher-settings.json` installé : construction, ressources, croissance de la compliance, besoins et dégâts de garnison, sabotage local des constructions.
+Le renseignement allemand est hors périmètre conformément au choix utilisateur ; les malus locaux de construction sont acceptés avec leur comportement additif.
 
 ## Territoires et fonctionnement
 
@@ -22,13 +22,13 @@ Aucun événement, insurrection scriptée, bâtiment, frontière, core ou droit 
 Les valeurs ci-dessous sont des contributions relatives aux facteurs moteur, jamais des points de résistance ou de compliance.
 La définition commune est `common/script_constants/rhenish_resistance.txt` ; les modificateurs dynamiques lisent ses valeurs par leur interface de variables acceptant `constant:`.
 
-| Intervalle | Palier | Durée nominale | Vitesse ajoutée | Ressources | Croissance compliance | Garnison requise | Dégâts garnison |
-| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| 0–20 inclus | Résistance civile légère | +10 % | −9,0909 % | −10 % | −10 % | 0 | 0 |
-| >20–40 inclus | Résistance civile généralisée | +25 % | −20 % | −25 % | −25 % | +10 % | 0 |
-| >40–60 inclus | Actes de sabotage | +50 % | −33,3333 % | −50 % | −50 % | +50 % | 0 |
-| >60–80 inclus | Résistance armée | +100 % | −50 % | −75 % | −75 % | +100 % | +50 % |
-| >80–100 inclus | Soulèvements | +200 % | −66,6667 % | −100 % | −100 % | +300 % | +200 % |
+| Intervalle | Palier | Durée nominale | Vitesse ajoutée | Ressources | Croissance compliance | Garnison requise | Dégâts garnison | Sabotage des constructions |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| 0–20 inclus | Résistance civile légère | +10 % | −9,0909 % | −10 % | −10 % | 0 | 0 | 0 |
+| >20–40 inclus | Résistance civile généralisée | +25 % | −20 % | −25 % | −25 % | +10 % | 0 | 0 |
+| >40–60 inclus | Actes de sabotage | +50 % | −33,3333 % | −50 % | −50 % | +50 % | 0 | +10 % |
+| >60–80 inclus | Résistance armée | +100 % | −50 % | −75 % | −75 % | +100 % | +50 % | +25 % |
+| >80–100 inclus | Soulèvements | +200 % | −66,6667 % | −100 % | −100 % | +300 % | +200 % | +100 % |
 
 Chaque identifiant suivant figure dans `documentation/modifiers_documentation.md` de l'installation, catégorie `state`, et possède le précédent vanilla indiqué.
 
@@ -38,6 +38,7 @@ Chaque identifiant suivant figure dans `documentation/modifiers_documentation.md
 | Ressources de l'État | `state_resources_factor` | Même précédent |
 | Croissance relative de compliance | `compliance_growth` | Même fichier, `kurdish_separatism` ; `compliance_gain` est plat et n'est pas utilisé |
 | Besoin de garnison | `required_garrison_factor` | `common/occupation_laws/occupation_laws.txt`, contribution −0,40 à la ligne 153 |
+| Sabotage des constructions | `local_factory_sabotage` | `common/dynamic_modifiers/aat_dynamic_modifiers.txt`, `FIN_anti_soviet_sentiment` (+0,1) |
 | Dégâts aux garnisons | `resistance_damage_to_garrison` | `common/dynamic_modifiers/aat_dynamic_modifiers.txt`, `FIN_weapon_caches_modifier` |
 
 Pour une augmentation de durée `d`, le facteur de vitesse est `1/(1+d)` et la contribution enregistrée vaut `1/(1+d)-1`.
@@ -52,25 +53,26 @@ Les pénalités natives de résistance et les lois d'occupation restent actives 
 Nos dégâts se cumulent avec le +100 % natif et les autres contributions de dégâts ; nos besoins s'ajoutent aux facteurs des lois d'occupation ; ressources et compliance conservent leurs autres facteurs natifs.
 Le déclenchement natif à 90 n'est ni supprimé ni remplacé ; « Soulèvements » n'ajoute aucun déclenchement.
 
-## Limites restantes
+## Sabotage et limites moteur
 
-- Renseignement : les +5/+10/+15/+20/+30 % réservés à GER contre FRA sont en attente.
-  `local_intel_to_enemies` ne réserve pas l'avantage à GER ; les modificateurs de réseau concernent le réseau, pas un renseignement générique ciblé.
-  Un traitement séparé devra préciser le domaine, le mode d'agrégation des quatre États, puis une correspondance moteur ciblant effectivement GER contre FRA, avant toute implémentation.
-- Sabotage : les 0/0/+10/+25/+100 % sont en attente.
-  `local_factory_sabotage` est nommé « Chance to Sabotage Constructions » dans la localisation officielle et utilisé par `FIN_anti_soviet_sentiment` ; `resistance_activity`, utilisé dans le même fichier vanilla, concerne toute l'activité de résistance.
-  Ni un risque limité aux constructions ni une hausse générale incluant les attaques de garnisons ne sont retenus sans préciser le sens du sabotage demandé.
-- Construction : la conversion réciproque est implémentée ; un allongement exact de la durée finale indépendamment des autres bonus reste une limite du facteur additif décrit ci-dessus.
+`local_factory_sabotage` ajoute au facteur local de probabilité de sabotage des constructions les contributions 0/0/+0,10/+0,25/+1,00 selon le palier.
+Ce facteur se combine au calcul natif associé à la résistance ; il ne remplace pas la résistance ni les dégâts natifs de sabotage.
+Les contributions au même facteur se cumulent additivement, sous réserve des bornes internes du moteur ; +10 % n'est pas une addition de dix points de probabilité absolue.
+`resistance_activity` et `resistance_garrison_penetration_chance` ne sont pas modifiés : le risque général d'activité et les attaques contre les garnisons ne sont pas amplifiés par ce nouveau facteur.
+La construction conserve les valeurs locales converties du tableau ; l'allongement exact tous bonus confondus n'est pas un critère d'acceptation.
+Aucune simplification ni omission dans ce périmètre accepté ; le renseignement n'en fait pas partie.
 
 ## Contrôles et références
 
 Le test `.tools/tests/test_rhenish_resistance.py` interprète le sous-ensemble utilisé des scripts réels : 240 cas couvrant les dix valeurs demandées, chaque État, chaque ancien palier et l'absence de palier.
 Il vérifie montées/descentes, unicité, stabilité sans remplacement, nettoyage pour propriétaire/contrôleur/core, réapplication, exclusion des États allemands et conservation d'un modificateur tiers.
+Il contrôle les cinq valeurs et branchements de `local_factory_sabotage`, ainsi que l’absence de substitution par `resistance_activity`.
 Il contrôle également le routage des deux on_actions et la résolution des constantes ; ce contrôle statique ne remplace pas l'exécution moteur, non réalisée conformément à la demande.
 L'inspection cartographique est à la révision `7e2e8b443c429459ba85deb246c14f077909c402ddb0cc1f0fb26bd01c8104b4` ; l'artefact est `map-inspect.7e2e8b443c429459.json`, SHA-256 `ef3482c3e3f273e8bfbc46432cd62acc445d1eb18780e6e86e19294c1769dbdd`.
 MCP valide les appartenances et réseaux ; sa validation globale des positions/ports échoue et n'est pas présentée comme validée ; aucun fichier cartographique n'est touché.
 L'inspection probabilité ciblée identifie `no_weighted_surfaces` : ces facteurs ne sont pas un pool pondéré ou une chaîne événementielle prise en charge par ses onze adaptateurs.
-Preuve MCP finale : `hoi4-agent://workspace/auto_pax_franca/artifact/b0c4b19b13feddff0b2cb2f001efd34223a3fc8ab0365f808d27aadf7a04c6fe/d93ae3414ac0240543451fc17cc7ade956c17e4b77f4be9c2c6430b3b6d0c347/probability-inspect-92bc021f4e61.json`.
+Preuve MCP avant sabotage : `hoi4-agent://workspace/auto_pax_franca/artifact/b0c4b19b13feddff0b2cb2f001efd34223a3fc8ab0365f808d27aadf7a04c6fe/d93ae3414ac0240543451fc17cc7ade956c17e4b77f4be9c2c6430b3b6d0c347/probability-inspect-92bc021f4e61.json`.
+Preuve MCP finale : `hoi4-agent://workspace/auto_pax_franca/artifact/f3ac6af9f9c15add10855ad0d4d514067a333a64e8036e4df0b01b0497220840/cd8a4a602361bcfb070ea26eafeeb94cfd12b363d5cc086a64dc04260c0f8f30/probability-inspect-ab019d089ef4.json` ; aucun adaptateur disponible pour ce facteur natif, donc aucune simulation MCP de sa fréquence moteur n'est revendiquée.
 Preuve cartographique : `hoi4-agent://workspace/auto_pax_franca/artifact/ef3482c3e3f273e8bfbc46432cd62acc445d1eb18780e6e86e19294c1769dbdd/018fbcbf27dd41605eb8019ed0ccfb336dd6bf1b549b8d19104bb7cd730984e5/map-inspect.7e2e8b443c429459.json`.
 Aucune réécriture de carte, chaîne événementielle, technologie, focus ou GUI n'est concernée.
 Sources locales complémentaires : wiki hors ligne, pages centrales imposées et sections variables/résistance, modificateurs dynamiques, effets scriptés et on_actions ; documentation officielle `dynamic_variables_documentation.md`, `triggers_documentation.md`, `effects_documentation.md`, `script_concept_documentation.md` et `common/script_constants/documentation.md`.

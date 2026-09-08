@@ -111,14 +111,18 @@ for modifier in modifiers.values():
         if key not in ('enable', 'remove_trigger', 'icon'):
             assert value.startswith('constant:rhenish_resistance.')
             Decimal(constants[value.split('.')[-1]])
-for tier, duration, penalty, garrison, damage in zip(
+for tier, duration, penalty, garrison, damage, sabotage in zip(
     ['light', 'general', 'sabotage', 'armed', 'uprisings'],
     ['0.1', '0.25', '0.5', '1', '2'],
     ['-0.1', '-0.25', '-0.5', '-0.75', '-1'],
     ['0', '0.1', '0.5', '1', '3'],
     ['0', '0', '0', '0.5', '2'],
+    ['0', '0', '0.1', '0.25', '1'],
 ):
     assert abs(Decimal(constants[tier + '_construction']) - (1 / (1 + Decimal(duration)) - 1)) < Decimal('0.000001')
+    assert dict(modifiers['rhenish_resistance_' + tier])['local_factory_sabotage'] == 'constant:rhenish_resistance.' + tier + '_factory_sabotage'
+    assert Decimal(constants[tier + '_factory_sabotage']) == Decimal(sabotage)
+    assert 'resistance_activity' not in dict(modifiers['rhenish_resistance_' + tier])
     for suffix, expected_value in [('resources', penalty), ('compliance', penalty), ('garrison', garrison), ('damage', damage)]:
         assert Decimal(constants[tier + '_' + suffix]) == Decimal(expected_value)
 print(f'{count} source-driven threshold/transition cases passed; cleanup, reapplication, no replacement at stable tier, unrelated modifier preservation and hook allowlist passed.')
