@@ -100,7 +100,7 @@ for state_id in (42, 1082, 1083, 1084):
 for state_id in (51, 55, 1085):
     state['id'] = state_id
     assert not condition(triggers['rhenish_resistance_eligible'], state)
-assert {int(k) for k, _ in effects['rhenish_resistance_update']} == {42, 1082, 1083, 1084}
+assert {int(k) for k, _ in effects['rhenish_resistance_update'] if k.isdigit()} == {42, 1082, 1083, 1084}
 hooks = dict(dict(parse(ROOT / 'common/on_actions/rhenish_resistance.txt'))['on_actions'])
 assert set(hooks) == {'on_startup', 'on_daily_FRA'}
 assert dict(dict(hooks['on_daily_FRA'])['effect']) == {'rhenish_resistance_update': 'yes'}
@@ -119,6 +119,12 @@ def validate_calls(block, scope):
         elif key in ('add_dynamic_modifier', 'remove_dynamic_modifier'):
             assert scope == 'state'
             assert dict(value)['modifier'] in modifiers
+        elif key == 'set_temp_variable':
+            assert scope in ('country', 'state')
+            assert set(dict(value)) == {'rhenish_max_resistance'}
+        elif key in ('add_ideas', 'remove_ideas'):
+            assert scope == 'country'
+            assert value in {'rhenish_occupation', 'rhenish_concern', 'rhenish_crisis', 'rhenish_insurrection', 'rhenish_uprising'}
         else:
             raise AssertionError(key)
 

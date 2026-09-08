@@ -1,4 +1,4 @@
-# State-only tier maintenance. The native resistance variable is read, never written.
+# Local tiers and French national tier maintenance. Native resistance is only read.
 
 rhenish_resistance_clear = {
 	if = {
@@ -69,10 +69,95 @@ rhenish_resistance_update_state = {
 	else = { rhenish_resistance_clear = yes }
 }
 
-# Country scope: call from FRA at startup and from the FRA daily hook.
+# State scope. The accumulator is initialized by the calling country effect.
+rhenish_resistance_update_and_accumulate = {
+	rhenish_resistance_update_state = yes
+	if = {
+		limit = {
+			rhenish_resistance_eligible = yes
+			check_variable = { var = resistance value = rhenish_max_resistance compare = greater_than }
+		}
+		set_temp_variable = { rhenish_max_resistance = resistance }
+	}
+}
+
+# FRA scope. Each idea's on_remove also removes its four GER -> FRA intel tokens.
+rhenish_resistance_clear_national = {
+	if = {
+		limit = { has_idea = rhenish_occupation }
+		remove_ideas = rhenish_occupation
+	}
+	if = {
+		limit = { has_idea = rhenish_concern }
+		remove_ideas = rhenish_concern
+	}
+	if = {
+		limit = { has_idea = rhenish_crisis }
+		remove_ideas = rhenish_crisis
+	}
+	if = {
+		limit = { has_idea = rhenish_insurrection }
+		remove_ideas = rhenish_insurrection
+	}
+	if = {
+		limit = { has_idea = rhenish_uprising }
+		remove_ideas = rhenish_uprising
+	}
+}
+
+# FRA scope. Strict descending comparisons preserve inclusive upper boundaries.
+rhenish_resistance_update_national = {
+	if = {
+		limit = { check_variable = { var = rhenish_max_resistance value = constant:rhenish_resistance.no_eligible_resistance compare = equals } }
+		rhenish_resistance_clear_national = yes
+	}
+	else_if = {
+		limit = { check_variable = { var = rhenish_max_resistance value = constant:rhenish_resistance.armed_ceiling compare = greater_than } }
+		if = {
+			limit = { NOT = { has_idea = rhenish_uprising } }
+			rhenish_resistance_clear_national = yes
+			add_ideas = rhenish_uprising
+		}
+	}
+	else_if = {
+		limit = { check_variable = { var = rhenish_max_resistance value = constant:rhenish_resistance.sabotage_ceiling compare = greater_than } }
+		if = {
+			limit = { NOT = { has_idea = rhenish_insurrection } }
+			rhenish_resistance_clear_national = yes
+			add_ideas = rhenish_insurrection
+		}
+	}
+	else_if = {
+		limit = { check_variable = { var = rhenish_max_resistance value = constant:rhenish_resistance.general_ceiling compare = greater_than } }
+		if = {
+			limit = { NOT = { has_idea = rhenish_crisis } }
+			rhenish_resistance_clear_national = yes
+			add_ideas = rhenish_crisis
+		}
+	}
+	else_if = {
+		limit = { check_variable = { var = rhenish_max_resistance value = constant:rhenish_resistance.light_ceiling compare = greater_than } }
+		if = {
+			limit = { NOT = { has_idea = rhenish_concern } }
+			rhenish_resistance_clear_national = yes
+			add_ideas = rhenish_concern
+		}
+	}
+	else = {
+		if = {
+			limit = { NOT = { has_idea = rhenish_occupation } }
+			rhenish_resistance_clear_national = yes
+			add_ideas = rhenish_occupation
+		}
+	}
+}
+
+# FRA scope: one shared four-state pass at startup and in the existing daily hook.
 rhenish_resistance_update = {
-	42 = { rhenish_resistance_update_state = yes }
-	1082 = { rhenish_resistance_update_state = yes }
-	1083 = { rhenish_resistance_update_state = yes }
-	1084 = { rhenish_resistance_update_state = yes }
+	set_temp_variable = { rhenish_max_resistance = constant:rhenish_resistance.no_eligible_resistance }
+	42 = { rhenish_resistance_update_and_accumulate = yes }
+	1082 = { rhenish_resistance_update_and_accumulate = yes }
+	1083 = { rhenish_resistance_update_and_accumulate = yes }
+	1084 = { rhenish_resistance_update_and_accumulate = yes }
+	rhenish_resistance_update_national = yes
 }

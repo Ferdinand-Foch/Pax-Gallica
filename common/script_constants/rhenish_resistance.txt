@@ -1,6 +1,7 @@
 # Shared thresholds (native 0..100 scale) and relative modifier contributions.
 rhenish_resistance = {
 	schema = { any_key = yes data = fixed_point }
+	no_eligible_resistance = -1
 	light_ceiling = 20
 	light_factory_sabotage = 0
 	light_construction = -0.090909

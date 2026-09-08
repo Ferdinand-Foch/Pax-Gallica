@@ -1,7 +1,7 @@
 # Paliers de résistance rhénane
 
 Paliers pour HOI4 1.19.2.0, confirmé par le `launcher-settings.json` installé : construction, ressources, croissance de la compliance, besoins et dégâts de garnison, sabotage local des constructions.
-Le renseignement allemand est hors périmètre conformément au choix utilisateur ; les malus locaux de construction sont acceptés avec leur comportement additif.
+Le renseignement allemand et l'esprit français associé sont décrits dans [la spécification nationale](national_spirits.md) ; les malus locaux de construction conservent leur comportement additif.
 
 ## Territoires et fonctionnement
 
@@ -61,7 +61,7 @@ Ce facteur se combine au calcul natif associé à la résistance ; il ne remplac
 Les contributions au même facteur se cumulent additivement, sous réserve des bornes internes du moteur ; +10 % n'est pas une addition de dix points de probabilité absolue.
 `resistance_activity` et `resistance_garrison_penetration_chance` ne sont pas modifiés : le risque général d'activité et les attaques contre les garnisons ne sont pas amplifiés par ce nouveau facteur.
 La construction conserve les valeurs locales converties du tableau ; l'allongement exact tous bonus confondus n'est pas un critère d'acceptation.
-Aucune simplification ni omission dans ce périmètre accepté ; le renseignement n'en fait pas partie.
+Aucune simplification ni omission dans ce périmètre local ; le renseignement dépend exclusivement du palier national.
 
 ## Contrôles et références
 
@@ -83,5 +83,5 @@ Aucune réécriture de carte, chaîne événementielle, technologie, focus ou GU
 Sources locales complémentaires : wiki hors ligne, pages centrales imposées et sections variables/résistance, modificateurs dynamiques, effets scriptés et on_actions ; documentation officielle `dynamic_variables_documentation.md`, `triggers_documentation.md`, `effects_documentation.md`, `script_concept_documentation.md` et `common/script_constants/documentation.md`.
 
 Icône finale réutilisée pour les cinq paliers : `GFX_modifiers_generic_resistance`, déjà définie dans le vanilla `interface/countrystateview.gfx` vers `gfx/interface/state_modifiers/modifiers_generic_resistance.dds` ; aucune image ni définition GFX supplémentaire.
-Fichiers runtime : `common/{script_constants,dynamic_modifiers,scripted_effects,scripted_triggers,on_actions}/rhenish_resistance.txt` et `localisation/{french,english}/rhenish_resistance_l_<langue>.yml`.
-Skills utilisés : `hoi4-events`, `hoi4-feature-assets` ; aucun skill modifié, aucune extension du mécanisme.
+Fichiers runtime : `common/{script_constants,dynamic_modifiers,scripted_effects,scripted_triggers,on_actions,ideas,operation_tokens}/rhenish_resistance.txt` et `localisation/{french,english}/rhenish_resistance_l_<langue>.yml`.
+Skills utilisés : `hoi4-events`, `hoi4-feature-assets` ; aucun skill modifié.

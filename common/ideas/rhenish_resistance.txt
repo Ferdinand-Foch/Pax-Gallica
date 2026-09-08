@@ -1,0 +1,136 @@
+# French national tiers. File-local constants tune persistent stability modifiers.
+@occupation_stability = 0
+@concern_stability = -0.05
+@crisis_stability = -0.10
+@insurrection_stability = -0.15
+@uprising_stability = -0.25
+
+ideas = {
+	country = {
+		rhenish_occupation = {
+			picture = DEN_occupation_laws
+			allowed = { original_tag = FRA }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			cancel = { NOT = { any_owned_state = { rhenish_resistance_eligible = yes } } }
+			modifier = { stability_factor = @occupation_stability }
+			on_add = {
+				GER = {
+					add_operation_token = { tag = FRA token = rhenish_occupation_civilian_intel }
+					add_operation_token = { tag = FRA token = rhenish_occupation_army_intel }
+					add_operation_token = { tag = FRA token = rhenish_occupation_navy_intel }
+					add_operation_token = { tag = FRA token = rhenish_occupation_airforce_intel }
+				}
+			}
+			on_remove = {
+				GER = {
+					remove_operation_token = { tag = FRA token = rhenish_occupation_civilian_intel }
+					remove_operation_token = { tag = FRA token = rhenish_occupation_army_intel }
+					remove_operation_token = { tag = FRA token = rhenish_occupation_navy_intel }
+					remove_operation_token = { tag = FRA token = rhenish_occupation_airforce_intel }
+				}
+			}
+		}
+
+		rhenish_concern = {
+			picture = DEN_occupation_laws
+			allowed = { original_tag = FRA }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			cancel = { NOT = { any_owned_state = { rhenish_resistance_eligible = yes } } }
+			modifier = { stability_factor = @concern_stability }
+			on_add = {
+				GER = {
+					add_operation_token = { tag = FRA token = rhenish_concern_civilian_intel }
+					add_operation_token = { tag = FRA token = rhenish_concern_army_intel }
+					add_operation_token = { tag = FRA token = rhenish_concern_navy_intel }
+					add_operation_token = { tag = FRA token = rhenish_concern_airforce_intel }
+				}
+			}
+			on_remove = {
+				GER = {
+					remove_operation_token = { tag = FRA token = rhenish_concern_civilian_intel }
+					remove_operation_token = { tag = FRA token = rhenish_concern_army_intel }
+					remove_operation_token = { tag = FRA token = rhenish_concern_navy_intel }
+					remove_operation_token = { tag = FRA token = rhenish_concern_airforce_intel }
+				}
+			}
+		}
+
+		rhenish_crisis = {
+			picture = DEN_occupation_laws
+			allowed = { original_tag = FRA }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			cancel = { NOT = { any_owned_state = { rhenish_resistance_eligible = yes } } }
+			modifier = { stability_factor = @crisis_stability }
+			on_add = {
+				GER = {
+					add_operation_token = { tag = FRA token = rhenish_crisis_civilian_intel }
+					add_operation_token = { tag = FRA token = rhenish_crisis_army_intel }
+					add_operation_token = { tag = FRA token = rhenish_crisis_navy_intel }
+					add_operation_token = { tag = FRA token = rhenish_crisis_airforce_intel }
+				}
+			}
+			on_remove = {
+				GER = {
+					remove_operation_token = { tag = FRA token = rhenish_crisis_civilian_intel }
+					remove_operation_token = { tag = FRA token = rhenish_crisis_army_intel }
+					remove_operation_token = { tag = FRA token = rhenish_crisis_navy_intel }
+					remove_operation_token = { tag = FRA token = rhenish_crisis_airforce_intel }
+				}
+			}
+		}
+
+		rhenish_insurrection = {
+			picture = DEN_occupation_laws
+			allowed = { original_tag = FRA }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			cancel = { NOT = { any_owned_state = { rhenish_resistance_eligible = yes } } }
+			modifier = { stability_factor = @insurrection_stability }
+			on_add = {
+				GER = {
+					add_operation_token = { tag = FRA token = rhenish_insurrection_civilian_intel }
+					add_operation_token = { tag = FRA token = rhenish_insurrection_army_intel }
+					add_operation_token = { tag = FRA token = rhenish_insurrection_navy_intel }
+					add_operation_token = { tag = FRA token = rhenish_insurrection_airforce_intel }
+				}
+			}
+			on_remove = {
+				GER = {
+					remove_operation_token = { tag = FRA token = rhenish_insurrection_civilian_intel }
+					remove_operation_token = { tag = FRA token = rhenish_insurrection_army_intel }
+					remove_operation_token = { tag = FRA token = rhenish_insurrection_navy_intel }
+					remove_operation_token = { tag = FRA token = rhenish_insurrection_airforce_intel }
+				}
+			}
+		}
+
+		rhenish_uprising = {
+			picture = DEN_occupation_laws
+			allowed = { original_tag = FRA }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			cancel = { NOT = { any_owned_state = { rhenish_resistance_eligible = yes } } }
+			modifier = { stability_factor = @uprising_stability }
+			on_add = {
+				GER = {
+					add_operation_token = { tag = FRA token = rhenish_uprising_civilian_intel }
+					add_operation_token = { tag = FRA token = rhenish_uprising_army_intel }
+					add_operation_token = { tag = FRA token = rhenish_uprising_navy_intel }
+					add_operation_token = { tag = FRA token = rhenish_uprising_airforce_intel }
+				}
+			}
+			on_remove = {
+				GER = {
+					remove_operation_token = { tag = FRA token = rhenish_uprising_civilian_intel }
+					remove_operation_token = { tag = FRA token = rhenish_uprising_army_intel }
+					remove_operation_token = { tag = FRA token = rhenish_uprising_navy_intel }
+					remove_operation_token = { tag = FRA token = rhenish_uprising_airforce_intel }
+				}
+			}
+		}
+
+	}
+}

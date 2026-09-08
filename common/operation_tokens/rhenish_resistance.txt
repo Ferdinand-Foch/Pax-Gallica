@@ -1,0 +1,167 @@
+# GER -> FRA only, granted and removed by the matching French idea callbacks.
+# Intel gains are absolute points; each unique token supports exactly one domain.
+@occupation_intel = 5
+@concern_intel = 10
+@crisis_intel = 20
+@insurrection_intel = 30
+@uprising_intel = 50
+
+rhenish_occupation_civilian_intel = {
+	name = rhenish_intel_civilian
+	desc = rhenish_intel_civilian_desc
+	icon = GFX_infiltrate_civilian_bg
+	intel_source = civilian
+	intel_gain = @occupation_intel
+}
+
+rhenish_occupation_army_intel = {
+	name = rhenish_intel_army
+	desc = rhenish_intel_army_desc
+	icon = GFX_infiltrate_army_bg
+	intel_source = army
+	intel_gain = @occupation_intel
+}
+
+rhenish_occupation_navy_intel = {
+	name = rhenish_intel_navy
+	desc = rhenish_intel_navy_desc
+	icon = GFX_infiltrate_navy_bg
+	intel_source = navy
+	intel_gain = @occupation_intel
+}
+
+rhenish_occupation_airforce_intel = {
+	name = rhenish_intel_airforce
+	desc = rhenish_intel_airforce_desc
+	icon = GFX_infiltrate_air_bg
+	intel_source = airforce
+	intel_gain = @occupation_intel
+}
+
+rhenish_concern_civilian_intel = {
+	name = rhenish_intel_civilian
+	desc = rhenish_intel_civilian_desc
+	icon = GFX_infiltrate_civilian_bg
+	intel_source = civilian
+	intel_gain = @concern_intel
+}
+
+rhenish_concern_army_intel = {
+	name = rhenish_intel_army
+	desc = rhenish_intel_army_desc
+	icon = GFX_infiltrate_army_bg
+	intel_source = army
+	intel_gain = @concern_intel
+}
+
+rhenish_concern_navy_intel = {
+	name = rhenish_intel_navy
+	desc = rhenish_intel_navy_desc
+	icon = GFX_infiltrate_navy_bg
+	intel_source = navy
+	intel_gain = @concern_intel
+}
+
+rhenish_concern_airforce_intel = {
+	name = rhenish_intel_airforce
+	desc = rhenish_intel_airforce_desc
+	icon = GFX_infiltrate_air_bg
+	intel_source = airforce
+	intel_gain = @concern_intel
+}
+
+rhenish_crisis_civilian_intel = {
+	name = rhenish_intel_civilian
+	desc = rhenish_intel_civilian_desc
+	icon = GFX_infiltrate_civilian_bg
+	intel_source = civilian
+	intel_gain = @crisis_intel
+}
+
+rhenish_crisis_army_intel = {
+	name = rhenish_intel_army
+	desc = rhenish_intel_army_desc
+	icon = GFX_infiltrate_army_bg
+	intel_source = army
+	intel_gain = @crisis_intel
+}
+
+rhenish_crisis_navy_intel = {
+	name = rhenish_intel_navy
+	desc = rhenish_intel_navy_desc
+	icon = GFX_infiltrate_navy_bg
+	intel_source = navy
+	intel_gain = @crisis_intel
+}
+
+rhenish_crisis_airforce_intel = {
+	name = rhenish_intel_airforce
+	desc = rhenish_intel_airforce_desc
+	icon = GFX_infiltrate_air_bg
+	intel_source = airforce
+	intel_gain = @crisis_intel
+}
+
+rhenish_insurrection_civilian_intel = {
+	name = rhenish_intel_civilian
+	desc = rhenish_intel_civilian_desc
+	icon = GFX_infiltrate_civilian_bg
+	intel_source = civilian
+	intel_gain = @insurrection_intel
+}
+
+rhenish_insurrection_army_intel = {
+	name = rhenish_intel_army
+	desc = rhenish_intel_army_desc
+	icon = GFX_infiltrate_army_bg
+	intel_source = army
+	intel_gain = @insurrection_intel
+}
+
+rhenish_insurrection_navy_intel = {
+	name = rhenish_intel_navy
+	desc = rhenish_intel_navy_desc
+	icon = GFX_infiltrate_navy_bg
+	intel_source = navy
+	intel_gain = @insurrection_intel
+}
+
+rhenish_insurrection_airforce_intel = {
+	name = rhenish_intel_airforce
+	desc = rhenish_intel_airforce_desc
+	icon = GFX_infiltrate_air_bg
+	intel_source = airforce
+	intel_gain = @insurrection_intel
+}
+
+rhenish_uprising_civilian_intel = {
+	name = rhenish_intel_civilian
+	desc = rhenish_intel_civilian_desc
+	icon = GFX_infiltrate_civilian_bg
+	intel_source = civilian
+	intel_gain = @uprising_intel
+}
+
+rhenish_uprising_army_intel = {
+	name = rhenish_intel_army
+	desc = rhenish_intel_army_desc
+	icon = GFX_infiltrate_army_bg
+	intel_source = army
+	intel_gain = @uprising_intel
+}
+
+rhenish_uprising_navy_intel = {
+	name = rhenish_intel_navy
+	desc = rhenish_intel_navy_desc
+	icon = GFX_infiltrate_navy_bg
+	intel_source = navy
+	intel_gain = @uprising_intel
+}
+
+rhenish_uprising_airforce_intel = {
+	name = rhenish_intel_airforce
+	desc = rhenish_intel_airforce_desc
+	icon = GFX_infiltrate_air_bg
+	intel_source = airforce
+	intel_gain = @uprising_intel
+}
