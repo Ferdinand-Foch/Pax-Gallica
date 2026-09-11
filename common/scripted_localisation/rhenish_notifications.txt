@@ -4,23 +4,23 @@ defined_text = {
 	name = RhenishNotificationOld
 	text = {
 		trigger = { check_variable = { var = rhenish_notification_old value = 1 compare = equals } }
-		localisation_key = rhenish_occupation
+		localization_key = rhenish_occupation
 	}
 	text = {
 		trigger = { check_variable = { var = rhenish_notification_old value = 2 compare = equals } }
-		localisation_key = rhenish_concern
+		localization_key = rhenish_concern
 	}
 	text = {
 		trigger = { check_variable = { var = rhenish_notification_old value = 3 compare = equals } }
-		localisation_key = rhenish_crisis
+		localization_key = rhenish_crisis
 	}
 	text = {
 		trigger = { check_variable = { var = rhenish_notification_old value = 4 compare = equals } }
-		localisation_key = rhenish_insurrection
+		localization_key = rhenish_insurrection
 	}
 	text = {
 		trigger = { check_variable = { var = rhenish_notification_old value = 5 compare = equals } }
-		localisation_key = rhenish_uprising
+		localization_key = rhenish_uprising
 	}
 }
 
@@ -28,23 +28,23 @@ defined_text = {
 	name = RhenishNotificationNew
 	text = {
 		trigger = { check_variable = { var = rhenish_notification_new value = 1 compare = equals } }
-		localisation_key = rhenish_occupation
+		localization_key = rhenish_occupation
 	}
 	text = {
 		trigger = { check_variable = { var = rhenish_notification_new value = 2 compare = equals } }
-		localisation_key = rhenish_concern
+		localization_key = rhenish_concern
 	}
 	text = {
 		trigger = { check_variable = { var = rhenish_notification_new value = 3 compare = equals } }
-		localisation_key = rhenish_crisis
+		localization_key = rhenish_crisis
 	}
 	text = {
 		trigger = { check_variable = { var = rhenish_notification_new value = 4 compare = equals } }
-		localisation_key = rhenish_insurrection
+		localization_key = rhenish_insurrection
 	}
 	text = {
 		trigger = { check_variable = { var = rhenish_notification_new value = 5 compare = equals } }
-		localisation_key = rhenish_uprising
+		localization_key = rhenish_uprising
 	}
 }
 
@@ -52,22 +52,22 @@ defined_text = {
 	name = RhenishNotificationEffects
 	text = {
 		trigger = { check_variable = { var = rhenish_notification_new value = 1 compare = equals } }
-		localisation_key = rhenish_occupation_notification_tt
+		localization_key = rhenish_occupation_notification_tt
 	}
 	text = {
 		trigger = { check_variable = { var = rhenish_notification_new value = 2 compare = equals } }
-		localisation_key = rhenish_concern_notification_tt
+		localization_key = rhenish_concern_notification_tt
 	}
 	text = {
 		trigger = { check_variable = { var = rhenish_notification_new value = 3 compare = equals } }
-		localisation_key = rhenish_crisis_notification_tt
+		localization_key = rhenish_crisis_notification_tt
 	}
 	text = {
 		trigger = { check_variable = { var = rhenish_notification_new value = 4 compare = equals } }
-		localisation_key = rhenish_insurrection_notification_tt
+		localization_key = rhenish_insurrection_notification_tt
 	}
 	text = {
 		trigger = { check_variable = { var = rhenish_notification_new value = 5 compare = equals } }
-		localisation_key = rhenish_uprising_notification_tt
+		localization_key = rhenish_uprising_notification_tt
 	}
 }
