@@ -115,3 +115,13 @@ Aucune dépendance de progression existante n'est réécrite ; les mécanismes n
 ## Extensions
 
 Aucune extension n'est prévue dans cette tranche ; toute interaction ultérieure avec décisions ou opérations devra préserver la propriété des jetons par les callbacks de l'esprit français.
+
+## Notifications de changement national
+
+Après l’actualisation existante des quatre États et de l’esprit national, FRA humaine reçoit un événement informatif unique si un palier national existant augmente ou diminue, même lors d’un saut de plusieurs paliers.
+Le démarrage et le rechargement sont silencieux ; l’initialisation sans esprit précédent, un palier national identique, les seuls changements locaux et l’absence d’État éligible ne produisent aucune notification.
+Le nettoyage national existant est conservé.
+Le texte français indique simplement « La résistance dans les départements rhénan continue de s'aggraver » à la hausse et « La résistance dans les départements rhénan semble se calmer » à la baisse, avec traduction anglaise.
+Le bouton « inquiétant » à la hausse ou « rassurant » à la baisse expose les effets nationaux et rappelle que les pénalités locales dépendent de chaque État, sans effet de gameplay au clic.
+Les événements `rhenish_notification.1` et `.2` sont définis dans `events/rhenish_notifications.txt`, avec la présentation native des événements pays et l’image vanilla `GFX_report_event_french_resistance_02` ; aucun nouvel asset n’est nécessaire.
+Les libellés dynamiques sont dans `common/scripted_localisation/rhenish_notifications.txt` et les textes dans les deux fichiers existants `rhenish_resistance_l_<langue>.yml`.

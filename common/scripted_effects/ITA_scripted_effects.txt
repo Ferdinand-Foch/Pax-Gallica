@@ -6082,7 +6082,7 @@ ITA_create_hugh_o_flaherty_operative = { #MONARCHIST (PAPAL)
 }
 
 ITA_create_maurizio_giglio_operative = { #DEMOCRATIC
-	create_operative_leader = { #This guy worked for the allies
+	create_operative_leader = { #This guy worked for the Commonwealth
 		name = "Maurizio Giglio"
 		GFX = GFX_portrait_ITA_maurizio_giglio
 		traits = { operative_infiltrator operative_tough operative_double_agent }
@@ -6093,7 +6093,7 @@ ITA_create_maurizio_giglio_operative = { #DEMOCRATIC
 }
 
 ITA_create_emilio_faldella_operative = { #DEMOCRATIC
-	create_operative_leader = { #This guy worked for the allies
+	create_operative_leader = { #This guy worked for the Commonwealth
 		name = "Emilio Faldella"
 		GFX = GFX_portrait_ITA_emilio_faldella
 		traits = { operative_well_groomed operative_commando operative_double_agent }

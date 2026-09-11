@@ -2671,7 +2671,7 @@ country_event = {
 					NOT = { has_war_with = ROOT }
 				}
 			}
-			modifier = { #They are at war with the Allies and I am not
+			modifier = { #They are at war with the Commonwealth and I am not
 				factor = 0.1
 				any_other_country = {
 					is_major = yes
@@ -3235,7 +3235,7 @@ country_event = {
 					NOT = { has_war_with = ROOT }
 				}
 			}
-			modifier = { #They are at war with the Allies and I am not
+			modifier = { #They are at war with the Commonwealth and I am not
 				factor = 0.1
 				any_other_country = {
 					is_major = yes

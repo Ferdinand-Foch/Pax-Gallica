@@ -1,4 +1,4 @@
-﻿capital = 361 # Washington DC
+capital = 361 # Washington DC
 
 oob = "USA_1936"
 
@@ -42,12 +42,6 @@ if = {
 	}
 }
 
-IF = {
-	limit = {
-		has_dlc = "No Compromise, No Surrender"
-	}
-	create_faction_from_template = faction_template_usa_commonwealth
-}
 
 set_research_slots = 4
 set_stability = 0.75

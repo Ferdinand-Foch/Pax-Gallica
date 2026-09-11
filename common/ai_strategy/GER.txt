@@ -1160,7 +1160,7 @@ GER_spain_ally_la_resistance = {
 	abort = {
 		OR = {
 			NOT = { country_exists = SPA }
-			SPA = { has_completed_focus = SPA_join_the_allies }
+			SPA = { has_completed_focus = SPA_join_the_commonwealth }
 		}
 	}
 
@@ -2801,7 +2801,7 @@ GER_spain_scw_support_la_resistance = {
 	abort = {
 		OR = {
 			NOT = { country_exists = SPA }
-			SPA = { has_completed_focus = SPA_join_the_allies }
+			SPA = { has_completed_focus = SPA_join_the_commonwealth }
 		}
 	}
 

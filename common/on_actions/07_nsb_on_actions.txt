@@ -1957,10 +1957,10 @@ on_actions = {
 				limit = {
 					any_other_country = {
 						is_in_faction_with = ROOT
-						is_in_tech_sharing_group = baltic_allied_research
+						is_in_tech_sharing_group = baltic_commonwealth_research
 					}
 				}
-				add_to_tech_sharing_group = baltic_allied_research
+				add_to_tech_sharing_group = baltic_commonwealth_research
 			}
 		}
 

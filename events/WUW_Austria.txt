@@ -8666,7 +8666,7 @@ country_event = { #the Liechtensteiner army found a friend!
 	}
 }
 
-country_event = { #Austria seeks to join the allies
+country_event = { #Austria seeks to join the Commonwealth
 	id = AUS_political_events.96
 	title = AUS_political_events.96.t
 	desc = AUS_political_events.96.desc
@@ -8743,7 +8743,7 @@ country_event = { #Austria seeks to join the allies
 	}
 }
 
-country_event = { #Austria Joins the Allies
+country_event = { #Austria Joins the Commonwealth
 	id = AUS_political_events.97
 	title = AUS_political_events.97.t
 	desc = AUS_political_events.97.desc
@@ -8773,7 +8773,7 @@ country_event = { #Austria Joins the Allies
 	}
 }
 
-country_event = { #Austria cannot join the allies
+country_event = { #Austria cannot join the Commonwealth
 	id = AUS_political_events.98
 	title = AUS_political_events.98.t
 	desc = AUS_political_events.98.desc

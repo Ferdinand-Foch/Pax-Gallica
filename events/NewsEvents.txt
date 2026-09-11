@@ -4238,7 +4238,7 @@ news_event = {
 	}
 }
 
-# The Fall of Rome (Allies)
+# The Fall of Rome (Commonwealth)
 news_event = {
 	id = news.132
 	title = news.132.t
@@ -4260,11 +4260,11 @@ news_event = {
 			2 = { is_owned_by = ITA }
 			2 = { is_owned_by = GER }
 		}
-		NOT = { has_global_flag = fall_of_rome_allies }
+		NOT = { has_global_flag = fall_of_rome_commonwealth }
 	}
 	
 	immediate = {
-		set_global_flag = fall_of_rome_allies
+		set_global_flag = fall_of_rome_commonwealth
 	}
 	
 	mean_time_to_happen = {
@@ -4353,7 +4353,7 @@ news_event = {
 	}
 }
 
-# The Liberation of Paris (Allies)
+# The Liberation of Paris (Commonwealth)
 news_event = {
 	id = news.134
 	title = news.134.t
@@ -4451,7 +4451,7 @@ news_event = {
 	}
 }
 
-# The Fall of Moscow (Allies)
+# The Fall of Moscow (Commonwealth)
 news_event = {
 	id = news.136
 	title = news.106.t
@@ -4471,11 +4471,11 @@ news_event = {
 			219 = { is_controlled_by = FRA }
 		}
 		219 = { is_owned_by = SOV }
-		NOT = { has_global_flag = fall_of_moscow_allies }
+		NOT = { has_global_flag = fall_of_moscow_commonwealth }
 	}
 	
 	immediate = {
-		set_global_flag = fall_of_moscow_allies
+		set_global_flag = fall_of_moscow_commonwealth
 	}
 	
 	mean_time_to_happen = {
@@ -5099,7 +5099,7 @@ news_event = {
 	}
 }
 
-# Remilitarization of the Rhineland (Germany Backs Down, Allied Pressure)
+# Remilitarization of the Rhineland (Germany Backs Down, Commonwealth Pressure)
 news_event = {
 	id = news.151
 	title = news.151.t
@@ -8799,7 +8799,7 @@ news_event = {
 	}
 }
 
-#Turkey Joins Allies to Avoid Ultimatum
+#Turkey Joins Commonwealth to Avoid Ultimatum
 news_event = {
 	id = news.217
 	title = news.217.t
@@ -10394,7 +10394,7 @@ news_event = {
 
 	is_triggered_only = yes
 
-	# Is in the same faction as ENG (presumably Allies)
+	# Is in the same faction as ENG (presumably Commonwealth)
 	option = {
 		name = news.251.a
 		trigger = {
@@ -10515,7 +10515,7 @@ news_event = {
 
 	is_triggered_only = yes
 
-	# Is in the same faction as ENG (presumably Allies)
+	# Is in the same faction as ENG (presumably Commonwealth)
 	option = {
 		name = news.253.a
 		trigger = {

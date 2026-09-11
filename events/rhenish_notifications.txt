@@ -1,0 +1,28 @@
+# Informational national changes; acknowledgement has no gameplay effect.
+add_namespace = rhenish_notification
+
+country_event = {
+	id = rhenish_notification.1
+	title = rhenish_notification_rise_title
+	desc = rhenish_notification_rise_desc
+	picture = GFX_report_event_french_resistance_02
+	is_triggered_only = yes
+	trigger = { tag = FRA is_ai = no }
+	option = {
+		name = rhenish_notification_rise_button
+		custom_effect_tooltip = rhenish_notification_effects_tt
+	}
+}
+
+country_event = {
+	id = rhenish_notification.2
+	title = rhenish_notification_fall_title
+	desc = rhenish_notification_fall_desc
+	picture = GFX_report_event_french_resistance_02
+	is_triggered_only = yes
+	trigger = { tag = FRA is_ai = no }
+	option = {
+		name = rhenish_notification_fall_button
+		custom_effect_tooltip = rhenish_notification_effects_tt
+	}
+}

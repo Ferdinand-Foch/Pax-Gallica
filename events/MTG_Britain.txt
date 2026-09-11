@@ -386,7 +386,7 @@ country_event = {
 				}
 				CAN = {
 					create_faction_from_template = {
-						template = faction_template_allies
+						template = faction_template_commonwealth
 						name = ENG_commonwealth_of_nations
 						icon = GFX_faction_logo_generic_2
 					}
@@ -416,7 +416,7 @@ country_event = {
 				}
 				SAF = {
 					create_faction_from_template = {
-						template = faction_template_allies
+						template = faction_template_commonwealth
 						name = ENG_commonwealth_of_nations
 						icon = GFX_faction_logo_generic_2
 					}
@@ -440,7 +440,7 @@ country_event = {
 				}
 				AST = {
 					create_faction_from_template = {
-						template = faction_template_allies
+						template = faction_template_commonwealth
 						name = ENG_commonwealth_of_nations
 						icon = GFX_faction_logo_generic_2
 					}
@@ -1100,7 +1100,7 @@ country_event = {
 	}
 }
 
-# Abdication Crisis Edward VIII - Notification event for the Dominions that they are leaving the Allies
+# Abdication Crisis Edward VIII - Notification event for the Dominions that they are leaving the Commonwealth
 country_event = {
 	id = mtg_britain.16
 	title = mtg_britain.16.t
@@ -1119,7 +1119,7 @@ country_event = {
 			FROM = { set_autonomy = { target = CAN autonomy_state = autonomy_free } }
 			drop_cosmetic_tag = yes
 			create_faction_from_template = {
-				template = faction_template_allies
+				template = faction_template_commonwealth
 				name = ENG_commonwealth_of_nations
 				icon = GFX_faction_logo_generic_2
 			}
@@ -1170,7 +1170,7 @@ country_event = {
 					AST = { NOT = { has_country_flag = ENG_abdication_crisis_dominion_will_leave } }
 				}
 				create_faction_from_template = {
-					template = faction_template_allies
+					template = faction_template_commonwealth
 					name = ENG_commonwealth_of_nations
 					icon = GFX_faction_logo_generic_2
 				}
@@ -1209,7 +1209,7 @@ country_event = {
 					AST = { NOT = { has_country_flag = ENG_abdication_crisis_dominion_will_leave } }
 				}
 				create_faction_from_template = {
-					template = faction_template_allies
+					template = faction_template_commonwealth
 					name = ENG_commonwealth_of_nations
 					icon = GFX_faction_logo_generic_2
 				}
@@ -1274,7 +1274,7 @@ country_event = {
 					CAN = { NOT = { has_country_flag = ENG_abdication_crisis_dominion_will_leave } }
 				}
 				create_faction_from_template = {
-					template = faction_template_allies
+					template = faction_template_commonwealth
 					name = ENG_commonwealth_of_nations
 					icon = GFX_faction_logo_generic_2
 				}
@@ -4754,7 +4754,7 @@ country_event = {
 	}
 }
 
-# Event for Dominions leaving the Allies after UK switches to Fascism or Communism
+# Event for Dominions leaving the Commonwealth after UK switches to Fascism or Communism
 country_event = {
 	id = mtg_britain.66
 	title = mtg_britain.66.t
@@ -8191,7 +8191,7 @@ country_event = {
 	}
 }
 
-# Bounce event for correct FROM scope for localization in the "British Empire Allies Imperial Loyalists" news event
+# Bounce event for correct FROM scope for localization in the "British Empire Commonwealth Imperial Loyalists" news event
 country_event = {
 	id = mtg_britain.112
 	

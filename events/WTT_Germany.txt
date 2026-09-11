@@ -1735,7 +1735,7 @@ country_event = {
 	}
 }
 
-### Allied response to inviting the kaiser
+### Commonwealth response to inviting the kaiser
 
 # French Response
 country_event = {

@@ -2,7 +2,11 @@
 on_actions = {
 	on_startup = {
 		effect = {
-			FRA = { rhenish_resistance_update = yes }
+			FRA = {
+				set_country_flag = rhenish_notification_suppressed
+				rhenish_resistance_update = yes
+				clr_country_flag = rhenish_notification_suppressed
+			}
 		}
 	}
 	on_daily_FRA = {

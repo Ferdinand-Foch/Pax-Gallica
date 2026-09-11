@@ -78,6 +78,7 @@ rhenish_resistance_update_and_accumulate = {
 			check_variable = { var = resistance value = rhenish_max_resistance compare = greater_than }
 		}
 		set_temp_variable = { rhenish_max_resistance = resistance }
+		save_event_target_as = rhenish_determining_state
 	}
 }
 
@@ -154,10 +155,61 @@ rhenish_resistance_update_national = {
 
 # FRA scope: one shared four-state pass at startup and in the existing daily hook.
 rhenish_resistance_update = {
+	rhenish_notification_read_tier = yes
+	set_temp_variable = { rhenish_previous_tier = rhenish_notification_tier }
 	set_temp_variable = { rhenish_max_resistance = constant:rhenish_resistance.no_eligible_resistance }
 	42 = { rhenish_resistance_update_and_accumulate = yes }
 	1082 = { rhenish_resistance_update_and_accumulate = yes }
 	1083 = { rhenish_resistance_update_and_accumulate = yes }
 	1084 = { rhenish_resistance_update_and_accumulate = yes }
 	rhenish_resistance_update_national = yes
+	rhenish_resistance_notify_change = yes
+}
+
+# Notification metadata only; existing ideas remain the source of truth.
+rhenish_notification_read_tier = {
+	set_temp_variable = { rhenish_notification_tier = 0 }
+	if = {
+		limit = { has_idea = rhenish_occupation }
+		set_temp_variable = { rhenish_notification_tier = 1 }
+	}
+	if = {
+		limit = { has_idea = rhenish_concern }
+		set_temp_variable = { rhenish_notification_tier = 2 }
+	}
+	if = {
+		limit = { has_idea = rhenish_crisis }
+		set_temp_variable = { rhenish_notification_tier = 3 }
+	}
+	if = {
+		limit = { has_idea = rhenish_insurrection }
+		set_temp_variable = { rhenish_notification_tier = 4 }
+	}
+	if = {
+		limit = { has_idea = rhenish_uprising }
+		set_temp_variable = { rhenish_notification_tier = 5 }
+	}
+}
+
+# One informational event after the complete national update.
+rhenish_resistance_notify_change = {
+	rhenish_notification_read_tier = yes
+	if = {
+		limit = {
+			tag = FRA
+			is_ai = no
+			NOT = { has_country_flag = rhenish_notification_suppressed }
+			check_variable = { rhenish_previous_tier > 0 }
+			check_variable = { rhenish_notification_tier > 0 }
+			NOT = { check_variable = { var = rhenish_previous_tier value = rhenish_notification_tier compare = equals } }
+		}
+		set_variable = { rhenish_notification_old = rhenish_previous_tier }
+		set_variable = { rhenish_notification_new = rhenish_notification_tier }
+		set_variable = { rhenish_notification_resistance = rhenish_max_resistance }
+		if = {
+			limit = { check_variable = { var = rhenish_notification_tier value = rhenish_previous_tier compare = greater_than } }
+			country_event = { id = rhenish_notification.1 }
+		}
+		else = { country_event = { id = rhenish_notification.2 } }
+	}
 }

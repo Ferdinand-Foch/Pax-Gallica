@@ -1183,7 +1183,7 @@ the_balkan_powder_keg = {
 	}
 	
 	happened = {
-		has_country_flag = YUG_delcared_war_on_axis_allies
+		has_country_flag = YUG_delcared_war_on_axis_commonwealth
 	}
 }
 

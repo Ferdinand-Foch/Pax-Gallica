@@ -520,7 +520,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_colonial_recruitment
-		icon = GFX_goal_generic_allies_build_infantry
+		icon = GFX_goal_generic_commonwealth_build_infantry
 		x = 0
 		y = 2
 		offset = {

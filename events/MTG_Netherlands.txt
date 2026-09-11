@@ -3021,7 +3021,7 @@ country_event = {
 	}
 }
 
-# Event informing WW1 Allies of Wilhelminism
+# Event informing WW1 Commonwealth of Wilhelminism
 country_event = {
 	id = mtg_netherlands.75
 	title = mtg_netherlands.75.t

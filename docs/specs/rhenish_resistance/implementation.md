@@ -16,7 +16,8 @@ Chaque État doit rester possédé ET contrôlé par FRA et non-core FRA.
 Chaque branche du sélecteur utilise un identifiant de modificateur littéral et ne retire/remplace rien lorsque le bon palier existe ; lors d'une transition elle appelle le nettoyage partagé des cinq identifiants de ce système, puis ajoute le palier voulu.
 Les blocs `enable` et `remove_trigger` neutralisent et nettoient aussi les modificateurs invalides lors de l'actualisation native des modificateurs, même si FRA disparaît et que son on_action quotidien ne s'exécute plus.
 Le retour aux conditions réapplique le palier à l'actualisation suivante ; la réactivité est quotidienne, pas instantanée.
-Aucun événement, insurrection scriptée, bâtiment, frontière, core ou droit de ressources n'est modifié.
+Les notifications de changement national sont décrites dans [la spécification nationale](national_spirits.md).
+Aucune insurrection scriptée, aucun bâtiment, frontière, core ou droit de ressources n'est modifié.
 
 ## Valeurs et correspondance moteur
 

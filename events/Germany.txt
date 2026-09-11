@@ -2239,7 +2239,7 @@ country_event = {
 			modifier = { #ROOT is less willing to accept the deal if Czech completed this focus
 				factor = 0.60 #Was more worried about the fighter gap
 				CZE = {
-					has_completed_focus = CZE_supply_fighters_for_allies
+					has_completed_focus = CZE_supply_fighters_for_commonwealth
 				}
 			}
 			modifier = { #ROOT is less willing to accept the deal if Czech completed this focus
@@ -2350,7 +2350,7 @@ country_event = {
 						NOT = {
 							is_in_faction_with = CZE
 							CZE = {
-								has_completed_focus = CZE_supply_fighters_for_allies
+								has_completed_focus = CZE_supply_fighters_for_commonwealth
 							}
 							has_war_with = GER
 						}
@@ -2367,7 +2367,7 @@ country_event = {
 			modifier = { #ROOT is more willing to support the Czechs if they completed this focus
 				factor = 1.4 #Was more worried about the fighter gap
 				CZE = {
-					has_completed_focus = CZE_supply_fighters_for_allies
+					has_completed_focus = CZE_supply_fighters_for_commonwealth
 				}
 			}
 			modifier = { #ROOT is more willing to support the Czechs if they completed this focus
@@ -2556,7 +2556,7 @@ country_event = {
 			modifier = { #ROOT is less willing to accept the deal if Czech completed this focus
 				factor = 0.65
 				CZE = {
-					has_completed_focus = CZE_supply_fighters_for_allies
+					has_completed_focus = CZE_supply_fighters_for_commonwealth
 				}
 			}
 			modifier = { #ROOT is less willing to accept the deal if Czech completed this focus
@@ -2678,7 +2678,7 @@ country_event = {
 						NOT = {
 							is_in_faction_with = CZE
 							CZE = {		#PfOT
-								has_completed_focus = CZE_supply_fighters_for_allies
+								has_completed_focus = CZE_supply_fighters_for_commonwealth
 							}
 						}
 					}
@@ -2694,7 +2694,7 @@ country_event = {
 			modifier = { #ROOT is more willing to support the Czechs if they completed this focus
 				factor = 1.3
 				CZE = {
-					has_completed_focus = CZE_supply_fighters_for_allies
+					has_completed_focus = CZE_supply_fighters_for_commonwealth
 				}
 			}
 			modifier = { #ROOT is more willing to support the Czechs if they completed this focus
@@ -3030,7 +3030,7 @@ country_event = {
 	}
 }
 
-# France leaves the Allies - Event for ENG (from FRA)
+# France leaves the Commonwealth - Event for ENG (from FRA)
 country_event = {
 	id = germany.43
 	title = germany.43.t
@@ -3285,7 +3285,7 @@ country_event = {
 				GER_hitlers_blunders_variable = 1
 			}
 		}
-		set_country_flag = allies_support_czechs
+		set_country_flag = commonwealth_support_czechs
 	}
 }
 
@@ -6705,7 +6705,7 @@ country_event = {
 		#has_war_with = CZE
 		#has_war_with = FRA
 		#has_war_with = ENG
-		#has_country_flag = allies_support_czechs
+		#has_country_flag = commonwealth_support_czechs
 	}
 
 	mean_time_to_happen = {
@@ -9063,7 +9063,7 @@ country_event = {
 		hidden_effect = {
 			news_event = { id = news.164 hours = 6 }
 		}
-		set_country_flag = allies_support_yugoslavia
+		set_country_flag = commonwealth_support_yugoslavia
 
 		# Claiming German Slovenia
 		102 = {

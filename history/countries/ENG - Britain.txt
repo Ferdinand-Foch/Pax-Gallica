@@ -596,7 +596,7 @@ set_popularities = {
 }
 
 
-create_faction_from_template = faction_template_allies
+create_faction_from_template = faction_template_commonwealth
 IF= {
 	limit = {
 		has_dlc = "No Compromise, No Surrender"

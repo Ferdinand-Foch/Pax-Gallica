@@ -2919,7 +2919,7 @@ focus_tree = {
 
 	focus = {
 		id = POL_annex_czech
-		icon = GFX_goal_generic_attack_allies
+		icon = GFX_goal_generic_attack_commonwealth
 		prerequisite = { focus = POL_pan_slavic_revanchism }
 		will_lead_to_war_with = CZE
 		
@@ -4659,7 +4659,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POL_join_allies
+		id = POL_join_commonwealth
 		icon = GFX_goal_generic_major_alliance
 		prerequisite = { focus = POL_align_with_the_west }
 		x = 2
@@ -4723,18 +4723,18 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 		completion_reward = {
-			join_allies_effect = yes
+			join_commonwealth_effect = yes
 		}
 	}
 
 	focus = {
 		id = POL_romanian_bridgehead_strategy
 		icon = GFX_focus_POL_romania_bridgehead_strategy
-		prerequisite = { focus = POL_join_allies }
+		prerequisite = { focus = POL_join_commonwealth }
 		
 		x = 0
 		y = 1
-		relative_position_id = POL_join_allies
+		relative_position_id = POL_join_commonwealth
 		cost = 10
 
 		ai_will_do = {
@@ -5613,7 +5613,7 @@ focus_tree = {
 
 	focus = {
 		id = POL_empower_the_morges
-		icon = GFX_goal_generic_allies_build_infantry
+		icon = GFX_goal_generic_commonwealth_build_infantry
 		prerequisite = { focus = POL_raise_the_black_madonna }
 		relative_position_id = POL_raise_the_black_madonna
 
@@ -6555,7 +6555,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			join_allies_effect = yes
+			join_commonwealth_effect = yes
 		}
 	}
 
@@ -8230,7 +8230,7 @@ focus_tree = {
 
 	focus = {
 		id = POL_kings_guard
-		icon = GFX_goal_generic_allies_build_infantry
+		icon = GFX_goal_generic_commonwealth_build_infantry
 		prerequisite = { focus = POL_soldier_king }
 		relative_position_id = POL_soldier_king
 
@@ -8475,7 +8475,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			join_allies_effect = yes
+			join_commonwealth_effect = yes
 		}
 	}
 
@@ -11017,7 +11017,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POL_pro_allied_government
+		id = POL_pro_commonwealth_government
 		icon = GFX_goal_support_democracy
 		prerequisite = { focus = POL_merge_internal_governments focus = POL_claim_livonia }
 		relative_position_id = POL_merge_internal_governments
@@ -11082,18 +11082,18 @@ focus_tree = {
 						has_government = democratic
 					}
 				}
-				add_opinion_modifier = { modifier = ROM_appoint_allied_friendly_government target = ENG }
-				ENG = { add_opinion_modifier = { modifier = ROM_appoint_allied_friendly_government target = ROOT } }
+				add_opinion_modifier = { modifier = ROM_appoint_commonwealth_friendly_government target = ENG }
+				ENG = { add_opinion_modifier = { modifier = ROM_appoint_commonwealth_friendly_government target = ROOT } }
 			}
 			else = {
 				get_best_alliance_match_democratic_effect = yes
 				var:best_leader = {
 					add_opinion_modifier = {
-						modifier = ROM_appoint_allied_friendly_government
+						modifier = ROM_appoint_commonwealth_friendly_government
 						target = PREV
 					}
 					reverse_add_opinion_modifier = {
-						modifier = ROM_appoint_allied_friendly_government
+						modifier = ROM_appoint_commonwealth_friendly_government
 						target = PREV
 					}
 				}
@@ -11102,10 +11102,10 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POL_ROM_join_allies
+		id = POL_ROM_join_commonwealth
 		icon = GFX_focus_chi_british_cooperation
-		prerequisite = { focus = POL_pro_allied_government }
-		relative_position_id = POL_pro_allied_government
+		prerequisite = { focus = POL_pro_commonwealth_government }
+		relative_position_id = POL_pro_commonwealth_government
 
 		x = 0
 		y = 1
@@ -11157,7 +11157,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 		completion_reward = {
-			join_allies_effect = yes
+			join_commonwealth_effect = yes
 		}
 	}
 
@@ -11171,7 +11171,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 
-		mutually_exclusive = { focus = POL_pro_allied_government }
+		mutually_exclusive = { focus = POL_pro_commonwealth_government }
 
 		ai_will_do = {
 			factor = 2.5
