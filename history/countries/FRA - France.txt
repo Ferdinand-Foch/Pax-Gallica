@@ -221,6 +221,13 @@ if = {
 	}
 	give_guarantee = BEL
 }
+# Initial Little Entente: France leads the five-member defensive association.
+create_faction_from_template = faction_template_petite_entente
+add_to_faction = POL
+add_to_faction = CZE
+add_to_faction = ROM
+add_to_faction = YUG
+
 1939.1.1 = {
 
 	add_political_power = 899

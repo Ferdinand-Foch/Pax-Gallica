@@ -1,0 +1,6 @@
+# Initial French-led Little Entente, with a descriptive manifest only.
+faction_template_petite_entente = {
+	name = petite_entente
+	manifest = petite_entente_european_order
+	icon = GFX_faction_logo_generic_2
+}

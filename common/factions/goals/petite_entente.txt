@@ -1,0 +1,7 @@
+# Descriptive diplomatic orientation; no completion, rewards or modifiers.
+petite_entente_european_order = {
+	name = petite_entente_european_order_name
+	description = petite_entente_european_order_desc
+	is_manifest = yes
+	completed = { }
+}
